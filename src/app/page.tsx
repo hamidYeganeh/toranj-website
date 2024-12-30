@@ -1,12 +1,16 @@
-import { Button } from "@/components/kit/Button";
+// components
+import { Button, Container } from "@/components/kit";
+// libs
 import { getTranslations } from "next-intl/server";
 
-export default async function Home() {
+export default async function HomePage() {
   const t = await getTranslations("HomePage");
+
   return (
-    <>
-      <h1>{t("title")}</h1>
-      <Button variant={"contained"}></Button>
-    </>
+    <Container maxWidth={"xl"}>
+      <Button variant={"contained"} color={"secondary"}>
+        {t("title")}
+      </Button>
+    </Container>
   );
 }

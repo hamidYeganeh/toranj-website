@@ -1,17 +1,21 @@
-import { forwardRef, useMemo } from "react";
-import { IButtonTypes } from "./Button.types";
+// libs
 import { cn } from "@/lib/utils";
-import { ButtonVariants } from "./Button.variants";
+import { forwardRef } from "react";
+// types
+import { IButtonTypes } from "./Button.types";
+// variants
+import { ButtonColors, ButtonVariants } from "./Button.variants";
 
 const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
-  const { variant, className } = props;
+  const { variant, className, children, color } = props;
 
-  const ButtonClassName = useMemo(
-    () => cn(className, ButtonVariants({ variant })),
-    [className, variant]
+  const ButtonColor = ButtonColors[color][variant ?? "contained"];
+
+  return (
+    <button className={cn(ButtonVariants({ variant }), ButtonColor, className)}>
+      {children}
+    </button>
   );
-
-  return <button className={ButtonClassName}>Button</button>;
 });
 
 export default Button;

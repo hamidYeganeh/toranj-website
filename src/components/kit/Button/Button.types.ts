@@ -4,8 +4,18 @@ import { VariantProps } from "class-variance-authority";
 import type { ComponentPropsWithoutRef } from "react";
 import { ButtonVariants } from "./Button.variants";
 
-export type IButtonVariant = "contained";
+export interface IButtonVariants extends VariantProps<typeof ButtonVariants> {}
+export interface IHTMLButton
+  extends Omit<ComponentPropsWithoutRef<"button">, "color"> {}
+export type IButtonColor =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "success"
+  | "error"
+  | "warning"
+  | "info";
 
-export interface IButtonTypes
-  extends ComponentPropsWithoutRef<"button">,
-    VariantProps<typeof ButtonVariants> {}
+export interface IButtonTypes extends IHTMLButton, IButtonVariants {
+  color: IButtonColor;
+}

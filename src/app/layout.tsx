@@ -1,8 +1,16 @@
+// types
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// stylesheets
 import "./globals.css";
+import "@/theme/palette.css";
+import "@/theme/shape.css";
+import "@/theme/breakpoints.css";
+// libs
+import { Geist, Geist_Mono } from "next/font/google";
 import { getLocale, getMessages } from "next-intl/server";
+// providers
 import { I18nProvider } from "@/providers/I18nProvider";
+import { ReduxProvider } from "@/providers/ReduxProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +35,13 @@ export default async function RootLayout({
   const locale = await getLocale();
   const messages = await getMessages();
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <I18nProvider messages={messages}>{children}</I18nProvider>
+        <ReduxProvider>
+          <I18nProvider messages={messages}>{children}</I18nProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
