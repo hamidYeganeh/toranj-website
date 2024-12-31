@@ -11,6 +11,7 @@ import { getLocale, getMessages } from "next-intl/server";
 // providers
 import { I18nProvider } from "@/providers/I18nProvider";
 import { ReduxProvider } from "@/providers/ReduxProvider";
+import { MainLayout } from "@/components/layout/MainLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

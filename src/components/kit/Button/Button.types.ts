@@ -3,6 +3,7 @@ import { VariantProps } from "class-variance-authority";
 // types
 import type { ComponentPropsWithoutRef } from "react";
 import { ButtonVariants } from "./Button.variants";
+import { Url } from "next/dist/shared/lib/router/router";
 
 export interface IButtonVariants extends VariantProps<typeof ButtonVariants> {}
 export interface IHTMLButton
@@ -18,4 +19,9 @@ export type IButtonColor =
 
 export interface IButtonTypes extends IHTMLButton, IButtonVariants {
   color?: IButtonColor;
+  href?: Url;
+}
+export interface IIconButtonTypes extends IHTMLButton, IButtonVariants {
+  color?: IButtonColor;
+  href?: Url;
 }

@@ -8,7 +8,7 @@ export default async function HomePage() {
 
   return (
     <Container maxWidth={"xl"}>
-      <Button variant={"contained"} color={"secondary"}>
+      <Button href={"/"} variant={"contained"} color={"secondary"}>
         {t("title")}
       </Button>
     </Container>

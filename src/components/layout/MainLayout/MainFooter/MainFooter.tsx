@@ -1,4 +1,4 @@
-export default function MainFooter() {
+export const MainFooter = () => {
   return (
     <footer className="w-full h-48 p-4 bg-tertiary-50">
       <nav className="w-full h-full bg-success-dark rounded p-4">
@@ -6,4 +6,4 @@ export default function MainFooter() {
       </nav>
     </footer>
   );
-}
+};
