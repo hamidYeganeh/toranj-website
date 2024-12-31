@@ -80,20 +80,20 @@ export default {
         },
         error: {
           light: "var(--error-light)",
-          main: "var(--error-light)",
-          dark: "var(--error-light)",
+          main: "var(--error-main)",
+          dark: "var(--error-dark)",
           "contrast-text": "var(--error-light)",
         },
         warning: {
           light: "var(--warning-light)",
-          main: "var(--warning-light)",
-          dark: "var(--warning-light)",
+          main: "var(--warning-main)",
+          dark: "var(--warning-dark)",
           "contrast-text": "var(--warning-light)",
         },
         info: {
           light: "var(--info-light)",
-          main: "var(--info-light)",
-          dark: "var(--info-light)",
+          main: "var(--info-main)",
+          dark: "var(--info-dark)",
           "contrast-text": "var(--info-light)",
         },
         text: {

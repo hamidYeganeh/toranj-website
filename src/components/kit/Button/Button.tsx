@@ -9,7 +9,7 @@ import { ButtonColors, ButtonVariants } from "./Button.variants";
 const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
   const { variant, className, children, color } = props;
 
-  const ButtonColor = ButtonColors[color][variant ?? "contained"];
+  const ButtonColor = ButtonColors[color || "primary"][variant ?? "contained"];
 
   return (
     <button className={cn(ButtonVariants({ variant }), ButtonColor, className)}>

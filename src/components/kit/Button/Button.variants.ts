@@ -15,6 +15,7 @@ export const ButtonVariants = cva("rounded-lg", {
       lg: "px-6 py-3 h-12",
     },
   },
+  defaultVariants: { size: "md", variant: "contained" },
 });
 
 export const ButtonColors = {

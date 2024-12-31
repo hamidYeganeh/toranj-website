@@ -17,5 +17,5 @@ export type IButtonColor =
   | "info";
 
 export interface IButtonTypes extends IHTMLButton, IButtonVariants {
-  color: IButtonColor;
+  color?: IButtonColor;
 }

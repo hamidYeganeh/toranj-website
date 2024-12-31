@@ -11,6 +11,6 @@ export const ContainerVariants = cva("w-full m-auto", {
     },
   },
   defaultVariants: {
-    maxWidth: "md",
+    maxWidth: "xl",
   },
 });
