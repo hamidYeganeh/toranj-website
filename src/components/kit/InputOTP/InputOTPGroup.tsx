@@ -1,3 +1,5 @@
+"use client";
+
 // libs
 import { cn } from "@/lib/utils";
 import { OTPInputContext } from "input-otp";

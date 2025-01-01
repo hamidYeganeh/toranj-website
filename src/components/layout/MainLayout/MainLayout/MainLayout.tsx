@@ -15,7 +15,7 @@ export const MainLayout: FC<IMainLayout> = (props) => {
         <MainLayoutHeader />
         <MainLayoutNavbarHorizontal />
       </header>
-      <main className="w-full flex flex-col">
+      <main className="w-full flex flex-col bg-white">
         <section className="min-h-dvh">{children}</section>
       </main>
       <MainFooter />

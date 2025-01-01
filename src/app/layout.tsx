@@ -38,7 +38,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={"rtl"}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <ReduxProvider>
           <I18nProvider messages={messages}>{children}</I18nProvider>
