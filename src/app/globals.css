@@ -5,3 +5,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+    /* LAYOUT SIZES */
+    --dashboard-header-height: calc(24 * 4px);
+}

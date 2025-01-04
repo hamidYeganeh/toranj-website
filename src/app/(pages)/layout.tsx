@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
 
-export default function PagesLayout(
+export default function MainPagesLayout(
     props: Readonly<{
         children: ReactNode;
     }>,

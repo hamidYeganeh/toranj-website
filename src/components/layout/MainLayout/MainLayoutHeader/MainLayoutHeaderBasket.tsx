@@ -1,14 +1,18 @@
 // components
-import { IconButton } from "@/components/kit";
+import { Badge, IconButton } from "@/components/kit";
 // icons
 import { FaBasketShopping } from "react-icons/fa6";
 
 export const MainLayoutHeaderBasket = () => {
     return (
-        <div>
-            <IconButton variant={"outlined"} color="secondary">
+        <IconButton variant={"light"} color="success">
+            <Badge
+                position={"bottom-right"}
+                badgeContent={8}
+                variant={"success"}
+            >
                 <FaBasketShopping />
-            </IconButton>
-        </div>
+            </Badge>
+        </IconButton>
     );
 };

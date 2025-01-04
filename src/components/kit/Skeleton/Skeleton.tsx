@@ -1,15 +1,18 @@
+// libs
+import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
+// variants
+import { SkeletonVariants } from "./Skeleton.variants";
+// types
+import type { ISkeleton } from "./Skeleton.types";
 
-function Skeleton({
-    className,
-    ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+const Skeleton = forwardRef<HTMLDivElement, ISkeleton>((props, ref) => {
+    const { className, shape } = props;
     return (
-        <div
-            className={cn("bg-primary/10 animate-pulse rounded-md", className)}
-            {...props}
-        />
+        <div ref={ref} className={cn(SkeletonVariants({ shape }), className)} />
     );
-}
+});
+
+Skeleton.displayName = "Skeleton";
 
 export default Skeleton;

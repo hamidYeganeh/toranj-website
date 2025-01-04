@@ -39,24 +39,32 @@
 
     /* UTIL COLORS */
 
-    --warning-dark: #e65100;
+    --warning-darker: #532601;
+    --warning-dark: #8c4001;
     --warning-main: #ed6c02;
-    --warning-light: #ff9800;
+    --warning-light: #f5ae74;
+    --warning-lighter: #f5ae74;
     --warning-contrast-text: #f2f2f2;
 
-    --info-dark: #1769aa;
+    --info-darker: #0C3555;
+    --info-dark: #13598f;
     --info-main: #2196f3;
-    --info-light: #4dabf5;
+    --info-light: #85c5f8;
+    --info-lighter: #BCE0FB;
     --info-contrast-text: #f2f2f2;
 
-    --error-dark: #c62828;
+    --error-darker: #4A1010;
+    --error-dark: #7c1c1c;
     --error-main: #d32f2f;
-    --info--light: #ef5350;
-    --info--contrast-text: #f2f2f2;
+    --error-light: #e78d8d;
+    --error-lighter: #F2C1C1;
+    --error-contrast-text: #f2f2f2;
 
-    --success-dark: #1b5e20;
+    --success-darker: #102c12;
+    --success-dark: #1b4a1e;
     --success-main: #2e7d32;
-    --success-light: #4caf50;
+    --success-light: #8cb88e;
+    --success-lighter: #c0d8c2;
     --success-contrast-text: #f2f2f2;
 
     /* NEUTRIAL COLORS */
@@ -131,24 +139,32 @@
 
     /* UTIL COLORS */
 
-    --warning-dark: #ff9800;
-    --warning-main: #e65100;
-    --warning-light: #ed6c02;
+    --warning-darker: #532601;
+    --warning-dark: #8c4001;
+    --warning-main: #ed6c02;
+    --warning-light: #f5ae74;
+    --warning-lighter: #f5ae74;
     --warning-contrast-text: #000000;
 
-    --info-dark: #4dabf5;
+    --info-darker: #0C3555;
+    --info-dark: #13598f;
     --info-main: #2196f3;
-    --info-light: #1769aa;
+    --info-light: #85c5f8;
+    --info-lighter: #BCE0FB;
     --info-contrast-text: #000000;
 
-    --error-dark: #ef5350;
+    --error-darker: #4A1010;
+    --error-dark: #7c1c1c;
     --error-main: #d32f2f;
-    --error-light: #c62828;
-    --error-contrast-text: #ffffff;
+    --error-light: #e78d8d;
+    --error-lighter: #F2C1C1;
+    --error-contrast-text: #000000;
 
-    --success-dark: #4caf50;
+    --success-darker: #102c12;
+    --success-dark: #1b4a1e;
     --success-main: #2e7d32;
-    --success-light: #1b5e20;
+    --success-light: #8cb88e;
+    --success-lighter: #c0d8c2;
     --success-contrast-text: #000000;
 
     /* NEUTRAL COLORS */

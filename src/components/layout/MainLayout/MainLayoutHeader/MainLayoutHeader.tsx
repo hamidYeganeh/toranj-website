@@ -15,6 +15,7 @@ export const MainLayoutHeader = () => {
                 <div className="flex-1" />
 
                 <MainLayoutHeaderAccount />
+                <div className="divide-y-2 mx-4" />
                 <MainLayoutHeaderBasket />
             </div>
         </Container>

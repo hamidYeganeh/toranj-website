@@ -5,12 +5,32 @@ import { forwardRef } from "react";
 import { IButtonTypes } from "./Button.types";
 // variants
 import { ButtonColors, ButtonVariants } from "./Button.variants";
+// components
 import Link from "next/link";
 
 const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
-    const { variant, className, children, color, href, ...otherProps } = props;
+    const {
+        variant = "contained",
+        className,
+        children,
+        color,
+        href,
+        fullWidth,
+        size,
+        shadow = false,
+        ...otherProps
+    } = props;
 
     const isLinkButton = !!href;
+    const isBrandColor = ["primary", "secondary", "tertiary"].includes(
+        variant!,
+    );
+    const ButtonShadow =
+        !!shadow && !!variant
+            ? isBrandColor
+                ? `hover:shadow-[0px_8px_8px_0px_var(--${color || "primary"}-100)]`
+                : `hover:shadow-[0px_8px_8px_0px_var(--${color || "success"}-lighter)]`
+            : "";
     const ButtonColor =
         ButtonColors[color || "primary"][variant ?? "contained"];
 
@@ -21,7 +41,11 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
                 className={cn(
                     ButtonVariants({ variant }),
                     ButtonColor,
+                    ButtonShadow,
                     className,
+                    {
+                        "w-full": fullWidth,
+                    },
                 )}
             >
                 {children}
@@ -31,7 +55,14 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
     return (
         <button
             ref={ref}
-            className={cn(ButtonVariants({ variant }), ButtonColor, className)}
+            className={cn(
+                ButtonVariants({ variant, size }),
+                ButtonColor,
+                className,
+                {
+                    "w-full": fullWidth,
+                },
+            )}
             {...otherProps}
         >
             {children}

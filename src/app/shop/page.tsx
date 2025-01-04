@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@/components/kit";
+import { Badge, Button, IconButton } from "@/components/kit";
+import { BellRing } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export default function ShopPage() {
@@ -15,16 +16,19 @@ export default function ShopPage() {
     }
 
     return (
-        <section className="h-[200vh] flex-1 bg-bg-paper px-4">
-            <div className="h-full w-full rounded bg-secondary-500 p-4">
-                <Button
+        <section className="bg-bg-paper h-[200vh] flex-1 px-4">
+            <div className="h-full w-full rounded p-4">
+                <IconButton
+                    color="secondary"
+                    variant={"outlined"}
                     onClick={() => {
-                        console.log("HERE");
                         handleToggleThemeMode();
                     }}
                 >
-                    CHANGE THEME MODE
-                </Button>
+                    <Badge badgeContent={9}>
+                        <BellRing />
+                    </Badge>
+                </IconButton>
             </div>
         </section>
     );

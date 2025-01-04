@@ -7,3 +7,4 @@ export * from "./InputOTP";
 export * from "./Input";
 export * from "./RadioGroup";
 export * from "./Skeleton";
+export * from "./Badge";

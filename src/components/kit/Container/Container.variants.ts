@@ -8,6 +8,7 @@ export const ContainerVariants = cva("w-full m-auto", {
             md: "max-w-md",
             lg: "max-w-lg",
             xl: "max-w-xl",
+            fluid: "max-w-full",
         },
     },
     defaultVariants: {
