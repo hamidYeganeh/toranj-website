@@ -1,3 +1,3 @@
 export const RouterPaths = {
-  root: "/",
+    root: "/",
 };

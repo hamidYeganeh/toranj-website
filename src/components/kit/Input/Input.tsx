@@ -7,15 +7,15 @@ import type { IInput } from "./Input.types";
 import { InputVariants } from "./Input.variants";
 
 const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
-  const { className, type, size, variant, ...otherProps } = props;
-  return (
-    <input
-      type={type}
-      className={cn(InputVariants({ variant, size }), className)}
-      ref={ref}
-      {...otherProps}
-    />
-  );
+    const { className, type, size, variant, ...otherProps } = props;
+    return (
+        <input
+            type={type}
+            className={cn(InputVariants({ variant, size }), className)}
+            ref={ref}
+            {...otherProps}
+        />
+    );
 });
 Input.displayName = "Input";
 

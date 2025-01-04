@@ -1,15 +1,15 @@
 :root {
-  /* SCREENS */
-  --screen-xs: 375px;
-  --screen-sm: 575px;
-  --screen-md: 768px;
-  --screen-lg: 1024px;
-  --screen-xl: 1400px;
+    /* SCREENS */
+    --screen-xs: 375px;
+    --screen-sm: 575px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1400px;
 
-  /* MAX WIDTHS */
-  --max-width-xl: 1400px;
-  --max-width-lg: 1024px;
-  --max-width-md: 992px;
-  --max-width-sm: 824px;
-  --max-width-xs: 768px;
+    /* MAX WIDTHS */
+    --max-width-xl: 1400px;
+    --max-width-lg: 1024px;
+    --max-width-md: 992px;
+    --max-width-sm: 824px;
+    --max-width-xs: 768px;
 }

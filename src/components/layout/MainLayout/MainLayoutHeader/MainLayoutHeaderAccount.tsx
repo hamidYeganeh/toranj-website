@@ -1,9 +1,9 @@
 import { Button } from "@/components/kit";
 
 export const MainLayoutHeaderAccount = () => {
-  return (
-    <>
-      <Button>{"ورود"}</Button>
-    </>
-  );
+    return (
+        <>
+            <Button>{"ورود"}</Button>
+        </>
+    );
 };

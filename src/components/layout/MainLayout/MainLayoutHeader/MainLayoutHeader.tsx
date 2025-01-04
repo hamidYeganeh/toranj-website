@@ -6,17 +6,17 @@ import { MainLayoutHeaderAccount } from "./MainLayoutHeaderAccount";
 import { MainLayoutHeaderBasket } from "./MainLayoutHeaderBasket";
 
 export const MainLayoutHeader = () => {
-  return (
-    <Container>
-      <div className="w-full flex items-center gap-2">
-        <MainLayoutHeaderLogo />
-        <MainLayoutHeaderSearch />
+    return (
+        <Container>
+            <div className="flex w-full items-center gap-2">
+                <MainLayoutHeaderLogo />
+                <MainLayoutHeaderSearch />
 
-        <div className="flex-1" />
+                <div className="flex-1" />
 
-        <MainLayoutHeaderAccount />
-        <MainLayoutHeaderBasket />
-      </div>
-    </Container>
-  );
+                <MainLayoutHeaderAccount />
+                <MainLayoutHeaderBasket />
+            </div>
+        </Container>
+    );
 };

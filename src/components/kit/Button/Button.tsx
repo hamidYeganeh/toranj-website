@@ -8,29 +8,35 @@ import { ButtonColors, ButtonVariants } from "./Button.variants";
 import Link from "next/link";
 
 const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
-  const { variant, className, children, color, href } = props;
+    const { variant, className, children, color, href, ...otherProps } = props;
 
-  const isLinkButton = !!href;
-  const ButtonColor = ButtonColors[color || "primary"][variant ?? "contained"];
+    const isLinkButton = !!href;
+    const ButtonColor =
+        ButtonColors[color || "primary"][variant ?? "contained"];
 
-  if (isLinkButton)
+    if (isLinkButton)
+        return (
+            <Link
+                href={href}
+                className={cn(
+                    ButtonVariants({ variant }),
+                    ButtonColor,
+                    className,
+                )}
+            >
+                {children}
+            </Link>
+        );
+
     return (
-      <Link
-        href={href}
-        className={cn(ButtonVariants({ variant }), ButtonColor, className)}
-      >
-        {children}
-      </Link>
+        <button
+            ref={ref}
+            className={cn(ButtonVariants({ variant }), ButtonColor, className)}
+            {...otherProps}
+        >
+            {children}
+        </button>
     );
-
-  return (
-    <button
-      ref={ref}
-      className={cn(ButtonVariants({ variant }), ButtonColor, className)}
-    >
-      {children}
-    </button>
-  );
 });
 
 Button.displayName = "Button";

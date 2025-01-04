@@ -6,8 +6,8 @@ import ThemeReducer from "@/redux/slices/theme.slice";
 const rootReducer = combineReducers({ ThemeReducer });
 
 export const Store = configureStore({
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
-  reducer: rootReducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+    reducer: rootReducer,
 });
 
 export type RootState = ReturnType<typeof Store.getState>;

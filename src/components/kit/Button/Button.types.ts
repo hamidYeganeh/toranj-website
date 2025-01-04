@@ -7,21 +7,21 @@ import { Url } from "next/dist/shared/lib/router/router";
 
 export interface IButtonVariants extends VariantProps<typeof ButtonVariants> {}
 export interface IHTMLButton
-  extends Omit<ComponentPropsWithoutRef<"button">, "color"> {}
+    extends Omit<ComponentPropsWithoutRef<"button">, "color"> {}
 export type IButtonColor =
-  | "primary"
-  | "secondary"
-  | "tertiary"
-  | "success"
-  | "error"
-  | "warning"
-  | "info";
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "success"
+    | "error"
+    | "warning"
+    | "info";
 
 export interface IButtonTypes extends IHTMLButton, IButtonVariants {
-  color?: IButtonColor;
-  href?: Url;
+    color?: IButtonColor;
+    href?: Url;
 }
 export interface IIconButtonTypes extends IHTMLButton, IButtonVariants {
-  color?: IButtonColor;
-  href?: Url;
+    color?: IButtonColor;
+    href?: Url;
 }

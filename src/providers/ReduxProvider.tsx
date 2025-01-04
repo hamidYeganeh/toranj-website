@@ -7,6 +7,6 @@ import { Provider } from "react-redux";
 interface IReduxProvider extends PropsWithChildren {}
 
 export const ReduxProvider: FC<IReduxProvider> = (props) => {
-  const { children } = props;
-  return <Provider store={Store}>{children}</Provider>;
+    const { children } = props;
+    return <Provider store={Store}>{children}</Provider>;
 };

@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
 
 export default function PagesLayout(
-  props: Readonly<{
-    children: ReactNode;
-  }>
+    props: Readonly<{
+        children: ReactNode;
+    }>,
 ) {
-  const { children } = props;
-  return <MainLayout>{children}</MainLayout>;
+    const { children } = props;
+    return <MainLayout>{children}</MainLayout>;
 }

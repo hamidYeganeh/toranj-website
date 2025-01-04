@@ -1,10 +1,10 @@
 :root {
-  /* BORDER RADIUS */
-  --radius: 4px;
-  --radius-sm: 2px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-  --radius-2xl: 12px;
-  --radius-3xl: 24px;
+    /* BORDER RADIUS */
+    --radius: 4px;
+    --radius-sm: 2px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 12px;
+    --radius-3xl: 24px;
 }

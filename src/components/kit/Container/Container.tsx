@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 import { ContainerVariants } from "./Container.variants";
 
 const Container: FC<IContanier> = (props) => {
-  const { children, className, maxWidth } = props;
+    const { children, className, maxWidth } = props;
 
-  return (
-    <div className={cn(ContainerVariants({ maxWidth }), className)}>
-      {children}
-    </div>
-  );
+    return (
+        <div className={cn(ContainerVariants({ maxWidth }), className)}>
+            {children}
+        </div>
+    );
 };
 export default Container;

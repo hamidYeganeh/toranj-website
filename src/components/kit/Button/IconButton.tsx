@@ -7,20 +7,24 @@ import { IIconButtonTypes } from "./Button.types";
 import { ButtonColors, IconButtonVariants } from "./Button.variants";
 
 const IconButton = forwardRef<HTMLButtonElement, IIconButtonTypes>(
-  (props, ref) => {
-    const { variant, className, children, color } = props;
+    (props, ref) => {
+        const { variant, className, children, color } = props;
 
-    const ButtonColor =
-      ButtonColors[color || "primary"][variant ?? "contained"];
-    return (
-      <button
-        ref={ref}
-        className={cn(IconButtonVariants({ variant }), ButtonColor, className)}
-      >
-        {children}
-      </button>
-    );
-  }
+        const ButtonColor =
+            ButtonColors[color || "primary"][variant ?? "contained"];
+        return (
+            <button
+                ref={ref}
+                className={cn(
+                    IconButtonVariants({ variant }),
+                    ButtonColor,
+                    className,
+                )}
+            >
+                {children}
+            </button>
+        );
+    },
 );
 
 IconButton.displayName = "IconButton";

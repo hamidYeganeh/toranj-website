@@ -1,9 +1,31 @@
+"use client";
+
+import { Button } from "@/components/kit";
+import { useTheme } from "next-themes";
+
 export default function ShopPage() {
-  return (
-    <section className="flex-1 px-4 bg-secondary-50 h-[200vh]">
-      <div className="w-full p-4 h-full bg-secondary-500 rounded">
-        <h1>SHOP</h1>
-      </div>
-    </section>
-  );
+    const { setTheme, theme } = useTheme();
+
+    function handleToggleThemeMode() {
+        if (theme === "dark") {
+            setTheme("light");
+        } else {
+            setTheme("dark");
+        }
+    }
+
+    return (
+        <section className="h-[200vh] flex-1 bg-bg-paper px-4">
+            <div className="h-full w-full rounded bg-secondary-500 p-4">
+                <Button
+                    onClick={() => {
+                        console.log("HERE");
+                        handleToggleThemeMode();
+                    }}
+                >
+                    CHANGE THEME MODE
+                </Button>
+            </div>
+        </section>
+    );
 }
