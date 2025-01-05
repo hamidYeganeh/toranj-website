@@ -1,18 +1,31 @@
+import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
 export const InputVariants = cva(
-    "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+    cn(
+        "block w-full rounded transition-colors file:border-0 file:bg-transparent bg-transparent file:text-foreground focus:ring-primary-500 duration-200 text-primary-500 font-semibold focus-visible:ring-[2px] placeholder:text-muted-foreground outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "relative",
+    ),
     {
         variants: {
             variant: {
-                outlined: "",
+                outlined: "border border-input",
             },
             size: {
-                sm: "",
-                md: "",
-                lg: "",
+                sm: "px-2 py-1 h-8 text-sm",
+                md: "px-4 py-1 h-10 text-md",
+                lg: "px-6 py-3 h-12 text-xl",
             },
         },
-        defaultVariants: { variant: "outlined", size: "md" },
+        defaultVariants: { variant: "outlined", size: "sm" },
     },
 );
+
+export const InputIcons = cva("absolute inset-y-0 flex items-center", {
+    variants: {
+        position: {
+            start: "ps-2.5 start-0",
+            end: "pe-2.5 end-0",
+        },
+    },
+});
