@@ -19,6 +19,9 @@ export default {
                 lg: "var(--max-width-lg)",
                 xl: "var(--max-width-xl)",
             },
+            fontFamily: {
+                roboto: "var(--font-roboto)",
+            },
             colors: {
                 primary: {
                     "50": "var(--primary-50)",
@@ -115,6 +118,7 @@ export default {
                     DEFAULT: "var(--background)",
                     paper: "var(--background-paper)",
                 },
+                divider: "var(--divider)",
             },
             borderRadius: {
                 DEFAULT: "var(--radius)",

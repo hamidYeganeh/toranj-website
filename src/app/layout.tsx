@@ -6,20 +6,17 @@ import "@/theme/palette.css";
 import "@/theme/shape.css";
 import "@/theme/breakpoints.css";
 // libs
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
+import { getLanguageDirection } from "@/i18n/request";
 import { getLocale, getMessages } from "next-intl/server";
 // providers
 import { I18nProvider } from "@/providers/I18nProvider";
 import { ReduxProvider } from "@/providers/ReduxProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const RobotoFont = Roboto({
+    variable: "--font-roboto",
+    weight: ["100", "300", "400", "500", "700", "900"],
     subsets: ["latin"],
 });
 
@@ -35,11 +32,10 @@ export default async function RootLayout({
 }>) {
     const locale = await getLocale();
     const messages = await getMessages();
+    const dir = getLanguageDirection(locale);
     return (
-        <html lang={locale} dir={"rtl"} suppressHydrationWarning>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
+        <html lang={locale} dir={dir} suppressHydrationWarning>
+            <body className={`${RobotoFont.className} antialiased`}>
                 <ReduxProvider>
                     <ThemeProvider>
                         <I18nProvider messages={messages}>

@@ -1,5 +1,5 @@
 // components
-import { Container } from "@/components/kit";
+import { Container, Divider } from "@/components/kit";
 import { MainLayoutHeaderLogo } from "./MainLayoutHeaderLogo";
 import { MainLayoutHeaderSearch } from "./MainLayoutHeaderSearch";
 import { MainLayoutHeaderAccount } from "./MainLayoutHeaderAccount";
@@ -15,7 +15,7 @@ export const MainLayoutHeader = () => {
                 <div className="flex-1" />
 
                 <MainLayoutHeaderAccount />
-                <div className="divide-y-2 mx-4" />
+                <Divider orientation={"vertical"} />
                 <MainLayoutHeaderBasket />
             </div>
         </Container>

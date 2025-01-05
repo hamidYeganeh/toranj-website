@@ -18,6 +18,8 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
         fullWidth,
         size,
         shadow = false,
+        startIcon,
+        endIcon,
         ...otherProps
     } = props;
 
@@ -48,7 +50,9 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
                     },
                 )}
             >
+                {startIcon && startIcon}
                 {children}
+                {endIcon && endIcon}
             </Link>
         );
 
@@ -65,7 +69,9 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
             )}
             {...otherProps}
         >
+            {startIcon && startIcon}
             {children}
+            {endIcon && endIcon}
         </button>
     );
 });

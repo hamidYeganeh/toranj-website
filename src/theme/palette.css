@@ -46,18 +46,18 @@
     --warning-lighter: #f5ae74;
     --warning-contrast-text: #f2f2f2;
 
-    --info-darker: #0C3555;
+    --info-darker: #0c3555;
     --info-dark: #13598f;
     --info-main: #2196f3;
     --info-light: #85c5f8;
-    --info-lighter: #BCE0FB;
+    --info-lighter: #bce0fb;
     --info-contrast-text: #f2f2f2;
 
-    --error-darker: #4A1010;
+    --error-darker: #4a1010;
     --error-dark: #7c1c1c;
     --error-main: #d32f2f;
     --error-light: #e78d8d;
-    --error-lighter: #F2C1C1;
+    --error-lighter: #f2c1c1;
     --error-contrast-text: #f2f2f2;
 
     --success-darker: #102c12;
@@ -88,7 +88,7 @@
 
     --text-primary: #2d2d2d;
     --text-secondary: #f2f2f2;
-    --text-disabled: #b1b1b1;
+    --text-disabled: #5d5d5d;
     --text-light: #ffffff;
     --text-dark: #000000;
 
@@ -146,18 +146,18 @@
     --warning-lighter: #f5ae74;
     --warning-contrast-text: #000000;
 
-    --info-darker: #0C3555;
+    --info-darker: #0c3555;
     --info-dark: #13598f;
     --info-main: #2196f3;
     --info-light: #85c5f8;
-    --info-lighter: #BCE0FB;
+    --info-lighter: #bce0fb;
     --info-contrast-text: #000000;
 
-    --error-darker: #4A1010;
+    --error-darker: #4a1010;
     --error-dark: #7c1c1c;
     --error-main: #d32f2f;
     --error-light: #e78d8d;
-    --error-lighter: #F2C1C1;
+    --error-lighter: #f2c1c1;
     --error-contrast-text: #000000;
 
     --success-darker: #102c12;

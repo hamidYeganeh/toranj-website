@@ -6,7 +6,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-    /* config options here */
+    images: { remotePatterns: [{ pathname: "**", hostname: "**" }] },
 };
 
 export default withNextIntl(nextConfig);
