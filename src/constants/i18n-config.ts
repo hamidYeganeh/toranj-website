@@ -20,4 +20,4 @@ export const Languages: ILanguage[] = [
         dir: "ltr",
     },
 ];
-export const DEFAULT_LANGUAGE: ILocales = ILocales.en;
+export const DEFAULT_LANGUAGE: ILocales = ILocales.fa;

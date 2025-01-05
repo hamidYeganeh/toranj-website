@@ -24,6 +24,7 @@ export interface IButtonTypes extends IHTMLButton, IButtonVariants {
     shadow?: boolean;
     startIcon?: ReactNode;
     endIcon?: ReactNode;
+    loading?: boolean;
 }
 export interface IIconButtonTypes extends IHTMLButton, IButtonVariants {
     color?: IButtonColor;

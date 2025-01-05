@@ -7,6 +7,7 @@ import { IButtonTypes } from "./Button.types";
 import { ButtonColors, ButtonVariants } from "./Button.variants";
 // components
 import Link from "next/link";
+import { LoaderCircle } from "lucide-react";
 
 const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
     const {
@@ -20,6 +21,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
         shadow = false,
         startIcon,
         endIcon,
+        loading,
         ...otherProps
     } = props;
 
@@ -65,13 +67,29 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
                 className,
                 {
                     "w-full": fullWidth,
+                    "pointer-events-none": loading,
                 },
             )}
             {...otherProps}
         >
-            {startIcon && startIcon}
-            {children}
-            {endIcon && endIcon}
+            {loading && (
+                <span className="absolute inset-0 m-auto flex w-full items-center justify-center">
+                    <LoaderCircle className="size-5 animate-spin" />
+                </span>
+            )}
+            <span
+                id="button-content"
+                className={cn(
+                    "flex w-full flex-row items-center justify-center gap-2",
+                    {
+                        invisible: loading,
+                    },
+                )}
+            >
+                {startIcon && startIcon}
+                {children}
+                {endIcon && endIcon}
+            </span>
         </button>
     );
 });

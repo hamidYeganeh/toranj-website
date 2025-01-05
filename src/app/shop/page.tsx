@@ -16,7 +16,7 @@ export default function ShopPage() {
     }
 
     return (
-        <section className="bg-bg-paper h-[200vh] flex-1 px-4">
+        <section className="h-[200vh] flex-1 bg-bg-paper px-4">
             <div className="h-full w-full rounded p-4">
                 <IconButton
                     color="secondary"
