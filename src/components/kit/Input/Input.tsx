@@ -1,11 +1,17 @@
+"use client";
+
 // libs
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 // types
 import type { IInput } from "./Input.types";
 // variants
-import { InputIcons, InputVariants } from "./Input.variants";
-import { Loader } from "lucide-react";
+import {
+    InputIconsVariants,
+    InputHelperTextVariants,
+    InputVariants,
+    InputLabelVariants,
+} from "./Input.variants";
 // components
 import { Label } from "../Label";
 
@@ -20,16 +26,28 @@ const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
         endAdornment,
         startAdornmentClassName,
         endAdornmentClassName,
+        helperText = " ",
+        error,
         ...otherProps
     } = props;
+
     return (
-        <div className="flex w-full flex-col gap-2">
-            {label && <Label htmlFor="input">{label}</Label>}
+        <div className="peer relative flex w-full flex-col gap-2">
+            {!!label && (
+                <Label
+                    htmlFor="input"
+                    className={cn(InputLabelVariants({}), {
+                        "text-error-main": error,
+                    })}
+                >
+                    {label}
+                </Label>
+            )}
             <div className="relative flex flex-col">
                 {startAdornment && (
                     <div
                         className={cn(
-                            InputIcons({ position: "start" }),
+                            InputIconsVariants({ position: "start" }),
                             startAdornmentClassName,
                         )}
                     >
@@ -38,18 +56,20 @@ const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
                 )}
                 <input
                     id="input"
+                    ref={ref}
                     type={type}
                     className={cn(InputVariants({ variant, size }), className, {
                         "ps-10": !!startAdornment,
                         "pe-10": !!endAdornment,
+                        "border-[1px] border-error-main focus:ring-error-main focus-visible:ring-[1px]":
+                            error,
                     })}
-                    ref={ref}
                     {...otherProps}
                 />
                 {endAdornment && (
                     <div
                         className={cn(
-                            InputIcons({ position: "end" }),
+                            InputIconsVariants({ position: "end" }),
                             endAdornmentClassName,
                         )}
                     >
@@ -57,6 +77,15 @@ const Input = forwardRef<HTMLInputElement, IInput>((props, ref) => {
                     </div>
                 )}
             </div>
+            <p
+                className={cn(
+                    InputHelperTextVariants({
+                        variant: error ? "error" : "default",
+                    }),
+                )}
+            >
+                {helperText}
+            </p>
         </div>
     );
 });

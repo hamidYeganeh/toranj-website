@@ -12,4 +12,6 @@ export interface IInput extends IHtmlInput, IInputVariants {
     startAdornmentClassName?: string;
     endAdornment?: ReactNode;
     endAdornmentClassName?: string;
+    helperText?: string;
+    error?: boolean | string;
 }

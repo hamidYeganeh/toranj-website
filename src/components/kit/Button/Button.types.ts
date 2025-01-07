@@ -2,8 +2,9 @@
 import { VariantProps } from "class-variance-authority";
 // types
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { Url } from "next/dist/shared/lib/router/router";
+// variants
 import { ButtonVariants } from "./Button.variants";
-import { Url } from "next/dist/shared/lib/router/router";
 
 export interface IButtonVariants extends VariantProps<typeof ButtonVariants> {}
 export interface IHTMLButton
@@ -17,7 +18,7 @@ export type IButtonColor =
     | "warning"
     | "info";
 
-export interface IButtonTypes extends IHTMLButton, IButtonVariants {
+export interface IButton extends IHTMLButton, IButtonVariants {
     color?: IButtonColor;
     href?: Url;
     fullWidth?: boolean;
@@ -26,7 +27,7 @@ export interface IButtonTypes extends IHTMLButton, IButtonVariants {
     endIcon?: ReactNode;
     loading?: boolean;
 }
-export interface IIconButtonTypes extends IHTMLButton, IButtonVariants {
+export interface IIconButton extends IHTMLButton, IButtonVariants {
     color?: IButtonColor;
     href?: Url;
     shadow?: boolean;

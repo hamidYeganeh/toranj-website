@@ -2,14 +2,14 @@
 import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
 // types
-import { IButtonTypes } from "./Button.types";
+import { IButton } from "./Button.types";
 // variants
 import { ButtonColors, ButtonVariants } from "./Button.variants";
 // components
 import Link from "next/link";
 import { LoaderCircle } from "lucide-react";
 
-const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
+const Button = forwardRef<HTMLButtonElement, IButton>((props, ref) => {
     const {
         variant = "contained",
         className,
@@ -32,8 +32,8 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
     const ButtonShadow =
         !!shadow && !!variant
             ? isBrandColor
-                ? `hover:shadow-[0px_8px_8px_0px_var(--${color || "primary"}-100)]`
-                : `hover:shadow-[0px_8px_8px_0px_var(--${color || "success"}-lighter)]`
+                ? `hover:shadow-md hover:shadow-[0px_8px_8px_0px_var(--${color || "primary"}-100)]`
+                : `hover:shadow-md hover:shadow-[0px_8px_8px_0px_var(--${color || "success"}-lighter)]`
             : "";
     const ButtonColor =
         ButtonColors[color || "primary"][variant ?? "contained"];
@@ -64,10 +64,12 @@ const Button = forwardRef<HTMLButtonElement, IButtonTypes>((props, ref) => {
             className={cn(
                 ButtonVariants({ variant, size }),
                 ButtonColor,
+                ButtonShadow,
                 className,
                 {
                     "w-full": fullWidth,
                     "pointer-events-none": loading,
+                    "shadow-[0px_4px_24px_0px]": shadow,
                 },
             )}
             {...otherProps}

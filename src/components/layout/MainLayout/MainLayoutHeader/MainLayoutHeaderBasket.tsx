@@ -5,11 +5,11 @@ import { FaBasketShopping } from "react-icons/fa6";
 
 export const MainLayoutHeaderBasket = () => {
     return (
-        <IconButton variant={"light"} color="success">
+        <IconButton variant={"light"} color="primary">
             <Badge
                 position={"bottom-right"}
                 badgeContent={8}
-                variant={"success"}
+                variant={"primary"}
             >
                 <FaBasketShopping />
             </Badge>
