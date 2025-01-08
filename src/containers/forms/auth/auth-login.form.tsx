@@ -2,9 +2,13 @@
 
 // libs
 import { Form, Formik } from "formik";
+import { useAppDispatch } from "@/hooks/useRedux";
+import { useRouter } from "next/navigation";
 // components
 import { FormikButton, FormikInput } from "@/components/common/Formik";
-import { Checkbox, Container } from "@/components/kit";
+import { Container } from "@/components/kit";
+// configs
+import { RouterPaths } from "@/constants/router-config";
 // validations
 import {
     AuthLoginValidation,
@@ -12,20 +16,25 @@ import {
 } from "@/containers/validations";
 // services
 import { useLoginMutation } from "@/redux/services/auth.service";
+// reducers
+import { authenticate } from "@/redux/slices/auth.slice";
 
 const initialValues = {
-    username: "",
-    password: "",
+    username: "emilys",
+    password: "emilyspass",
 };
 
 export const AuthLoginForm = () => {
+    const dispatch = useAppDispatch();
+    const { push } = useRouter();
     const [login, { isLoading: isLoginLoading }] = useLoginMutation();
 
     async function handleSubmit(values: typeof initialValues) {
         try {
             const body = prepareDataForAuthLogin(values);
             const response = await login(body).unwrap();
-            console.log(response);
+            dispatch(authenticate(response));
+            push(RouterPaths.dashboard.root);
         } catch (error) {
             console.log(error);
         }
@@ -43,7 +52,11 @@ export const AuthLoginForm = () => {
                     className="flex h-dvh flex-col items-center justify-center gap-6"
                 >
                     <FormikInput name="username" label="Username" />
-                    <FormikInput name="password" label="Password" />
+                    <FormikInput
+                        name="password"
+                        label="Password"
+                        type="password"
+                    />
                     <FormikButton loading={isLoginLoading}>
                         {"Submit"}
                     </FormikButton>

@@ -9,3 +9,6 @@ export const useAppSelector = useSelector.withTypes<RootState>();
 export const useThemeSlice = () => {
     return useAppSelector((state) => state.ThemeReducer);
 };
+export const useAuthSlice = () => {
+    return useAppSelector((state) => state.AuthReducer);
+};

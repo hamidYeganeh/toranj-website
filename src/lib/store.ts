@@ -2,11 +2,13 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 // slices
 import ThemeReducer from "@/redux/slices/theme.slice";
+import AuthReducer from "@/redux/slices/auth.slice";
 // services
 import { AuthService } from "@/redux/services/auth.service";
 
 const rootReducer = combineReducers({
     ThemeReducer,
+    AuthReducer,
     [AuthService.reducerPath]: AuthService.reducer,
 });
 

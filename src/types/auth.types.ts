@@ -13,3 +13,14 @@ export interface IUser {
     gender: string;
     image: string;
 }
+
+export interface ILoginResponse extends IUser {
+    accessToken: string;
+    refreshToken: string;
+}
+
+export interface IAuth {
+    isAuthenticated: boolean;
+    isInitialized: boolean;
+    user: IUser | null;
+}

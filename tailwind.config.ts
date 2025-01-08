@@ -4,14 +4,31 @@ export default {
     darkMode: ["class"],
     content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
     theme: {
-        screens: {
-            xs: "var(--screen-xs)",
-            sm: "var(--screen-sm)",
-            md: "var(--screen-md)",
-            lg: "var(--screen-lg)",
-            xl: "var(--screen-xl)",
-        },
         extend: {
+            container: {
+                center: true,
+                padding: {
+                    xs: "8px",
+                    sm: "8px",
+                    md: "8px",
+                    lg: "8px",
+                    xl: "8px",
+                },
+                screens: {
+                    xs: "var(--screen-xs)",
+                    sm: "var(--screen-sm)",
+                    md: "var(--screen-md)",
+                    lg: "var(--screen-lg)",
+                    xl: "var(--screen-xl)",
+                },
+            },
+            screens: {
+                xs: "var(--screen-xs)",
+                sm: "var(--screen-sm)",
+                md: "var(--screen-md)",
+                lg: "var(--screen-lg)",
+                xl: "var(--screen-xl)",
+            },
             maxWidth: {
                 xs: "var(--max-width-xs)",
                 sm: "var(--max-width-sm)",
