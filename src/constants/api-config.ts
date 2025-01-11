@@ -10,5 +10,6 @@ export enum API_METHODS {
 export const Endpoints = {
     auth: {
         login: "/auth/login",
+        currentUser: '/auth/me'
     },
 };

@@ -1,7 +1,9 @@
+"use client";
 import { IconButton } from "@/components/kit";
 import { Pencil } from "lucide-react";
 
 export default function DashboardPage() {
+
     return (
         <div className="m-auto flex w-full max-w-sm flex-col items-center justify-center gap-2">
             <IconButton

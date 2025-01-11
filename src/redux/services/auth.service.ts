@@ -17,7 +17,13 @@ export const AuthService = createApi({
                 body,
             }),
         }),
+        currentUser: build.query({
+            query: () => ({
+                url: Endpoints.auth.currentUser,
+                method: API_METHODS.GET,
+            }),
+        }),
     }),
 });
 
-export const { useLoginMutation } = AuthService;
+export const { useLoginMutation, useCurrentUserQuery } = AuthService;
