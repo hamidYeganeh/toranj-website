@@ -5,7 +5,6 @@ import type { IMainLayout } from "./MainLayout.types";
 import { MainLayoutHeader, MainLayoutHeaderBanner } from "../MainLayoutHeader";
 import { MainLayoutNavbarHorizontal } from "../MainLayoutNavbar";
 import { MainFooter } from "../MainFooter";
-import { MainLayoutAside } from "../MainLayoutAside";
 import { Container } from "@/components/kit";
 
 export const MainLayout: FC<IMainLayout> = (props) => {
@@ -17,9 +16,8 @@ export const MainLayout: FC<IMainLayout> = (props) => {
                 <MainLayoutHeader />
                 <MainLayoutNavbarHorizontal />
             </header>
-            <main>
-                <Container className="relative flex h-full w-full flex-row items-start bg-white">
-                    <MainLayoutAside />
+            <main className="h-full rounded py-4">
+                <Container className="relative flex h-full w-full flex-row items-start">
                     <section className="min-h-dvh w-full">{children}</section>
                 </Container>
             </main>

@@ -1,17 +1,17 @@
 :root {
     /* BRAND COLORS */
 
-    --primary-50: #f5f6f8;
-    --primary-100: #c4cad7;
-    --primary-200: #929db6;
-    --primary-300: #617195;
-    --primary-400: #364974;
-    --primary-500: #2f4065;
-    --primary-600: #283757;
-    --primary-700: #222d48;
-    --primary-800: #1b2439;
-    --primary-900: #141b2b;
-    --primary-950: #0d121c;
+    --primary-50: #f7f6fb;
+    --primary-100: #d0cae7;
+    --primary-200: #a89ed2;
+    --primary-300: #8171be;
+    --primary-400: #5c4aa5;
+    --primary-500: #514190;
+    --primary-600: #45377c;
+    --primary-700: #392e67;
+    --primary-800: #2e2552;
+    --primary-900: #221b3d;
+    --primary-950: #161228;
 
     --secondary-50: #f5fafd;
     --secondary-100: #c3dff1;

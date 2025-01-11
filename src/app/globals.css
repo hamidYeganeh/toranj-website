@@ -6,6 +6,10 @@
     * {
         font-family: var(--font-roboto);
     }
+
+    body {
+        @apply bg-primary-50;
+    }
 }
 
 :root {

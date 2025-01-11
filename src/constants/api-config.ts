@@ -1,4 +1,11 @@
+// libs
+import axios from "axios";
+
 export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+export const Api = axios.create({
+    baseURL: BASE_URL,
+});
 
 export enum API_METHODS {
     GET = "GET",
@@ -10,6 +17,11 @@ export enum API_METHODS {
 export const Endpoints = {
     auth: {
         login: "/auth/login",
-        currentUser: '/auth/me'
+        currentUser: "/auth/me",
+    },
+    products: {
+        list: "/products",
+        categories: "/products/category-list",
+        byCategories: "/products/category",
     },
 };

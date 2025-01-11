@@ -2,11 +2,11 @@
 
 // libs
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 // configs
 import { persistor, Store } from "@/lib/store";
 // types
 import type { FC, PropsWithChildren } from "react";
-import { PersistGate } from "redux-persist/integration/react";
 
 interface IReduxProvider extends PropsWithChildren {}
 

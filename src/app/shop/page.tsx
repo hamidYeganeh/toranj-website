@@ -1,35 +1,40 @@
-"use client";
+// sections
+import { ProductsCategories, ProductsList } from "@/containers/sections";
+// services
+import {
+    getProducts,
+    getProductsByCategories,
+    getProductsCategories,
+} from "@/services/products.service";
+// types
+import type { IProduct } from "@/types/products.types";
 
-import { Badge, Button, IconButton } from "@/components/kit";
-import { BellRing } from "lucide-react";
-import { useTheme } from "next-themes";
+export default async function ShopPage(props: {
+    params: Promise<{ category: IProduct["category"] }>;
+    searchParams: Promise<{ category: IProduct["category"] }>;
+}) {
+    const { category } = await props.searchParams;
 
-export default function ShopPage() {
-    const { setTheme, theme } = useTheme();
+    const products = await getProducts();
+    const productsCategories = await getProductsCategories();
+    const productsByCategory = await getProductsByCategories({
+        category,
+    });
 
-    function handleToggleThemeMode() {
-        if (theme === "dark") {
-            setTheme("light");
+    function getData() {
+        if (!!category) {
+            return productsByCategory;
         } else {
-            setTheme("dark");
+            return products;
         }
     }
 
+    const data = getData();
+
     return (
-        <section className="h-[200vh] flex-1 bg-bg-paper px-4">
-            <div className="h-full w-full rounded p-4">
-                <IconButton
-                    color="secondary"
-                    variant={"outlined"}
-                    onClick={() => {
-                        handleToggleThemeMode();
-                    }}
-                >
-                    <Badge badgeContent={9}>
-                        <BellRing />
-                    </Badge>
-                </IconButton>
-            </div>
+        <section className="h-full flex-1 bg-bg-paper px-4">
+            <ProductsCategories categories={productsCategories} />
+            <ProductsList products={data.products} />
         </section>
     );
 }

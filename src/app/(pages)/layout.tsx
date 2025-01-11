@@ -7,5 +7,6 @@ export default function MainPagesLayout(
     }>,
 ) {
     const { children } = props;
+
     return <MainLayout>{children}</MainLayout>;
 }

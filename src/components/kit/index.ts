@@ -9,3 +9,4 @@ export { RadioGroup } from "./RadioGroup";
 export { Skeleton } from "./Skeleton";
 export { Badge } from "./Badge";
 export { Divider } from "./Divider";
+export { Icon } from "./Icon";

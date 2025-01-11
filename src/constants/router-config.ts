@@ -1,3 +1,5 @@
+import { IProduct } from "@/types/products.types";
+
 export const RouterPaths = {
     root: "/",
     auth: {
@@ -27,4 +29,12 @@ export const RouterPaths = {
             details: "/dashboard/product/details",
         },
     },
+    shop: {
+        root: "/shop",
+        detail: (id: IProduct["id"]) => `/shop/${id}`,
+    },
 };
+
+export function productDetailRoute(id: IProduct["id"]) {
+    return RouterPaths.shop.detail(id);
+}

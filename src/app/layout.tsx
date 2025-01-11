@@ -1,10 +1,3 @@
-// types
-import type { Metadata } from "next";
-// stylesheets
-import "./globals.css";
-import "@/theme/palette.css";
-import "@/theme/shape.css";
-import "@/theme/breakpoints.css";
 // libs
 import { Roboto } from "next/font/google";
 import { getLanguageDirection } from "@/i18n/request";
@@ -13,6 +6,17 @@ import { getLocale, getMessages } from "next-intl/server";
 import { I18nProvider } from "@/providers/I18nProvider";
 import { ReduxProvider } from "@/providers/ReduxProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+// types
+import type { Metadata } from "next";
+// stylesheets
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import "./globals.css";
+import "@/theme/palette.css";
+import "@/theme/shape.css";
+import "@/theme/breakpoints.css";
 
 const RobotoFont = Roboto({
     variable: "--font-roboto",
