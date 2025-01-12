@@ -11,7 +11,7 @@ export const getProducts: () => Promise<IProducts> = async () => {
     try {
         const response = await Api(Endpoints.products.list);
         return response.data;
-    } catch (error) {
+    } catch {
         return { products: [], limit: 0, skip: 0, total: 0 };
     }
 };
@@ -21,7 +21,7 @@ export const getProduct: (
     try {
         const response = await Api(`${Endpoints.products.list}/${args.id}`);
         return response.data;
-    } catch (error) {
+    } catch {
         return null;
     }
 };
@@ -29,7 +29,7 @@ export const getProductsCategories: () => Promise<string[]> = async () => {
     try {
         const response = await Api(Endpoints.products.categories);
         return response.data;
-    } catch (error) {
+    } catch {
         return [];
     }
 };
@@ -41,7 +41,7 @@ export const getProductsByCategories: (
             `${Endpoints.products.byCategories}/${args.category}`,
         );
         return response.data;
-    } catch (error) {
+    } catch {
         return { products: [], limit: 0, skip: 0, total: 0 };
     }
 };

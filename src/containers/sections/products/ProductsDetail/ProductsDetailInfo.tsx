@@ -5,8 +5,6 @@ import type { IProductDetailsInfo } from "./ProductsDetail.types";
 export const ProductsDetailInfo: FC<IProductDetailsInfo> = (props) => {
     const { product } = props;
 
-    console.log("\n\n\n\n\n\n\n\n\n\n", product);
-
     return (
         <div className="flex w-full flex-col p-8">
             <div className="flex flex-col items-start gap-4">

@@ -2,8 +2,9 @@ import { VariantProps } from "class-variance-authority";
 import { BadgeVariants } from "./Badge.variants";
 import { PropsWithChildren } from "react";
 
-export interface IBadgeVariants extends VariantProps<typeof BadgeVariants> {}
-export interface IBadge extends PropsWithChildren, IBadgeVariants {
+export interface IBadge
+    extends PropsWithChildren,
+        VariantProps<typeof BadgeVariants> {
     max?: number;
     badgeContent: number;
 }

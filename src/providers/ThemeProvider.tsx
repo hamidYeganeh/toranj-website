@@ -5,9 +5,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 // types
 import type { FC, PropsWithChildren } from "react";
 
-export interface IThemeProvider extends PropsWithChildren {}
-
-export const ThemeProvider: FC<IThemeProvider> = (props) => {
+export const ThemeProvider: FC<PropsWithChildren> = (props) => {
     const { children } = props;
 
     return (

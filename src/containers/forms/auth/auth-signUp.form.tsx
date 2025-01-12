@@ -16,7 +16,9 @@ const initialValues = {
 };
 
 export const AuthSignUpForm = () => {
-    async function handleSubmit(values: typeof initialValues) {}
+    async function handleSubmit(values: typeof initialValues) {
+        console.log(values);
+    }
 
     return (
         <Formik

@@ -1,12 +1,7 @@
 import { Container } from "@/components/kit";
 import {
-    NavigationListItem,
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
 } from "@/components/kit/NavigationMenu";
 import { getNavbarItems } from "@/constants/navbar-config";
 import { MainLayoutNavbarHorizontalItem } from "./MainLayoutNavbarHorizontalItem";

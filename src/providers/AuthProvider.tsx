@@ -1,22 +1,18 @@
 "use client";
 
-import { useAppDispatch, useAuthSlice } from "@/hooks/useRedux";
+// libs
+import { useAppDispatch } from "@/hooks/useRedux";
 import { initialize } from "@/redux/slices/auth.slice";
-import { usePathname } from "next/navigation";
-import { FC, PropsWithChildren, useEffect, useLayoutEffect } from "react";
+// types
+import { type FC, type PropsWithChildren, useEffect } from "react";
 
-interface IAuthProvider extends PropsWithChildren {}
 
-export const AuthProvider: FC<IAuthProvider> = (props) => {
+export const AuthProvider: FC<PropsWithChildren> = (props) => {
     const { children } = props;
 
     const dispatch = useAppDispatch();
-    const pathname = usePathname();
-    const { isAuthenticated, isInitialized, user } = useAuthSlice();
 
     useEffect(() => {
-        console.log("#1");
-
         dispatch(initialize());
     }, [dispatch]);
 

@@ -1,4 +1,7 @@
-export function apiHelper(url: string, queries: any) {
+export function apiHelper(
+    url: string,
+    queries: Record<string, string | number>,
+) {
     let filterParams = {};
     Object.keys(queries).forEach((key) => {
         filterParams = {

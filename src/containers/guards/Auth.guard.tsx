@@ -11,9 +11,7 @@ import type { FC, PropsWithChildren } from "react";
 // configs
 import { RouterPaths } from "@/constants/router-config";
 
-interface IAuthGuard extends PropsWithChildren {}
-
-const CheckAuth: FC<IAuthGuard> = ({ children }) => {
+const CheckAuth: FC<PropsWithChildren> = ({ children }) => {
     const pathname = usePathname();
     const { isAuthenticated } = useAuthSlice();
     const [initialized, setInitialized] = useState(false);
@@ -49,7 +47,7 @@ const CheckAuth: FC<IAuthGuard> = ({ children }) => {
     return <>{children}</>;
 };
 
-export const AuthGuard: FC<IAuthGuard> = ({ children }) => {
+export const AuthGuard: FC<PropsWithChildren> = ({ children }) => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {

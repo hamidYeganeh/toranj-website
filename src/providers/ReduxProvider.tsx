@@ -8,9 +8,7 @@ import { persistor, Store } from "@/lib/store";
 // types
 import type { FC, PropsWithChildren } from "react";
 
-interface IReduxProvider extends PropsWithChildren {}
-
-export const ReduxProvider: FC<IReduxProvider> = (props) => {
+export const ReduxProvider: FC<PropsWithChildren> = (props) => {
     const { children } = props;
     return (
         <Provider store={Store}>

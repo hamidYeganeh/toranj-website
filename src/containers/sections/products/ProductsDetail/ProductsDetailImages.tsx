@@ -4,15 +4,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode, Thumbs } from "swiper/modules";
+import { cn } from "@/lib/utils";
 // types
 import type { FC } from "react";
 import type {
     IProductImagesThumb,
     IProdutDetailImages,
 } from "./ProductsDetail.types";
-import { Swiper as ISwiper } from "swiper/types";
-import { cn } from "@/lib/utils";
+import type { Swiper as ISwiper } from "swiper/types";
 
 export const ProductsDetailImages: FC<IProdutDetailImages> = (props) => {
     const { product } = props;
