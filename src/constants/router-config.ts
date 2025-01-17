@@ -1,4 +1,4 @@
-import { IProduct } from "@/types/products.types";
+import { IProduct } from "@/types/general.types";
 
 export const RouterPaths = {
     root: "/",

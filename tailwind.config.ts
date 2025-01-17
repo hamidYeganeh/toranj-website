@@ -29,15 +29,14 @@ export default {
                 lg: "var(--screen-lg)",
                 xl: "var(--screen-xl)",
             },
-            maxWidth: {
-                xs: "var(--max-width-xs)",
-                sm: "var(--max-width-sm)",
-                md: "var(--max-width-md)",
-                lg: "var(--max-width-lg)",
-                xl: "var(--max-width-xl)",
-            },
             fontFamily: {
-                roboto: "var(--font-roboto)",
+                sequencia: "var(--sequencia-font)",
+                inter: "var(--inter-font)",
+                fira: "--Fira_CodeFont-font",
+            },
+            fontSize: {
+                extreme: "204px",
+                huge: "160px",
             },
             colors: {
                 primary: {

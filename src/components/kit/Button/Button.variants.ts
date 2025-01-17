@@ -12,7 +12,7 @@ export const ButtonVariants = cva(
                 text: "bg-transparent text-text-primary hover:bg-text-primary",
             },
             size: {
-                sm: "px-2 py-1 h-8 text-sm [&_svg]:size-4",
+                sm: "px-1 py-1 h-6 text-[10px] font-normal [&_svg]:size-4",
                 md: "px-4 py-1 h-10 text-md [&_svg]:size-5",
                 lg: "px-6 py-3 h-12 text-xl gap-2 [&_svg]:size-6",
             },
@@ -46,7 +46,7 @@ export const ButtonColors = {
         contained:
             "bg-primary-500 text-text-secondary hover:bg-primary-700 hover:shadow-primary-500",
         outlined:
-            "border border-2 border-primary-500 text-primary-500 hover:bg-primary-200 hover:shadow-primary-500",
+            "border border-primary-500 text-primary-500 hover:text-text-secondary hover:bg-primary-500 hover:shadow-primary-500",
         light: "text-primary-500 bg-primary-100 hover:bg-primary-200 hover:shadow-primary-500",
         text: "bg-transparent text-primary-500 hover:bg-primary-100 hover:shadow-primary-500",
     },

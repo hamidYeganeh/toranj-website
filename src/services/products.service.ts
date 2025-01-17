@@ -1,11 +1,7 @@
 // configs
 import { Api, Endpoints } from "@/constants/api-config";
 // types
-import type {
-    IProduct,
-    IProductQuery,
-    IProducts,
-} from "@/types/products.types";
+import type { IProduct, IProductQuery, IProducts } from "@/types/general.types";
 
 export const getProducts: () => Promise<IProducts> = async () => {
     try {

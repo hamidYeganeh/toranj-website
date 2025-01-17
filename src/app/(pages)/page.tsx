@@ -1,12 +1,24 @@
-// components
-import { Button, Container } from "@/components/kit";
+import {
+    HomePageAboutUsSection,
+    HomePageContentSection,
+    HomePageHeroSection,
+    HomePagePriceSection,
+    HomePageProductsSection,
+} from "@/containers/sections";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function HomePage() {
     return (
-        <Container maxWidth={"xl"}>
-            <Button variant={"light"} color={"secondary"}>
-                HAMID REZA
-            </Button>
-        </Container>
+        <main className="w-full bg-bg-paper">
+            {/* <HomePageHeroSection />
+            <HomePageProductsSection />
+            <HomePageAboutUsSection />
+            <HomePagePriceSection /> */}
+            <HomePageContentSection />
+        </main>
     );
 }

@@ -4,15 +4,17 @@
 
 @layer base {
     * {
-        font-family: var(--font-roboto);
+        @apply box-border font-inter;
     }
 
     body {
-        @apply bg-primary-50;
+        @apply overflow-x-hidden bg-bg-paper;
     }
 }
 
 :root {
     /* LAYOUT SIZES */
     --dashboard-header-height: calc(24 * 4px);
+
+    --container-width: 1440px;
 }
