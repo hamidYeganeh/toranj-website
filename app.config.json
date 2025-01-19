@@ -1,0 +1,11 @@
+{
+    "apps": [
+      {
+        "name": "toranj-site",
+        "script": "npm",
+        "interpreter": "none",
+        "args": "start"
+      }
+    ]
+  }
+  
