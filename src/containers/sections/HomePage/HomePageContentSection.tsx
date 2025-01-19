@@ -28,22 +28,22 @@ export const HomePageContentSection = () => {
                 "#gallery-item-2",
                 {
                     y: window.innerHeight,
-                    display: "none",
+                    // display: "none",
                 },
                 {
                     y: 0,
-                    display: "block",
+                    // display: "flex",
                 },
             )
             .fromTo(
                 "#gallery-item-3",
                 {
                     y: window.innerHeight,
-                    display: "none",
+                    // display: "none",
                 },
                 {
                     y: 0,
-                    display: "block",
+                    // display: "flex",
                 },
                 ">",
             );
@@ -75,16 +75,6 @@ export const HomePageContentSection = () => {
             markers: false,
             animation: galleryWrapper,
         });
-
-        // ScrollTrigger.create({
-        //     trigger: "#gallery-item-3",
-        //     start: "top center",
-        //     end: "+=" + window.innerHeight / 2,
-        //     markers: true,
-        //     scrub: true,
-        //     pin: true,
-        //     animation: galleryBg,
-        // });
     });
 
     return (
@@ -130,23 +120,26 @@ export const HomePageContentSection = () => {
 
                         <div
                             id="gallery-wrapper"
-                            className="flex w-full flex-row items-start gap-2"
+                            className="flex w-full flex-row items-start justify-between"
                         >
-                            <GalleryCard
-                                className="gallery-item"
-                                id={`gallery-item-1`}
-                                gallery={GALLERY[0]}
-                            />
-                            <GalleryCard
-                                className="gallery-item"
-                                id={`gallery-item-2`}
-                                gallery={GALLERY[1]}
-                            />
-                            <GalleryCard
-                                className="gallery-item"
-                                id={`gallery-item-3`}
-                                gallery={GALLERY[2]}
-                            />
+                            <div id={`gallery-item-1`}>
+                                <GalleryCard
+                                    className="gallery-item"
+                                    gallery={GALLERY[0]}
+                                />
+                            </div>
+                            <div id={`gallery-item-2`}>
+                                <GalleryCard
+                                    className="gallery-item"
+                                    gallery={GALLERY[1]}
+                                />
+                            </div>
+                            <div id={`gallery-item-3`}>
+                                <GalleryCard
+                                    className="gallery-item"
+                                    gallery={GALLERY[2]}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
