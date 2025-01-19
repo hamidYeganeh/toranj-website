@@ -1,5 +1,6 @@
 import {
     HomePageAboutUsSection,
+    HomePageAdvantagesSection,
     HomePageContentSection,
     HomePageHeroSection,
     HomePagePriceSection,
@@ -19,6 +20,7 @@ export default function HomePage() {
             <HomePageAboutUsSection />
             <HomePagePriceSection /> */}
             <HomePageContentSection />
+            <HomePageAdvantagesSection />
         </main>
     );
 }

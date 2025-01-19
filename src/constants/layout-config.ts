@@ -19,4 +19,6 @@ export const MEDIAS = {
         "https://static.tildacdn.com/tild3835-6633-4461-a431-623762343937/max1232617_A_delicat.jpg",
     contentImage3:
         "https://static.tildacdn.com/tild3266-3830-4637-b234-363366343563/max1232617_A_row_of_.jpg",
+    contentImage4:
+        "https://static.tildacdn.com/tild3236-3564-4333-a532-663163373834/max1232617_Closeup_o.jpg",
 };

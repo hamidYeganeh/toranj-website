@@ -15,157 +15,196 @@ export const HomePageContentSection = () => {
     const t = useTranslations("HomePage");
 
     useGSAP(() => {
-        const galleryBg = gsap.timeline();
+        const contentSection2Bg1 = gsap.timeline();
         const gallerySection = gsap.timeline();
-        const galleryWrapper = gsap.timeline();
-        gallerySection.fromTo(
-            "#gallery-bg",
+        const galleryItemsWrapper = gsap.timeline();
+        const galleryItemsWrapperReversed = gsap.timeline();
+
+        contentSection2Bg1.fromTo(
+            "#content-bg-1",
             { width: "50%" },
             { width: "100%" },
         );
-        galleryWrapper
+
+        galleryItemsWrapper
             .fromTo(
                 "#gallery-item-2",
                 {
                     y: window.innerHeight,
-                    // display: "none",
                 },
                 {
                     y: 0,
-                    // display: "flex",
                 },
             )
             .fromTo(
                 "#gallery-item-3",
                 {
                     y: window.innerHeight,
-                    // display: "none",
                 },
                 {
                     y: 0,
-                    // display: "flex",
+                },
+            );
+        galleryItemsWrapperReversed
+            .fromTo(
+                "#content-section-2-title",
+                {
+                    y: 0,
+                },
+                {
+                    y: -window.innerHeight,
+                },
+            )
+            .fromTo(
+                "#gallery-item-card-1",
+                {
+                    y: 0,
+                },
+                {
+                    y: -window.innerHeight,
+                },
+                "=",
+            )
+            .fromTo(
+                "#gallery-item-card-2",
+                {
+                    y: 0,
+                },
+                {
+                    y: -window.innerHeight,
+                },
+                ">",
+            )
+            .fromTo(
+                "#gallery-item-card-3",
+                {
+                    y: 0,
+                },
+                {
+                    y: -window.innerHeight,
                 },
                 ">",
             );
 
         ScrollTrigger.create({
-            trigger: "#gallery-section",
+            trigger: "#content-section-2",
             start: "top",
-            // end: "+=" + window.innerHeight * 2,
-            end: "max",
+            end: `+=${window.innerHeight}px`,
             markers: false,
             scrub: true,
-            pin: true,
-            animation: gallerySection,
+            animation: contentSection2Bg1,
         });
         ScrollTrigger.create({
-            id: "gallery-wrapper",
-            trigger: "#gallery-content-wrapper",
-            end: "max",
+            id: "section-2",
+            trigger: "#content-section-2",
+            start: "top",
+            end: "center top",
             markers: false,
-            pin: true,
             scrub: true,
-            animation: gallerySection,
+            animation: galleryItemsWrapper,
         });
         ScrollTrigger.create({
-            id: "#gallery-wrapper",
-            trigger: "#gallery-wrapper",
+            id: "section-3",
+            trigger: "#content-section-3",
             start: "top",
-            scrub: true,
+            end: "center top",
             markers: false,
-            animation: galleryWrapper,
+            scrub: true,
+            animation: galleryItemsWrapperReversed,
         });
     });
 
     return (
         <div className="relative w-full">
-            <div className="flex h-[200dvh] w-full flex-row items-start bg-white">
-                <div className="h-full w-1/2 px-8">
-                    <div className="flex h-dvh w-full items-center justify-start">
-                        <h3 className="max-w-lg text-start font-sequencia text-7xl font-bold text-text-dark">
-                            {t("contents-section.title")}
-                        </h3>
-                    </div>
-                    <div className="flex h-dvh w-full items-center justify-start">
-                        <p className="whitespace-pre-line text-xs font-normal text-text-dark">
-                            {t("contents-section.description")}
-                        </p>
-                    </div>
+            <ContentSection1 />
+            <ContentSection2 />
+        </div>
+    );
+};
+
+const ContentSection1 = () => {
+    const t = useTranslations("HomePage");
+
+    return (
+        <div className="flex h-[200dvh] w-full flex-row items-start bg-white">
+            <div className="h-full w-1/2 px-8">
+                <div className="flex h-dvh w-full items-center justify-start">
+                    <h3 className="max-w-lg text-start font-sequencia text-7xl font-bold text-text-dark">
+                        {t("contents-section.title")}
+                    </h3>
                 </div>
-                <div
-                    className="sticky top-0 h-dvh w-1/2 bg-fixed bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${MEDIAS.contentImage1})`,
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        transformOrigin: "center",
-                    }}
-                ></div>
+                <div className="flex h-dvh w-full items-center justify-start">
+                    <p className="whitespace-pre-line text-xs font-normal text-text-dark">
+                        {t("contents-section.description")}
+                    </p>
+                </div>
             </div>
             <div
-                id="gallery-section"
-                className="flex w-full flex-row-reverse bg-white"
-            >
-                <div
-                    id="gallery-content"
-                    className="absolute bottom-0 left-0 top-0 z-40 h-dvh w-full bg-transparent px-8"
-                >
-                    <div
-                        id="gallery-content-wrapper"
-                        className="flex h-full w-full flex-col items-start justify-center"
-                    >
-                        <h2 className="max-w-md text-start font-sequencia text-7xl mix-blend-difference">
+                className="sticky top-0 h-dvh w-1/2 bg-fixed bg-no-repeat"
+                style={{
+                    backgroundImage: `url(${MEDIAS.contentImage1})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    transformOrigin: "center",
+                }}
+            ></div>
+        </div>
+    );
+};
+
+export const ContentSection2 = () => {
+    const t = useTranslations("HomePage");
+
+    return (
+        <div className="relative h-fit w-full">
+            <div className="absolute left-0 top-0 z-[99] h-full w-full">
+                <div className="sticky top-0 h-dvh w-full">
+                    <Container className="flex h-full w-full flex-col justify-center gap-8">
+                        <h2
+                            id="content-section-2-title"
+                            className="max-w-md text-start font-sequencia text-7xl"
+                        >
                             {t("contents-section.gallery-title")}
                         </h2>
 
-                        <div
-                            id="gallery-wrapper"
-                            className="flex w-full flex-row items-start justify-between"
-                        >
-                            <div id={`gallery-item-1`}>
-                                <GalleryCard
-                                    className="gallery-item"
-                                    gallery={GALLERY[0]}
-                                />
-                            </div>
-                            <div id={`gallery-item-2`}>
-                                <GalleryCard
-                                    className="gallery-item"
-                                    gallery={GALLERY[1]}
-                                />
-                            </div>
-                            <div id={`gallery-item-3`}>
-                                <GalleryCard
-                                    className="gallery-item"
-                                    gallery={GALLERY[2]}
-                                />
-                            </div>
+                        <div className="flex w-full flex-row items-center justify-between">
+                            {GALLERY.map((galleryItem, index) => (
+                                <div
+                                    key={`gallery-item-${galleryItem._id}`}
+                                    id={`gallery-item-${galleryItem._id}`}
+                                >
+                                    <GalleryCard
+                                        id={`gallery-item-card-${galleryItem._id}`}
+                                        gallery={galleryItem}
+                                    />
+                                </div>
+                            ))}
                         </div>
-                    </div>
+                    </Container>
                 </div>
-                <div
-                    id="gallery-bg"
-                    className="sticky top-0 z-30 flex h-dvh w-1/2"
-                >
+            </div>
+            <div id="content-section-2" className="relative w-full">
+                <div className="relative flex h-[250dvh] w-full flex-row-reverse">
                     <div
-                        id="gallery-bg-1"
-                        className="gallery-bg h-dvh w-full bg-cover bg-fixed bg-no-repeat"
+                        id="content-bg-1"
+                        className="h-full w-1/2 bg-blue-500 bg-fixed"
                         style={{
                             backgroundImage: `url(${MEDIAS.contentImage2})`,
                             backgroundPositionX: "100%",
                             backgroundPositionY: "0",
                         }}
                     ></div>
-                    {/* <div
-                        id="gallery-bg-2"
-                        className="gallery-bg block h-dvh w-full bg-cover bg-fixed bg-no-repeat"
-                        style={{
-                            backgroundImage: `url(${MEDIAS.contentImage3})`,
-                            backgroundPositionX: "100%",
-                            backgroundPositionY: "0",
-                        }}
-                    ></div> */}
                 </div>
+            </div>
+            <div id="content-section-3" className="h-[150dvh] w-full">
+                <div
+                    className="h-full w-full bg-blue-500 bg-fixed"
+                    style={{
+                        backgroundImage: `url(${MEDIAS.contentImage3})`,
+                        backgroundPositionX: "100%",
+                        backgroundPositionY: "0",
+                    }}
+                ></div>
             </div>
         </div>
     );
