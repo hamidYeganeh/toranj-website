@@ -1,6 +1,6 @@
 {
     "General": {
-        "header": { "brand": "Fresco / <brand>Flavori</brand>" },
+        "header": { "brand": "Fresh / <brand>Toranj</brand>" },
         "navbar": {
             "about-us": "About us",
             "menu": "Menu",
@@ -12,7 +12,7 @@
     },
     "HomePage": {
         "hero-section": {
-            "title": "Flavori Restaurant"
+            "title": "Toranj Restaurant"
         },
         "products-section": {
             "book": "Book ▶"
@@ -32,6 +32,22 @@
             "title": "Since 1920 In the heart of Venice",
             "description": "In the very heart of Venice, on the banks of one of the canals, a cozy Italian tavern was opened. Its founder was a passionate connoisseur of Italian cuisine and culture, who dreamed of creating a place where guests could enjoy excellent dishes, a rich wine selection and a unique atmosphere\n\nThe restaurant was located in a building with historical architecture that combined elements of the Venetian Gothic style and the splendor of the canal views. Every day the tavern welcomed guests with its warm and cozy interior, reminiscent of the historical heritage of Venice and its culture\n\nOver time, the restaurant has become an integral part of the gastronomic life of Venice, attracting both locals and tourists from all over the world. The menu of the establishment was enriched with new dishes, but did not lose its exquisite Italian taste, and the service remained the most attentive and caring\n\nAnd now, many years later, the restaurant continues to be famous for its delicious dishes, cozy atmosphere and stunning views of the petal bridges and floating gondolas. The Venetian tavern has become not just a place for treating bodily needs, but a real epicenter of meetings, conversations and elevation of the soul\n\nThe concept of our restaurant is to create a unique atmosphere inspired by the culture and history of Venice. The interior design of the restaurant reflects Venetian style and architecture, using traditional elements and colors\n\nThe restaurant's menu is probably composed of traditional Venetian dishes, representing the best culinary traditions of this region. The selection of products will be carried out with special attention to quality and freshness, so that guests can enjoy the authentic tastes of Venetian cuisine\n\nThe service at the restaurant will probably be high quality and attentive, making each guest feel valued and welcome during the service experience. All this combined with our restaurant's unique location in the center of Venice makes it a popular destination for tourists and locals wanting to experience the magic and flavors of this historic city",
             "gallery-title": "Breathe in the charm of Venice"
+        },
+        "contacts-section": {
+            "copyright": "Copyright {year}",
+            "privacy-policy": "Privacy policy",
+            "address": "Adress",
+            "phone": "phone",
+            "email": "E-mail",
+            "brand": "Fresh / <brand>Toranj</brand>",
+            "navbar": {
+                "about-us": "About us",
+                "menu": "Menu",
+                "contact-us": "Contact us",
+                "story": "Story",
+                "advantages": "Advantages",
+                "reserve-table": "Reserve a table"
+            }
         }
     }
 }

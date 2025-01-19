@@ -57,7 +57,7 @@ export const Header = () => {
                             size={"sm"}
                             variant={"outlined"}
                         >
-                            {t(navbarItem.title)}
+                            {t(`contacts-section.${navbarItem.title}`)}
                         </Button>
                     ))}
 

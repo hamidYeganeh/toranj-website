@@ -112,3 +112,13 @@ export const GALLERY: IGallery[] = [
         subtitle: "Musicians from all over world",
     },
 ];
+
+export const ContactUsData = [
+    {
+        label: "contacts-section.address",
+        link: "tel:",
+        value: "USA - Chicago",
+    },
+    { label: "contacts-section.phone", link: "tel:", value: "1234567" },
+    { label: "contacts-section.email", link: "tel:", value: "email@test.com" },
+];

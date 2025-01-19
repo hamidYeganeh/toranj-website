@@ -6,6 +6,7 @@ import {
     HomePagePriceSection,
     HomePageProductsSection,
 } from "@/containers/sections";
+import { HomePageContactsSection } from "@/containers/sections/HomePage/HomePageContactsSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -21,6 +22,7 @@ export default function HomePage() {
             <HomePagePriceSection /> */}
             <HomePageContentSection />
             <HomePageAdvantagesSection />
+            <HomePageContactsSection />
         </main>
     );
 }
