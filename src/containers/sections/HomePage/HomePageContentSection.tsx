@@ -140,7 +140,7 @@ const ContentSection1 = () => {
                 </div>
             </div>
             <div
-                className="sticky top-0 h-dvh w-1/2 bg-fixed bg-no-repeat"
+                className="sticky top-0 h-dvh w-1/2 bg-cover bg-fixed bg-no-repeat"
                 style={{
                     backgroundImage: `url(${MEDIAS.contentImage1})`,
                     backgroundPosition: "center",
@@ -168,7 +168,7 @@ export const ContentSection2 = () => {
                         </h2>
 
                         <div className="flex w-full flex-row items-center justify-between">
-                            {GALLERY.map((galleryItem, index) => (
+                            {GALLERY.map((galleryItem) => (
                                 <div
                                     key={`gallery-item-${galleryItem._id}`}
                                     id={`gallery-item-${galleryItem._id}`}
@@ -187,7 +187,7 @@ export const ContentSection2 = () => {
                 <div className="relative flex h-[250dvh] w-full flex-row-reverse">
                     <div
                         id="content-bg-1"
-                        className="h-full w-1/2 bg-blue-500 bg-fixed"
+                        className="h-full w-1/2 bg-cover bg-fixed bg-no-repeat"
                         style={{
                             backgroundImage: `url(${MEDIAS.contentImage2})`,
                             backgroundPositionX: "100%",
@@ -198,7 +198,7 @@ export const ContentSection2 = () => {
             </div>
             <div id="content-section-3" className="h-[150dvh] w-full">
                 <div
-                    className="h-full w-full bg-blue-500 bg-fixed"
+                    className="h-full w-full bg-cover bg-fixed bg-no-repeat"
                     style={{
                         backgroundImage: `url(${MEDIAS.contentImage3})`,
                         backgroundPositionX: "100%",
