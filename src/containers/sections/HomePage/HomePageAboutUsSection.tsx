@@ -7,16 +7,16 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useRef } from "react";
+// import { useRef } from "react";
 
 export const HomePageAboutUsSection = () => {
     const t = useTranslations("HomePage");
-    const containerRef = useRef(null);
+    // const containerRef = useRef(null);
 
     useGSAP(() => {
-        const container = gsap.timeline();
+        // const container = gsap.timeline();
         const bgTimeline = gsap.timeline();
-        const panelsContainer = gsap.timeline();
+        // const panelsContainer = gsap.timeline();
         const card = gsap.timeline();
 
         // let sections = gsap.utils.toArray(".panel");
@@ -98,7 +98,7 @@ export const HomePageAboutUsSection = () => {
         //     // animation: panel1Action,
         // });
 
-        const panels = gsap.utils.toArray(".panel");
+        // const panels = gsap.utils.toArray(".panel");
 
         // gsap.to(panels, {
         //     xPercent: -100 * (panels.length - 1),

@@ -1,6 +1,6 @@
 // libs
 import LocalFont from "next/font/local";
-import { Inter, Fira_Code } from "next/font/google";
+import { Inter } from "next/font/google";
 import { getLanguageDirection } from "@/i18n/request";
 import { getLocale, getMessages } from "next-intl/server";
 // providers

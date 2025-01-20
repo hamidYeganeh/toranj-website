@@ -31,10 +31,10 @@ export const RouterPaths = {
     },
     shop: {
         root: "/shop",
-        detail: (id: IProduct["id"]) => `/shop/${id}`,
+        detail: (id: IProduct["_id"]) => `/shop/${id}`,
     },
 };
 
-export function productDetailRoute(id: IProduct["id"]) {
+export function productDetailRoute(id: IProduct["_id"]) {
     return RouterPaths.shop.detail(id);
 }

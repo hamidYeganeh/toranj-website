@@ -6,9 +6,11 @@ import type { Url } from "next/dist/shared/lib/router/router";
 // variants
 import { ButtonVariants } from "./Button.variants";
 
-export interface IButtonVariants extends VariantProps<typeof ButtonVariants> {}
-export interface IHTMLButton
-    extends Omit<ComponentPropsWithoutRef<"button">, "color"> {}
+// export interface IButtonVariants extends VariantProps<typeof ButtonVariants> {}
+export type IButtonVariants = VariantProps<typeof ButtonVariants>
+// export interface IHTMLButton
+//     extends Omit<ComponentPropsWithoutRef<"button">, "color"> {}
+export type IHTMLButton = Omit<ComponentPropsWithoutRef<"button">, "color">
 export type IButtonColor =
     | "primary"
     | "secondary"

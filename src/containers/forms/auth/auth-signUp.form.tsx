@@ -3,7 +3,7 @@
 // libs
 import { Form, Formik } from "formik";
 // components
-import { FormikButton, FormikInput } from "@/components/common/Formik";
+// import { FormikButton, FormikInput } from "@/components/common/Formik";
 import { Container } from "@/components/kit";
 // validations
 import { AuthLoginValidation } from "@/containers/validations";
@@ -31,7 +31,7 @@ export const AuthSignUpForm = () => {
                     maxWidth={"sm"}
                     className="flex h-dvh flex-col items-center justify-center gap-6"
                 >
-                    <FormikInput name="name" label="Name" />
+                    {/* <FormikInput name="name" label="Name" />
                     <FormikInput name="address" label="Address" />
                     <FormikInput name="username" label="Username" />
                     <FormikInput
@@ -39,7 +39,7 @@ export const AuthSignUpForm = () => {
                         label="Password"
                         type="password"
                     />
-                    <FormikButton>{"Submit"}</FormikButton>
+                    <FormikButton>{"Submit"}</FormikButton> */}
                 </Container>
             </Form>
         </Formik>

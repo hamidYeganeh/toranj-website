@@ -1,5 +1,3 @@
-import { RouterPaths } from "./router-config";
-
 export interface INavbarItem {
     title: string;
     path?: string;

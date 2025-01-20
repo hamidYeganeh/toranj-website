@@ -12,11 +12,11 @@ import { useTranslations } from "next-intl";
 export const HomePageContentSection = () => {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-    const t = useTranslations("HomePage");
+    // const t = useTranslations("HomePage");
 
     useGSAP(() => {
         const contentSection2Bg1 = gsap.timeline();
-        const gallerySection = gsap.timeline();
+        // const gallerySection = gsap.timeline();
         const galleryItemsWrapper = gsap.timeline();
         const galleryItemsWrapperReversed = gsap.timeline();
 
