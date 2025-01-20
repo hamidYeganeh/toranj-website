@@ -9,6 +9,7 @@
 
     body {
         @apply overflow-x-hidden bg-bg-paper;
+        animation: name 40s linear reverse;
     }
 }
 

@@ -145,6 +145,16 @@ export default {
                 "2xl": "var(--radius-2xl)",
                 "3xl": "var(--radius-3xl)",
             },
+            animation: {
+                marquee: "marquee 40s linear infinite",
+                "marquee-reverse": "marquee 40s linear reverse",
+            },
+            keyframes: {
+                marquee: {
+                    "0%": { transform: "translateX(50%)" },
+                    "100%": { transform: "translateX(-150%)" },
+                },
+            },
         },
     },
     plugins: [require("tailwindcss-animate"), require("tailwindcss-animated")],

@@ -1,6 +1,7 @@
 import { Button } from "@/components/kit";
 import { ContactUsData } from "@/constants/dummy";
 import { getNavbarItems } from "@/constants/navbar-config";
+import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -56,7 +57,22 @@ export const HomePageContactsSection = () => {
                         ))}
                     </div>
                 </div>
-                <div className="w-full"></div>
+                <div className="flex h-[530px] w-full flex-col justify-between overflow-hidden border-b border-text-primary">
+                    {Array.from(Array(5)).map((_, index) => (
+                        <div
+                            key={index}
+                            className={cn(
+                                "whitespace-nowrap font-sequencia text-9xl text-text-primary",
+                                index % 2 === 0
+                                    ? "animate-marquee"
+                                    : "animate-marquee-reverse",
+                            )}
+                        >
+                            {t("contacts-section.brand-simple") +
+                                t("contacts-section.brand-simple")}
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <div className="flex w-full flex-row items-center justify-between px-8 py-4">

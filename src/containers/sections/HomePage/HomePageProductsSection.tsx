@@ -18,7 +18,7 @@ export const HomePageProductsSection = () => {
             //     start: "top center",
             //     end: "max",
             //     markers: false,
-            //     scrub: true,
+            //     scrub: 1,
             //     pin: true,
             //     // pin: "#products-section-title",
             // });

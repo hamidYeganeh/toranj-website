@@ -28,7 +28,7 @@ export const HomePageAboutUsSection = () => {
         //         trigger: "#panels-container",
         //         pin: true,
         //         markers: false,
-        //         scrub: true,
+        //         scrub: 1,
         //         // @ts-ignore
         //         // end: `+=${document.querySelector("#panels-container").offsetWidth}`,
         //         end: "+=" + window.innerWidth * 3,
@@ -75,7 +75,7 @@ export const HomePageAboutUsSection = () => {
             start: "top",
             end: "+=500",
             markers: false,
-            scrub: true,
+            scrub: 1,
             animation: bgTimeline,
         });
         ScrollTrigger.create({
@@ -83,7 +83,7 @@ export const HomePageAboutUsSection = () => {
             start: "top",
             end: "+=400px",
             markers: false,
-            scrub: true,
+            scrub: 1,
             animation: card,
         });
         // ScrollTrigger.create({
@@ -106,7 +106,7 @@ export const HomePageAboutUsSection = () => {
         //     scrollTrigger: {
         //         trigger: "#panels-container",
         //         pin: true,
-        //         scrub: true,
+        //         scrub: 1,
         //         markers: false,
         //         end: "+=" + panels.length * window.innerHeight,
         //     },

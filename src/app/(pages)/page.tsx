@@ -1,12 +1,12 @@
 import {
     HomePageAboutUsSection,
     HomePageAdvantagesSection,
+    HomePageContactsSection,
     HomePageContentSection,
     HomePageHeroSection,
     HomePagePriceSection,
     HomePageProductsSection,
 } from "@/containers/sections";
-import { HomePageContactsSection } from "@/containers/sections/HomePage/HomePageContactsSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

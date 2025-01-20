@@ -91,7 +91,7 @@ export const HomePageContentSection = () => {
             start: "top",
             end: `+=${window.innerHeight}px`,
             markers: false,
-            scrub: true,
+            scrub: 1,
             animation: contentSection2Bg1,
         });
         ScrollTrigger.create({
@@ -100,7 +100,7 @@ export const HomePageContentSection = () => {
             start: "top",
             end: "center top",
             markers: false,
-            scrub: true,
+            scrub: 1,
             animation: galleryItemsWrapper,
         });
         ScrollTrigger.create({
@@ -109,7 +109,7 @@ export const HomePageContentSection = () => {
             start: "top",
             end: "center top",
             markers: false,
-            scrub: true,
+            scrub: 1,
             animation: galleryItemsWrapperReversed,
         });
     });

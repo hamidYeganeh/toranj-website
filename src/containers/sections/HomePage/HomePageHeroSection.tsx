@@ -46,7 +46,7 @@ export const HomePageHeroSection = () => {
                 start: "top center",
                 end: "max",
                 markers: false,
-                scrub: true,
+                scrub: 1,
                 animation: heroSectionImageContainer,
             });
         },
