@@ -3,7 +3,7 @@
 // // types
 // import type { IProduct } from "@/types/general.types";
 
-// export const getProducts: () => Promise<IProducts> = async () => {
+// export const getProducts: () => Promise<IProducts> = async () => { //some change to test
 //     try {
 //         const response = await Api(Endpoints.products.list);
 //         return response.data;
