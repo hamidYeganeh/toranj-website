@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
-import { useEffect } from "react";
 
 // gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -26,11 +25,9 @@ export const Header = () => {
             start: "top top",
             end: "max",
             markers: false,
-            onUpdate: (self) => {
-                self.direction === -1
-                    ? showAnimation.play()
-                    : showAnimation.reverse();
-            },
+            onUpdate: (self) => (self.direction === -1
+                ? showAnimation.play()
+                : showAnimation.reverse()),
         });
     });
     return (

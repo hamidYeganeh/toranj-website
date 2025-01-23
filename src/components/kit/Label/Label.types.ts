@@ -3,7 +3,8 @@ import * as LabelPrimitive from "@radix-ui/react-label";
 import { LabelVariants } from "./Label.variants";
 import { ComponentPropsWithoutRef } from "react";
 
-export interface ILabelVariants extends VariantProps<typeof LabelVariants> {}
+// export interface ILabelVariants extends VariantProps<typeof LabelVariants> {}
+export type ILabelVariants = VariantProps<typeof LabelVariants>
 
 export interface ILabel
     extends ILabelVariants,

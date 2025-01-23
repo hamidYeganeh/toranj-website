@@ -2,9 +2,11 @@ import { VariantProps } from "class-variance-authority";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { InputVariants } from "./Input.variants";
 
-export interface IInputVariants extends VariantProps<typeof InputVariants> {}
-export interface IHtmlInput
-    extends Omit<ComponentPropsWithoutRef<"input">, "size"> {}
+// export interface IInputVariants extends VariantProps<typeof InputVariants> {}
+export type IInputVariants = VariantProps<typeof InputVariants>
+// export interface IHtmlInput
+//     extends Omit<ComponentPropsWithoutRef<"input">, "size"> {}
+export type IHtmlInput = Omit<ComponentPropsWithoutRef<"input">, "size">
 
 export interface IInput extends IHtmlInput, IInputVariants {
     label?: string;

@@ -24,7 +24,6 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const Store = configureStore({
     reducer: persistedReducer,
-    // @ts-ignore
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {

@@ -3,7 +3,6 @@
 import { ProductCard } from "@/components/common/ProductCard";
 import { Products } from "@/constants/dummy";
 import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 

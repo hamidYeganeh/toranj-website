@@ -1,11 +1,10 @@
 "use client";
 
-import { MEDIAS } from "@/constants/layout-config";
 import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const HomePageHeroSection = () => {
@@ -17,7 +16,7 @@ export const HomePageHeroSection = () => {
     useGSAP(
         () => {
             const heroSectionImageContainer = gsap.timeline({});
-            const heroSectionImage = gsap.timeline({});
+            // const heroSectionImage = gsap.timeline({});
 
             // heroSectionImage.fromTo(
             //     "#hero-section-image-container",

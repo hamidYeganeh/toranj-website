@@ -7,7 +7,7 @@ import type { IIcon } from "./Icon.types";
 import { IconColors, IconVariants } from "./Icon.variants";
 
 const Icon = forwardRef<HTMLDivElement, IIcon>((props, ref) => {
-    const { variant, size, children, className, color, ...otherProps } = props;
+    const { variant, size, children, color, ...otherProps } = props;
     const IconColor = IconColors[color || "primary"][variant ?? "contained"];
     return (
         <div

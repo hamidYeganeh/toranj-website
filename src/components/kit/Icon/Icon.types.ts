@@ -10,7 +10,8 @@ export type IIconColors =
     | "error"
     | "warning"
     | "info";
-export interface IIconVariants extends VariantProps<typeof IconVariants> {}
+// export interface IIconVariants extends VariantProps<typeof IconVariants> {}
+export type IIconVariants = VariantProps<typeof IconVariants>
 export interface IIcon
     extends IIconVariants,
         Omit<ComponentPropsWithoutRef<"div">, "color"> {

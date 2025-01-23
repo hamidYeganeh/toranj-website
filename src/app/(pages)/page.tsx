@@ -1,5 +1,4 @@
 import {
-    HomePageAboutUsSection,
     HomePageAdvantagesSection,
     HomePageContactsSection,
     HomePageContentSection,
