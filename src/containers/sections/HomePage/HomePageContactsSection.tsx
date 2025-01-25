@@ -76,9 +76,13 @@ export const HomePageContactsSection = () => {
             </div>
 
             <div className="flex w-full flex-row items-center justify-between px-8 py-4">
-                <p className="text-xs text-text-primary">
-                    {t("contacts-section.copyright", {
+                <p className="text-xs text-text-light">
+                    {t.rich("contacts-section.copyright", {
                         year: new Date().getFullYear(),
+                        developer: "Spexup",
+                        guide: (chunks) => (
+                            <Link href={"https://spexup.com"}>{chunks}</Link>
+                        ),
                     })}
                 </p>
                 <p className="text-xs text-text-primary">

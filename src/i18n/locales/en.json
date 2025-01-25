@@ -49,7 +49,7 @@
             }
         },
         "contacts-section": {
-            "copyright": "Copyright {year}",
+            "copyright": "Copyright {year} developed by <guide>{developer}</guide>",
             "privacy-policy": "Privacy policy",
             "address": "Adress",
             "phone": "phone",
