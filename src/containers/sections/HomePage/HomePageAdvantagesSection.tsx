@@ -46,7 +46,7 @@ export const HomePageAdvantagesSection = () => {
                     className="sticky top-0 flex h-full w-1/2 flex-col justify-between gap-4 bg-white p-4"
                 >
                     <div className="relative h-full w-full">
-                        <h3 className="sticky top-4 max-w-lg font-sequencia text-7xl">
+                        <h3 className="sticky top-4 max-w-lg pt-8 font-sequencia text-7xl">
                             {t("advantages-section.title")}
                         </h3>
                     </div>

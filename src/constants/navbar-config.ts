@@ -7,18 +7,18 @@ export interface INavbarItem {
 export const getNavbarItems: () => INavbarItem[] = () => [
     {
         title: "navbar.about-us",
-        path: "#",
+        path: "#about-us",
     },
     {
         title: "navbar.contact-us",
-        path: "#",
+        path: "#contact-us",
     },
     {
         title: "navbar.menu",
-        path: "#",
+        path: "#menu",
     },
     {
         title: "navbar.story",
-        path: "#",
+        path: "#story",
     },
 ];

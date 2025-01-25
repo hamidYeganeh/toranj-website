@@ -53,7 +53,7 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} suppressHydrationWarning>
             <body
-                className={`${SequenciaFont.variable} ${Fira_CodeFont.variable} ${InterFont.className} antialiased`}
+                className={`${SequenciaFont.variable} ${Fira_CodeFont.variable} ${InterFont.className} scroll-smooth antialiased`}
             >
                 <ReduxProvider>
                     <ThemeProvider>

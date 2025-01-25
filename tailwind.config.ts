@@ -148,11 +148,33 @@ export default {
             animation: {
                 marquee: "marquee 40s linear infinite",
                 "marquee-reverse": "marquee 40s linear reverse",
+                "hero-image-reveal": "hero-image 1.2s linear forwards",
             },
             keyframes: {
                 marquee: {
                     "0%": { transform: "translateX(50%)" },
                     "100%": { transform: "translateX(-150%)" },
+                },
+                "hero-image": {
+                    "0%": {
+                        width: "50%",
+                    },
+                    "37%": {
+                        "animation-timing-function":
+                            "cubic-bezier(0.76, 0, 0.24, 1)",
+                    },
+                    "68%": {
+                        "animation-timing-function":
+                            "cubic-bezier(0.76, 0, 0.24, 1)",
+                    },
+                    "99%": {
+                        width: "100%",
+                        "animation-timing-function":
+                            "cubic-bezier(0.76, 0, 0.24, 1)",
+                    },
+                    "100%": {
+                        opacity: "1",
+                    },
                 },
             },
         },

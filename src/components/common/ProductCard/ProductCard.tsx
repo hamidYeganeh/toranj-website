@@ -22,7 +22,7 @@ export const ProductCard: FC<IProductCard> = (props) => {
             }}
         >
             <div
-                className="h-72 w-full bg-cover transition-all duration-500 bg-no-repeat"
+                className="h-72 w-full bg-cover bg-no-repeat transition-all duration-500"
                 style={{
                     backgroundImage: `url(${
                         isHovered ? product?.images[0] : product?.images[1]

@@ -19,6 +19,8 @@
         },
         "about-us-section": {
             "text": "The atmosphere of romantic Venice reigns in our cozy restaurant, where every dish is prepared by hand and with special passion. Just like in old cafes on the narrow streets of a charming city. The chefs skillfully combine fresh and selected ingredients and deliver them to your table with love. We work to ensure that you enjoy the dolce vita and the vibrant flavors of Italy",
+            "reserve-table": "Reserve a table",
+            "callback": "Callback",
             "card": {
                 "title": "Welcome to our sophisticated restaurant in the heart of Venice",
                 "description": "Enjoy stunning views of the beautiful city's historic architecture with a glass of fine wine and delicate salami prepared by the world's best chef"

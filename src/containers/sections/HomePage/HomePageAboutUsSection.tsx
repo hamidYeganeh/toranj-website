@@ -4,133 +4,67 @@ import { AboutUs } from "@/constants/dummy";
 import { MEDIAS } from "@/constants/layout-config";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-// import { useRef } from "react";
+import { FC } from "react";
 
 export const HomePageAboutUsSection = () => {
+    gsap.registerPlugin(ScrollTrigger);
     const t = useTranslations("HomePage");
-    // const containerRef = useRef(null);
 
     useGSAP(() => {
-        // const container = gsap.timeline();
-        const bgTimeline = gsap.timeline();
-        // const panelsContainer = gsap.timeline();
-        const card = gsap.timeline();
+        const aboutUsSections = gsap.timeline();
 
-        // let sections = gsap.utils.toArray(".panel");
-
-        // gsap.to(sections, {
-        //     xPercent: -100 * (sections.length - 1),
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: "#panels-container",
-        //         pin: true,
-        //         markers: false,
-        //         scrub: 1,
-        //         // @ts-ignore
-        //         // end: `+=${document.querySelector("#panels-container").offsetWidth}`,
-        //         end: "+=" + window.innerWidth * 3,
-        //     },
-        // });
-
-        bgTimeline.to("#about-us-bg", {
-            margin: 0,
-        });
-
-        // panelsContainer.to("#panels-container", {
-        //     backgroundColor: "red",
-        // });
-
-        card.to("#about-us-card", {
-            x: -500,
-        });
-
-        const cardAction = gsap.to("#about-us-card", {
-            position: "fixed",
-            left: `${4 * 16}px`,
-            top: 0,
-        });
-        // const panel1Action = gsap.to("#panel-1", {
-        //     position: "fixed",
-        //     left: 0,
-        //     bottom: 0,
-        //     right: 0,
-        // });
+        aboutUsSections
+            .to("#about-us-card", { xPercent: -100 })
+            .fromTo("#about-us-card-1", { xPercent: 100 }, { xPercent: 0 }, "=")
+            .fromTo("#about-us-card-1-image", { scale: 1 }, { scale: 3 })
+            .fromTo(
+                "#about-us-card-1-title",
+                { yPercent: 0 },
+                { yPercent: -100 },
+            )
+            .fromTo(
+                "#about-us-card-2-container",
+                { left: "100dvw" },
+                { left: "0dvw" },
+            )
+            .fromTo("#about-us-card-2-image", { scale: 1 }, { scale: 3 })
+            .fromTo(
+                "#about-us-card-2-title",
+                { yPercent: 0 },
+                { yPercent: -100 },
+            );
 
         ScrollTrigger.create({
-            trigger: "#about-us-container",
-            start: "top top",
-            end: "max",
-            markers: false,
+            trigger: "#container",
+            start: "top",
             pin: true,
-            pinSpacing: false,
-            animation: cardAction,
-            toggleActions: "play reverse play reverse",
-        });
-
-        ScrollTrigger.create({
-            trigger: "#about-us-container",
-            start: "top",
-            end: "+=500",
+            end: "+=" + window.innerHeight * 6,
             markers: false,
-            scrub: 1,
-            animation: bgTimeline,
+            scrub: true,
+            pinSpacing: true,
+            animation: aboutUsSections,
         });
-        ScrollTrigger.create({
-            trigger: "#panels-container",
-            start: "top",
-            end: "+=400px",
-            markers: false,
-            scrub: 1,
-            animation: card,
-        });
-        // ScrollTrigger.create({
-        //     id: "panel-1",
-        //     trigger: "#panel-1",
-        //     start: "center top",
-        //     end: "+=1000",
-        //     markers: false,
-        //     pin: true,
-        //     anticipatePin: 1,
-        //     toggleActions: "play reverse play reverse",
-        //     // animation: panel1Action,
-        // });
-
-        // const panels = gsap.utils.toArray(".panel");
-
-        // gsap.to(panels, {
-        //     xPercent: -100 * (panels.length - 1),
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: "#panels-container",
-        //         pin: true,
-        //         scrub: 1,
-        //         markers: false,
-        //         end: "+=" + panels.length * window.innerHeight,
-        //     },
-        // });
     });
 
     return (
-        <div id="about-us-container" className="relative w-full bg-text-dark">
-            <div id="about-us-bg" className="absolute inset-0 mx-8 mb-0 w-full">
-                <div
-                    className="sticky top-0 -z-0 h-dvh w-full"
-                    style={{
-                        backgroundAttachment: "fixed",
-                        backgroundImage: `url(${MEDIAS.aboutUsImage})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                ></div>
-            </div>
-            <div className="relative z-10 flex h-full w-full justify-between">
-                <div
-                    id="about-us-card"
-                    className="flex h-screen w-fit items-end pb-8"
-                >
+        <div
+            id="about-us"
+            className="relative w-full"
+            style={{
+                backgroundAttachment: "fixed",
+                backgroundImage: `url(${MEDIAS.aboutUsImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
+        >
+            <div
+                id="about-us-card"
+                className="absolute left-0 top-0 h-full w-full"
+            >
+                <div className="sticky top-0 flex h-dvh items-end justify-start p-8">
                     <div className="flex h-60 w-full max-w-md flex-col justify-between bg-white p-4">
                         <p className="w-full max-w-60 text-xs font-medium text-text-dark">
                             {t("about-us-section.card.title")}
@@ -140,136 +74,65 @@ export const HomePageAboutUsSection = () => {
                         </p>
                     </div>
                 </div>
-                <div />
-                <div className="mt-[150dvh] h-full overflow-hidden pe-8">
-                    <div className="mb-8 w-full max-w-96">
-                        <p className="text-5xl text-text-secondary">
-                            {t("about-us-section.text")}
-                        </p>
-                    </div>
+            </div>
+
+            <div
+                id="about-us-text-container"
+                className="flex w-full justify-end px-8 pt-[150dvh]"
+            >
+                <div className="w-1/3">
+                    <h2 className="font-fira text-5xl text-white">
+                        {t("about-us-section.text")}
+                    </h2>
                 </div>
             </div>
-            <div
-                id="panels-container"
-                className="x-[100dvw] z-10 flex h-dvh w-[200dvw] flex-row"
-            >
-                <div className="panel h-dvh w-[50dvw] opacity-0"></div>
-                <div id="panel-1" className="panel h-dvh w-[100dvw]">
-                    <div className="grid h-full w-full grid-cols-2">
-                        <div className="relative col-span-1 flex h-full items-center justify-center">
-                            <h2 className="absolute top-[calc(50%-300px)] mx-auto max-w-md text-center font-sequencia text-7xl text-white">
-                                {AboutUs[0].title}
-                            </h2>
-                            <Image
-                                src={AboutUs[0].image}
-                                alt="About us image"
-                                width={300}
-                                height={300}
-                                className="section-image aspect-square w-72"
-                            />
-                        </div>
-                        <div className="col-span-1 h-full bg-white"></div>
-                    </div>
+
+            <div id="container" className="relative h-dvh w-dvw">
+                <SectionCard id="about-us-card-1" item={AboutUs[0]} />
+                <div
+                    id="about-us-card-2-container"
+                    className="absolute left-[100dvw] top-0 h-dvh w-dvw"
+                >
+                    <SectionCard id="about-us-card-2" item={AboutUs[1]} />
                 </div>
             </div>
         </div>
     );
 };
 
-// <div
-//     ref={containerRef}
-//     id="about-us-container"
-//     className="relative z-0 h-[800dvh] w-full pb-0"
-// >
-//     <div className="w-full">
-//         <div
-//             id="about-us-bg"
-//             className="sticky top-0 z-0 h-dvh w-full bg-cover bg-center bg-no-repeat"
-//             style={{ backgroundImage: `url(${MEDIAS.aboutUsImage})` }}
-//         ></div>
-
-//         <div
-//             id="about-us-card"
-//             className="sticky left-16 top-0 flex h-screen w-fit items-end pb-8"
-//         >
-//             <div className="flex h-60 w-full max-w-md flex-col justify-between bg-white p-4">
-//                 <p className="w-full max-w-60 text-xs font-medium text-text-dark">
-//                     {t("about-us-section.card.title")}
-//                 </p>
-//                 <p className="w-full max-w-sm text-xs font-medium text-text-dark">
-//                     {t("about-us-section.card.description")}
-//                 </p>
-//             </div>
-//         </div>
-
-//         <div className="absolute right-0 top-0 w-fit px-8">
-//             <div className="h-dvh w-full"></div>
-
-//             <div className="flex h-full w-full flex-row justify-between pe-8">
-//                 <div className="mt-[100dvh] w-full max-w-96">
-//                     <p className="text-5xl text-text-secondary">
-//                         {t("about-us-section.text")}
-//                     </p>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     <div
-//         ref={sliderRef}
-//         // className="absolute bottom-[100dvh] z-30 flex h-dvh flex-row ps-[40dvw]"
-//         className="absolute z-30 hidden h-dvh flex-row"
-//     >
-//         <div className="section h-full w-dvw">
-//             <div className="grid h-full w-full grid-cols-2">
-//                 <div className="relative col-span-1 flex h-full items-center justify-center">
-//                     <div className="section-title absolute top-[20%] mx-auto w-full max-w-[470px] text-center">
-//                         <h2 className="font-sequencia text-7xl text-text-secondary">
-//                             {AboutUs[0].title}
-//                         </h2>
-//                     </div>
-//                     <Image
-//                         src={AboutUs[0].image}
-//                         alt="About us image"
-//                         width={300}
-//                         height={300}
-//                         className="section-image aspect-square w-72"
-//                     />
-//                 </div>
-//                 <div className="col-span-1 flex h-full justify-end bg-white">
-//                     <div
-//                         className="h-full w-48 bg-cover bg-center"
-//                         style={{
-//                             backgroundImage: `url(${AboutUs[0].image})`,
-//                         }}
-//                     ></div>
-//                 </div>
-//             </div>
-//         </div>
-//         {/* <div className="section h-full w-dvw">
-//             <div className="grid h-full w-full grid-cols-2">
-//                 <div className="relative col-span-1 flex h-full items-center justify-center">
-//                     <div className="section-title absolute top-[20%] mx-auto w-full max-w-[470px] text-center">
-//                         <h2 className="font-sequencia text-7xl text-text-secondary mix-blend-screen">
-//                             {AboutUs[1].title}
-//                         </h2>
-//                     </div>
-//                     <Image
-//                         src={AboutUs[1].image}
-//                         alt="About us image"
-//                         width={300}
-//                         height={300}
-//                         className="section-image aspect-square w-72"
-//                     />
-//                 </div>
-//                 <div className="col-span-1 flex h-full justify-end bg-white">
-//                     <div
-//                         className="h-full w-48 bg-cover bg-center"
-//                         style={{
-//                             backgroundImage: `url(${AboutUs[1].image})`,
-//                         }}
-//                     ></div>
-//                 </div>
-//             </div>
-//         </div> */}
-//     </div>
-// </div>
+const SectionCard: FC<{ id: string; item: (typeof AboutUs)[number] }> = (
+    props,
+) => {
+    const { id, item } = props;
+    return (
+        <div
+            id={id}
+            className="relative z-20 grid h-dvh w-dvw grid-cols-2 overflow-hidden"
+        >
+            <div className="relative flex h-full items-center justify-center overflow-hidden">
+                <h2
+                    id={`${id}-title`}
+                    className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto max-w-md text-center font-sequencia text-7xl mix-blend-soft-light"
+                >
+                    {item.title}
+                </h2>
+                <Image
+                    id={`${id}-image`}
+                    src={item.image}
+                    alt={`About us card ${item.title}`}
+                    width={300}
+                    height={300}
+                    className="z-10 aspect-square w-[50%]"
+                />
+            </div>
+            <div className="flex h-full justify-end bg-white">
+                <div
+                    className="h-full w-1/5 bg-cover bg-fixed bg-left"
+                    style={{
+                        backgroundImage: `url(${item.image})`,
+                    }}
+                ></div>
+            </div>
+        </div>
+    );
+};

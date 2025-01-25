@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { MEDIAS } from "@/constants/layout-config";
 
 export const HomePageHeroSection = () => {
     const t = useTranslations("HomePage");
@@ -16,19 +17,62 @@ export const HomePageHeroSection = () => {
     useGSAP(
         () => {
             const heroSectionImageContainer = gsap.timeline({});
-            // const heroSectionImage = gsap.timeline({});
+            const heroSectionImage = gsap.timeline();
 
-            // heroSectionImage.fromTo(
-            //     "#hero-section-image-container",
+            heroSectionImage
+                .fromTo(
+                    "#hero-section-image",
+                    {
+                        height: "0%",
+                    },
+                    {
+                        height: "100dvh",
+                        duration: 0.5,
+                    },
+                )
+                .fromTo(
+                    "#hero-section-image",
+                    {
+                        width: "50%",
+                        margin: "0 auto",
+                        backgroundPosition: "100% 100%",
+                    },
+                    {
+                        width: "100%",
+                        backgroundPosition: "0% 50%",
+                        duration: 0.5,
+                    },
+                )
+                .fromTo(
+                    "#hero-section-title",
+                    {
+                        yPercent: 100,
+                    },
+                    { yPercent: 0, duration: 0.5 },
+                    "<=",
+                );
+            // .fromTo(
+            //     "#hero-section-image",
             //     {
             //         width: "50%",
-            //         height: 0,
+            //         height: "0%",
+            //         backgroundPosition: "top",
+            //         transformOrigin: "center",
+            //         backgroundSize: "100%",
             //     },
             //     {
             //         width: "100%",
             //         height: "100dvh",
+            //         duration: 1,
+            //         backgroundPosition: "center",
+            //         backgroundSize: "150%",
+            //         transformOrigin: "center",
             //     },
             // );
+            // .to("#hero-section-image", {
+            //     width: "100%",
+            //     duration: 1,
+            // });
 
             heroSectionImageContainer.fromTo(
                 "#hero-section-image-container",
@@ -57,7 +101,10 @@ export const HomePageHeroSection = () => {
             <div className="h-52 w-full"></div>
 
             <div className="relative top-20 px-8">
-                <h1 className="line-clamp-1 text-left font-sequencia text-extreme font-bold text-text-dark">
+                <h1
+                    id="hero-section-title"
+                    className="line-clamp-1 text-left font-sequencia text-extreme font-bold text-text-dark"
+                >
                     {t("hero-section.title")}
                 </h1>
             </div>
@@ -68,10 +115,10 @@ export const HomePageHeroSection = () => {
                 <div
                     id="hero-section-image"
                     className={cn(
-                        "flex h-screen w-full overflow-hidden",
-                        "bg-[url(https://static.tildacdn.com/tild3664-3161-4535-b465-313832633639/max1232617_A_delecta.jpg)] bg-cover",
+                        "mx-auto flex h-dvh w-full overflow-hidden bg-cover bg-fixed",
                     )}
                     style={{
+                        backgroundImage: `url(${MEDIAS.heroImage})`,
                         backgroundPosition: "0% 50%",
                     }}
                 ></div>

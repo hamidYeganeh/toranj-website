@@ -1,4 +1,5 @@
 import {
+    HomePageAboutUsSection,
     HomePageAdvantagesSection,
     HomePageContactsSection,
     HomePageContentSection,
@@ -17,7 +18,7 @@ export default function HomePage() {
         <main className="w-full bg-bg-paper">
             <HomePageHeroSection />
             <HomePageProductsSection />
-            {/* <HomePageAboutUsSection /> */}
+            <HomePageAboutUsSection />
             <HomePagePriceSection />
             <HomePageContentSection />
             <HomePageAdvantagesSection />

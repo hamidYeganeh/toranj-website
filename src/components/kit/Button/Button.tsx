@@ -43,18 +43,35 @@ const Button = forwardRef<HTMLButtonElement, IButton>((props, ref) => {
             <Link
                 href={href}
                 className={cn(
-                    ButtonVariants({ variant }),
+                    ButtonVariants({ variant, size }),
                     ButtonColor,
                     ButtonShadow,
                     className,
                     {
                         "w-full": fullWidth,
+                        "pointer-events-none": loading,
+                        "shadow-[0px_4px_24px_0px]": shadow,
                     },
                 )}
             >
-                {startIcon && startIcon}
-                {children}
-                {endIcon && endIcon}
+                {loading && (
+                    <span className="absolute inset-0 m-auto flex w-full items-center justify-center">
+                        <LoaderCircle className="size-5 animate-spin" />
+                    </span>
+                )}
+                <span
+                    id="button-content"
+                    className={cn(
+                        "flex w-full flex-row items-center justify-center gap-2",
+                        {
+                            invisible: loading,
+                        },
+                    )}
+                >
+                    {startIcon && startIcon}
+                    {children}
+                    {endIcon && endIcon}
+                </span>
             </Link>
         );
 

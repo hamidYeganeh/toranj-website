@@ -10,7 +10,7 @@ export const HomePageContactsSection = () => {
     const navbar = getNavbarItems();
 
     return (
-        <div className="w-full bg-text-dark">
+        <div id="contact-us" className="w-full bg-text-dark">
             <div className="flex w-full flex-row items-stretch justify-stretch divide-x divide-text-primary px-8">
                 <div className="w-full">
                     <div className="flex h-72 w-full flex-col items-start gap-2 py-8">

@@ -7,9 +7,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
 
-// gsap.registerPlugin(ScrollTrigger, useGSAP);
-
 export const Header = () => {
+    gsap.registerPlugin(ScrollTrigger, useGSAP);
     const t = useTranslations("General");
     const navbar = getNavbarItems();
     useGSAP(() => {
@@ -25,9 +24,10 @@ export const Header = () => {
             start: "top top",
             end: "max",
             markers: false,
-            onUpdate: (self) => (self.direction === -1
-                ? showAnimation.play()
-                : showAnimation.reverse()),
+            onUpdate: (self) =>
+                self.direction === -1
+                    ? showAnimation.play()
+                    : showAnimation.reverse(),
         });
     });
     return (
@@ -53,6 +53,7 @@ export const Header = () => {
                             key={navbarItem.title}
                             size={"sm"}
                             variant={"outlined"}
+                            href={navbarItem.path}
                         >
                             {t(navbarItem.title)}
                         </Button>
