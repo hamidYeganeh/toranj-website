@@ -4,7 +4,7 @@
         "name": "toranj-site",
         "script": "npm",
         "interpreter": "none",
-        "args": "start"
+        "args": "run prod"
       }
     ]
   }

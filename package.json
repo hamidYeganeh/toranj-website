@@ -5,8 +5,9 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
+        "start": "next start -p 12400",
+        "lint": "next lint",
+        "prod": "npm run build && npm run start"
     },
     "dependencies": {
         "@gsap/react": "^2.1.1",
