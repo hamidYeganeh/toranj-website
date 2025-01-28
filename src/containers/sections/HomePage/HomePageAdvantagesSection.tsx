@@ -1,6 +1,7 @@
 "use client";
 
 import { MEDIAS } from "@/constants/layout-config";
+import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -31,7 +32,7 @@ export const HomePageAdvantagesSection = () => {
     });
 
     return (
-        <div className="relative h-[300dvh] w-full">
+        <div className="max-md:h-[200dvh] relative h-[300dvh] w-full">
             <div
                 className="h-full w-full bg-cover bg-fixed bg-no-repeat"
                 style={{
@@ -43,10 +44,18 @@ export const HomePageAdvantagesSection = () => {
             <div className="absolute top-0 flex h-full w-full justify-end">
                 <div
                     id="advantages-section"
-                    className="sticky top-0 flex h-full w-1/2 flex-col justify-between gap-4 bg-white p-4"
+                    className={cn(
+                        "sticky top-0 flex h-full w-1/2 flex-col justify-between gap-4 bg-white p-4",
+                        "max-md:w-[calc(100%-16px)] max-md:mx-auto",
+                    )}
                 >
                     <div className="relative h-full w-full">
-                        <h3 className="sticky top-4 max-w-lg pt-8 font-sequencia text-7xl">
+                        <h3
+                            className={cn(
+                                "sticky top-4 max-w-lg pt-8 font-sequencia text-7xl",
+                                "max-md:top-8",
+                            )}
+                        >
                             {t("advantages-section.title")}
                         </h3>
                     </div>
