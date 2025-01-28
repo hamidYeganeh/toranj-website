@@ -23,11 +23,11 @@ export default {
                 },
             },
             screens: {
-                xs: "var(--screen-xs)",
-                sm: "var(--screen-sm)",
-                md: "var(--screen-md)",
-                lg: "var(--screen-lg)",
-                xl: "var(--screen-xl)",
+                xs: "375px",
+                sm: "575px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1400px",
             },
             fontFamily: {
                 sequencia: "var(--sequencia-font)",

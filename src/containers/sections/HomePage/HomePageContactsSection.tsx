@@ -11,7 +11,12 @@ export const HomePageContactsSection = () => {
 
     return (
         <div id="contact-us" className="w-full bg-text-dark">
-            <div className="flex w-full flex-row items-stretch justify-stretch divide-x divide-text-primary px-8">
+            <div
+                className={cn(
+                    "flex w-full flex-row items-stretch justify-stretch divide-x divide-text-primary px-8",
+                    "max-md:px-4",
+                )}
+            >
                 <div className="w-full">
                     <div className="flex h-72 w-full flex-col items-start gap-2 py-8">
                         <p className="text-md font-normal text-text-light">
@@ -75,7 +80,12 @@ export const HomePageContactsSection = () => {
                 </div>
             </div>
 
-            <div className="flex w-full flex-row items-center justify-between px-8 py-4">
+            <div
+                className={cn(
+                    "flex w-full flex-row items-center justify-between px-8 py-4",
+                    "max-md:px-4 max-md:flex-col max-md:gap-2",
+                )}
+            >
                 <p className="text-xs text-text-light">
                     {t.rich("contacts-section.copyright", {
                         year: new Date().getFullYear(),
