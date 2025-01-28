@@ -18,6 +18,7 @@ export const GalleryCard: FC<IGalleryCard> = (props) => {
             id={id}
             className={cn(
                 "flex aspect-square w-[464px] cursor-pointer flex-col gap-2 bg-white p-4",
+                "max-md:w-[360px]",
                 className,
             )}
         >

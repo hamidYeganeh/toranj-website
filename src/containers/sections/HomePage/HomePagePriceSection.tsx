@@ -118,7 +118,10 @@ export const HomePagePriceSection = () => {
             </div>
             <div
                 id="price-section"
-                className="relative z-50 w-full overflow-hidden bg-text-dark py-32"
+                className={cn(
+                    "relative z-50 w-full overflow-hidden bg-text-dark py-32",
+                    "max-md:px-4",
+                )}
             >
                 <Container>
                     <h4 className="text-md text-text-light">
@@ -129,23 +132,38 @@ export const HomePagePriceSection = () => {
                         {MENU_ITEMS.map((menuItem) => (
                             <div
                                 key={menuItem._id}
-                                className="group flex cursor-pointer flex-row items-baseline gap-4 border-b border-text-primary py-4"
+                                className={cn(
+                                    "group flex cursor-pointer flex-row items-baseline gap-4 border-b border-text-primary py-4",
+                                )}
                                 onClick={() => {
                                     handleOpenMenuSheet();
                                     handleSelectedMenu(menuItem);
                                 }}
                             >
-                                <p className="font-fira text-sm text-text-disabled">
-                                    {t("price-section.menu-item-start-price", {
-                                        price: menuItem.startPrice,
-                                    })}
-                                </p>
+                                <div
+                                    className={cn(
+                                        "flex flex-1 flex-row items-baseline gap-4",
+                                        "max-md:flex-col",
+                                    )}
+                                >
+                                    <p className="font-fira text-sm text-text-disabled">
+                                        {t(
+                                            "price-section.menu-item-start-price",
+                                            {
+                                                price: menuItem.startPrice,
+                                            },
+                                        )}
+                                    </p>
 
-                                <h2 className="font-sequencia text-huge text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500">
-                                    {menuItem.title}
-                                </h2>
-
-                                <div className="flex-1" />
+                                    <h2
+                                        className={cn(
+                                            "font-sequencia text-huge text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
+                                            "max-md:text-5xl",
+                                        )}
+                                    >
+                                        {menuItem.title}
+                                    </h2>
+                                </div>
 
                                 <div className="my-auto h-full text-2xl text-white transition-all duration-500 group-hover:-translate-x-7">
                                     {"-->"}

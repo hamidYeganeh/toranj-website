@@ -17,12 +17,12 @@ export default function HomePage() {
     return (
         <main className="w-full bg-bg-paper">
             {/* <HomePageHeroSection />
-            <HomePageProductsSection />
-            <HomePageAboutUsSection />
-            <HomePagePriceSection />
-            <HomePageContentSection />
              */}
-            <HomePageAdvantagesSection />
+            <HomePageProductsSection />
+            {/* <HomePageAboutUsSection /> */}
+            {/* <HomePagePriceSection /> */}
+            {/* <HomePageContentSection />
+            <HomePageAdvantagesSection /> */}
             <HomePageContactsSection />
         </main>
     );

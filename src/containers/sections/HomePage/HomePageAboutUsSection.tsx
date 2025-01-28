@@ -63,9 +63,13 @@ export const HomePageAboutUsSection = () => {
         >
             <div
                 id="about-us-card"
-                className="absolute left-0 top-0 h-full w-full"
+                className={cn("absolute left-0 top-0 h-full w-full")}
             >
-                <div className="sticky top-0 flex h-dvh items-end justify-start p-8">
+                <div
+                    className={cn(
+                        "sticky left-0 top-0 flex h-dvh items-end justify-start p-8",
+                    )}
+                >
                     <div className="flex h-60 w-full max-w-md flex-col justify-between bg-white p-4">
                         <p className="w-full max-w-60 text-xs font-medium text-text-dark">
                             {t("about-us-section.card.title")}
@@ -81,7 +85,7 @@ export const HomePageAboutUsSection = () => {
                 id="about-us-text-container"
                 className="flex w-full justify-end px-8 pt-[150dvh]"
             >
-                <div className="w-1/3">
+                <div className={cn("w-1/3", "max-md:w-full")}>
                     <h2 className="font-fira text-5xl text-white">
                         {t("about-us-section.text")}
                     </h2>
@@ -110,7 +114,10 @@ const SectionCard: FC<{
     return (
         <div
             id={id}
-            className="relative z-20 grid h-dvh w-dvw grid-cols-2 overflow-hidden"
+            className={cn(
+                "relative z-20 grid h-dvh w-dvw grid-cols-2 overflow-hidden",
+                "max-md:grid-cols-1",
+            )}
         >
             <div className="relative flex h-full items-center justify-center overflow-hidden">
                 <h2
@@ -125,13 +132,20 @@ const SectionCard: FC<{
                     alt={`About us card ${item.title}`}
                     width={300}
                     height={300}
-                    className="z-10 aspect-square w-[50%]"
+                    className={cn(
+                        "z-10 aspect-square w-[50%]",
+                        "max-md:w-[75%] max-md:mx-auto",
+                    )}
                 />
             </div>
             <div
-                className={cn("flex h-full justify-end", {
-                    "bg-white": withBg,
-                })}
+                className={cn(
+                    "flex h-full justify-end",
+                    {
+                        "bg-white": withBg,
+                    },
+                    "max-md:hidden",
+                )}
             >
                 <div
                     className="h-full w-1/5 bg-cover bg-fixed bg-left"

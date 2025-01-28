@@ -4,6 +4,8 @@ import { GalleryCard } from "@/components/common/GalleryCard";
 import { Container } from "@/components/kit";
 import { GALLERY } from "@/constants/dummy";
 import { MEDIAS } from "@/constants/layout-config";
+import { useResponsive } from "@/hooks/useResponsive";
+import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -17,11 +19,12 @@ export const HomePageContentSection = () => {
         const galleryItemsWrapper = gsap.timeline();
         const galleryItemsWrapperReversed = gsap.timeline();
 
-        contentSection2Bg1.fromTo(
-            "#content-bg-1",
-            { width: "50%" },
-            { width: "100%" },
-        );
+        // contentSection2Bg1.fromTo(
+        //     "#content-bg-1",
+        //     { width: "50%" },
+        //     { width: "100%" },
+        // );
+        contentSection2Bg1.to("#content-bg-1", { width: "100%" });
 
         galleryItemsWrapper
             .fromTo(
@@ -124,20 +127,35 @@ const ContentSection1 = () => {
 
     return (
         <div className="flex h-[200dvh] w-full flex-row items-start bg-white">
-            <div className="h-full w-1/2 px-8">
+            <div
+                className={cn("h-full w-1/2 px-8", "max-md:z-10 max-md:w-full")}
+            >
                 <div className="flex h-dvh w-full items-center justify-start">
-                    <h3 className="max-w-lg text-start font-sequencia text-7xl font-bold text-text-dark">
+                    <h3
+                        className={cn(
+                            "max-w-lg text-start font-sequencia text-7xl font-bold text-text-dark",
+                            "max-md:text-text-light",
+                        )}
+                    >
                         {t("contents-section.title")}
                     </h3>
                 </div>
                 <div className="flex h-dvh w-full items-center justify-start">
-                    <p className="whitespace-pre-line text-xs font-normal text-text-dark">
+                    <p
+                        className={cn(
+                            "whitespace-pre-line text-xs font-normal text-text-dark",
+                            "max-md:text-text-light",
+                        )}
+                    >
                         {t("contents-section.description")}
                     </p>
                 </div>
             </div>
             <div
-                className="sticky top-0 h-dvh w-1/2 bg-cover bg-fixed bg-no-repeat"
+                className={cn(
+                    "sticky top-0 h-dvh w-1/2 bg-cover bg-fixed bg-no-repeat",
+                    "max-md:w-full max-md:absolute max-md:z-0 max-md:h-full",
+                )}
                 style={{
                     backgroundImage: `url(${MEDIAS.contentImage1})`,
                     backgroundPosition: "center",
@@ -149,26 +167,33 @@ const ContentSection1 = () => {
     );
 };
 
-export const ContentSection2 = () => {
+const ContentSection2 = () => {
     const t = useTranslations("HomePage");
-
     return (
-        <div className="relative h-fit w-full">
+        <div className={cn("relative h-fit w-full")}>
             <div className="absolute left-0 top-0 z-[99] h-full w-full">
                 <div className="sticky top-0 h-dvh w-full">
                     <Container className="flex h-full w-full flex-col justify-center gap-8">
                         <h2
                             id="content-section-2-title"
-                            className="max-w-md text-start font-sequencia text-7xl"
+                            className={cn(
+                                "max-w-md text-start font-sequencia text-7xl",
+                                "max-md:absolute max-md:mx-4 max-md:top-[20dvh] max-md:z-50 max-md:max-w-full max-md:text-text-light max-md:text-5xl",
+                            )}
                         >
                             {t("contents-section.gallery-title")}
                         </h2>
 
-                        <div className="flex w-full flex-row items-center justify-between">
+                        <div
+                            className={cn(
+                                "relative flex w-full flex-row items-center justify-between",
+                            )}
+                        >
                             {GALLERY.map((galleryItem) => (
                                 <div
                                     key={`gallery-item-${galleryItem._id}`}
                                     id={`gallery-item-${galleryItem._id}`}
+                                    className="max-md:absolute max-md:mx-auto max-md:w-full max-md:flex max-md:justify-center"
                                 >
                                     <GalleryCard
                                         id={`gallery-item-card-${galleryItem._id}`}
@@ -184,7 +209,10 @@ export const ContentSection2 = () => {
                 <div className="relative flex h-[250dvh] w-full flex-row-reverse">
                     <div
                         id="content-bg-1"
-                        className="h-full w-1/2 bg-cover bg-fixed bg-no-repeat"
+                        className={cn(
+                            "h-full w-1/2 bg-cover bg-fixed bg-no-repeat",
+                            "max-md:w-full",
+                        )}
                         style={{
                             backgroundImage: `url(${MEDIAS.contentImage2})`,
                             backgroundPositionX: "100%",
