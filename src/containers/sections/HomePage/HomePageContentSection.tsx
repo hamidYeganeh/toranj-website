@@ -153,14 +153,14 @@ const ContentSection1 = () => {
             </div>
             <div
                 className={cn(
-                    "sticky top-0 h-dvh w-1/2 bg-cover bg-fixed bg-no-repeat",
+                    "sticky top-0 h-full w-1/2 bg-cover bg-fixed bg-no-repeat",
                     "max-md:w-full max-md:absolute max-md:z-0 max-md:h-full",
                 )}
                 style={{
                     backgroundImage: `url(${MEDIAS.contentImage1})`,
                     backgroundPosition: "center",
-                    backgroundSize: "cover",
                     transformOrigin: "center",
+                    backgroundSize: "cover",
                 }}
             ></div>
         </div>
