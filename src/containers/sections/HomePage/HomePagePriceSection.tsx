@@ -136,8 +136,8 @@ export const HomePagePriceSection = () => {
                                     "group flex cursor-pointer flex-row items-baseline gap-4 border-b border-text-primary py-4",
                                 )}
                                 onClick={() => {
-                                    handleOpenMenuSheet();
-                                    handleSelectedMenu(menuItem);
+                                    // handleOpenMenuSheet();
+                                    // handleSelectedMenu(menuItem);
                                 }}
                             >
                                 <div
@@ -157,7 +157,7 @@ export const HomePagePriceSection = () => {
 
                                     <h2
                                         className={cn(
-                                            "font-sequencia text-huge text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
+                                            "font-sequencia text-9xl text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
                                             "max-md:text-5xl",
                                         )}
                                     >

@@ -54,6 +54,7 @@ export const Header = () => {
                             size={"sm"}
                             variant={"outlined"}
                             href={navbarItem.path}
+                            className="max-md:hidden"
                         >
                             {t(navbarItem.title)}
                         </Button>

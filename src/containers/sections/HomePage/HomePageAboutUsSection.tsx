@@ -42,7 +42,7 @@ export const HomePageAboutUsSection = () => {
             trigger: "#container",
             start: "top",
             pin: true,
-            end: "+=" + window.innerHeight * 6,
+            end: "+=" + window.innerHeight * 5,
             markers: false,
             scrub: true,
             pinSpacing: true,
@@ -83,7 +83,7 @@ export const HomePageAboutUsSection = () => {
 
             <div
                 id="about-us-text-container"
-                className="flex w-full justify-end px-8 pt-[150dvh]"
+                className="flex w-full justify-end px-8 pt-[130dvh]"
             >
                 <div className={cn("w-1/3", "max-md:w-full")}>
                     <h2 className="font-fira text-5xl text-white">

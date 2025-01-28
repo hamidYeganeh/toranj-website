@@ -74,6 +74,10 @@ export const HomePageContactsSection = () => {
                             )}
                         >
                             {t("contacts-section.brand-simple") +
+                                t("contacts-section.brand-simple") +
+                                t("contacts-section.brand-simple") +
+                                t("contacts-section.brand-simple") +
+                                t("contacts-section.brand-simple") +
                                 t("contacts-section.brand-simple")}
                         </div>
                     ))}

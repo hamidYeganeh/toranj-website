@@ -100,10 +100,13 @@ export const HomePageHeroSection = () => {
         <div ref={containerRef} className="flex w-full flex-col">
             <div className="h-52 w-full"></div>
 
-            <div className="relative top-20 px-8">
+            <div className={cn("relative top-20 px-8", "max-md:top-0")}>
                 <h1
                     id="hero-section-title"
-                    className="line-clamp-1 text-left font-sequencia text-extreme font-bold text-text-dark"
+                    className={cn(
+                        "line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-text-dark",
+                        "max-md:text-5xl max-md:text-center",
+                    )}
                 >
                     {t("hero-section.title")}
                 </h1>
