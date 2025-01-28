@@ -81,7 +81,9 @@ export const HomePageContactsSection = () => {
                         year: new Date().getFullYear(),
                         developer: "Spexup",
                         guide: (chunks) => (
-                            <Link href={"https://spexup.com"}>{chunks}</Link>
+                            <Link target="_blank" href={"https://spexup.com"}>
+                                {chunks}
+                            </Link>
                         ),
                     })}
                 </p>

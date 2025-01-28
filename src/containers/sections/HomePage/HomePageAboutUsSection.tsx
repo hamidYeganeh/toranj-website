@@ -2,6 +2,7 @@
 
 import { AboutUs } from "@/constants/dummy";
 import { MEDIAS } from "@/constants/layout-config";
+import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -88,7 +89,7 @@ export const HomePageAboutUsSection = () => {
             </div>
 
             <div id="container" className="relative h-dvh w-dvw">
-                <SectionCard id="about-us-card-1" item={AboutUs[0]} />
+                <SectionCard id="about-us-card-1" item={AboutUs[0]} withBg />
                 <div
                     id="about-us-card-2-container"
                     className="absolute left-[100dvw] top-0 h-dvh w-dvw"
@@ -100,10 +101,12 @@ export const HomePageAboutUsSection = () => {
     );
 };
 
-const SectionCard: FC<{ id: string; item: (typeof AboutUs)[number] }> = (
-    props,
-) => {
-    const { id, item } = props;
+const SectionCard: FC<{
+    id: string;
+    item: (typeof AboutUs)[number];
+    withBg?: boolean;
+}> = (props) => {
+    const { id, item, withBg } = props;
     return (
         <div
             id={id}
@@ -125,7 +128,11 @@ const SectionCard: FC<{ id: string; item: (typeof AboutUs)[number] }> = (
                     className="z-10 aspect-square w-[50%]"
                 />
             </div>
-            <div className="flex h-full justify-end bg-white">
+            <div
+                className={cn("flex h-full justify-end", {
+                    "bg-white": withBg,
+                })}
+            >
                 <div
                     className="h-full w-1/5 bg-cover bg-fixed bg-left"
                     style={{
