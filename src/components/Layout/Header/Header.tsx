@@ -33,7 +33,7 @@ export const Header = () => {
     return (
         <header
             id="header"
-            className="fixed left-0 top-0 z-[9999] h-10 w-full bg-bg-paper duration-500"
+            className="z-header fixed left-0 top-0 h-10 w-full bg-bg-paper duration-500"
         >
             <Container
                 maxWidth={"xl"}

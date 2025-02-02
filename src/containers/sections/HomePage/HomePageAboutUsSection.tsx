@@ -42,7 +42,6 @@ export const HomePageAboutUsSection = () => {
             trigger: "#container",
             start: "top",
             pin: true,
-            markers: true,
             end: "+=" + window.innerHeight * 5,
             scrub: true,
             pinSpacing: true,

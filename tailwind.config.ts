@@ -136,6 +136,10 @@ export default {
                 },
                 divider: "var(--divider)",
             },
+            zIndex: {
+                header: "9998",
+                reserve: "9999",
+            },
             borderRadius: {
                 DEFAULT: "var(--radius)",
                 lg: "var(--radius-lg)",

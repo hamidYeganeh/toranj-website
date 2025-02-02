@@ -47,17 +47,17 @@ export const HomePagePriceSection = () => {
     });
 
     return (
-        <>
-            <div
+        <div className="relative w-full bg-blue-500">
+            {/* <div
                 id="menu"
                 className={cn(
-                    "top-0 z-[9999] hidden h-dvh w-full transition-all duration-500",
+                    "top-0 z-[9999] h-dvh w-full transition-all duration-500",
                 )}
             >
                 <div className="relative flex h-full w-full justify-end">
                     <div
-                        className="absolute inset-0 z-0 m-auto h-full w-full bg-[#12121285]"
-                        style={{ filter: "blur(50px)" }}
+                        className="absolute inset-0 z-0 m-auto h-full w-full"
+                        style={{ filter: "blur(2px)" }}
                     ></div>
                     <IconButton
                         variant={"contained"}
@@ -115,11 +115,77 @@ export const HomePagePriceSection = () => {
                         </div>
                     </div>
                 </div>
+            </div> */}
+            <div
+                className={cn(
+                    "z-reserve top-0 m-auto h-full w-full transition-all duration-500",
+                    isMenuSheetOpen ? "fixed left-0" : "fixed left-[100dvw]",
+                )}
+            >
+                <div className="relative flex h-full w-full justify-end">
+                    <div className="absolute inset-0 z-10 m-auto backdrop-blur-xl"></div>
+                    <IconButton
+                        variant={"contained"}
+                        size={"lg"}
+                        className="absolute right-8 top-8 z-50 bg-white text-black hover:text-white"
+                        onClick={handleCloseMenuSheet}
+                    >
+                        <IoClose />
+                    </IconButton>
+
+                    <div className="z-20 flex h-full w-1/2 flex-col bg-white p-4">
+                        <div
+                            className={"h-56 w-full bg-cover bg-fixed"}
+                            style={{
+                                backgroundImage: `url(${selectedMenu?.banner})`,
+                            }}
+                        ></div>
+                        <div className="my-2 max-h-[calc(100%-(56*4px)-(14*4px))] w-full scroll-m-4 divide-y-[1px] overflow-y-scroll pe-4">
+                            {selectedMenu?.items.map(
+                                (menuSubItem, menuSubItemIndex) => (
+                                    <div
+                                        key={menuSubItemIndex}
+                                        className="flex w-full flex-row items-center justify-between py-3"
+                                    >
+                                        <p className="text-md font-fira">
+                                            {menuSubItem.title}
+                                        </p>
+                                        <p className="text-md font-fira">
+                                            {format.number(menuSubItem.price, {
+                                                style: "currency",
+                                                currency: "EUR",
+                                                minimumFractionDigits: 0,
+                                            })}
+                                        </p>
+                                    </div>
+                                ),
+                            )}
+                        </div>
+                        <div className="mt-auto flex w-full flex-row items-center gap-2">
+                            <Button
+                                fullWidth
+                                variant="contained"
+                                color="secondary"
+                                size={"md"}
+                            >
+                                {t("about-us-section.reserve-table")}
+                            </Button>
+                            <Button
+                                fullWidth
+                                variant="outlined"
+                                color="primary"
+                                size={"md"}
+                            >
+                                {t("about-us-section.callback")}
+                            </Button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div
                 id="price-section"
                 className={cn(
-                    "relative z-50 w-full overflow-hidden bg-text-dark py-32",
+                    "relative z-40 w-full overflow-hidden bg-text-dark py-32",
                     "max-md:px-4",
                 )}
             >
@@ -136,8 +202,8 @@ export const HomePagePriceSection = () => {
                                     "group flex cursor-pointer flex-row items-baseline gap-4 border-b border-text-primary py-4",
                                 )}
                                 onClick={() => {
-                                    // handleOpenMenuSheet();
-                                    // handleSelectedMenu(menuItem);
+                                    handleOpenMenuSheet();
+                                    handleSelectedMenu(menuItem);
                                 }}
                             >
                                 <div
@@ -173,6 +239,6 @@ export const HomePagePriceSection = () => {
                     </div>
                 </Container>
             </div>
-        </>
+        </div>
     );
 };
