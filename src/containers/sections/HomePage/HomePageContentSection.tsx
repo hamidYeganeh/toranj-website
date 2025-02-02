@@ -4,7 +4,6 @@ import { GalleryCard } from "@/components/common/GalleryCard";
 import { Container } from "@/components/kit";
 import { GALLERY } from "@/constants/dummy";
 import { MEDIAS } from "@/constants/layout-config";
-import { useResponsive } from "@/hooks/useResponsive";
 import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type IMediaQuery = "xs" | "sm" | "md" | "lg" | "xl";
+// type IMediaQuery = "xs" | "sm" | "md" | "lg" | "xl";
 
 // export const useResponsive = () => {
 //     const [currentMediaQuery, setCurrentMediaQuery] = useState<IMediaQuery>();
