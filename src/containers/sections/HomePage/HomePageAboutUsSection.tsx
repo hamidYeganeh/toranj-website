@@ -42,8 +42,8 @@ export const HomePageAboutUsSection = () => {
             trigger: "#container",
             start: "top",
             pin: true,
+            markers: true,
             end: "+=" + window.innerHeight * 5,
-            markers: false,
             scrub: true,
             pinSpacing: true,
             animation: aboutUsSections,
@@ -92,7 +92,7 @@ export const HomePageAboutUsSection = () => {
                 </div>
             </div>
 
-            <div id="container" className="relative h-dvh w-dvw">
+            <div id="container" className="relative h-dvh w-full">
                 <SectionCard id="about-us-card-1" item={AboutUs[0]} withBg />
                 <div
                     id="about-us-card-2-container"
@@ -134,7 +134,7 @@ const SectionCard: FC<{
                     height={300}
                     className={cn(
                         "z-10 aspect-square w-[50%]",
-                        "max-md:w-[75%] max-md:mx-auto",
+                        "max-md:mx-auto max-md:w-[75%]",
                     )}
                 />
             </div>

@@ -27,15 +27,15 @@ export const HomePagePriceSection = () => {
         setSelectedMenu(selectedMenu);
     }
 
-    useEffect(() => {
-        if (!!document) {
-            if (isMenuSheetOpen) {
-                document.body.style.overflowY = "hidden";
-            } else {
-                document.body.style.overflowY = "auto";
-            }
-        }
-    }, [isMenuSheetOpen]);
+    // useEffect(() => {
+    //     if (!!document) {
+    //         if (isMenuSheetOpen) {
+    //             document.body.style.overflowY = "hidden";
+    //         } else {
+    //             document.body.style.overflowY = "auto";
+    //         }
+    //     }
+    // }, [isMenuSheetOpen]);
     useGSAP(() => {
         const MenuSheet = gsap.timeline();
 
