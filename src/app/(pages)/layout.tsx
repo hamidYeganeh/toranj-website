@@ -10,7 +10,7 @@ export default function MainPagesLayout(
 
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             {children}
         </>
     );
