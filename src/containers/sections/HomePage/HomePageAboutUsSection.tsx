@@ -121,7 +121,7 @@ const SectionCard: FC<{
                 "max-md:grid-cols-1",
             )}
         >
-            <div className="relative flex h-full items-center justify-center">
+            <div className="relative flex h-full items-center justify-center overflow-hidden">
                 <h2
                     id={`${id}-title`}
                     className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto max-w-md text-center font-sequencia text-7xl mix-blend-soft-light"
