@@ -15,4 +15,7 @@ export const MEDIAS = {
     contentImage2: "/assets/images/contentImage2.jpg",
     contentImage3: "/assets/images/contentImage3.jpg",
     contentImage4: "/assets/images/contentImage4.jpg",
+    menuKababBanner: "/assets/images/grilled-dishes-banner.jpg",
+    menuStarterBanner: "/assets/images/starter-banner.jpg",
+    menuSpecialsBanner: "/assets/images/specials-banner.jpg",
 };

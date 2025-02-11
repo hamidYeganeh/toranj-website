@@ -32,7 +32,7 @@ export const HomePageAdvantagesSection = () => {
     });
 
     return (
-        <div className="max-md:h-[200dvh] relative h-[300dvh] w-full">
+        <div className="max-md:h-[200dvh] relative h-[300dvh] w-full overflow-x-hidden">
             <div
                 className="h-full w-full bg-cover bg-fixed bg-no-repeat"
                 style={{

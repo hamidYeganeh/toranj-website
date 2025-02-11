@@ -1,3 +1,5 @@
+"use client";
+
 import { IProduct } from "@/types/general.types";
 import { useFormatter, useTranslations } from "next-intl";
 import { FC, useState } from "react";

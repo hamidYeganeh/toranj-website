@@ -1,6 +1,6 @@
 // libs
 import LocalFont from "next/font/local";
-import { Inter } from "next/font/google";
+import { Inter, Fira_Code } from "next/font/google";
 import { getLanguageDirection } from "@/i18n/request";
 import { getLocale, getMessages } from "next-intl/server";
 // providers
@@ -27,9 +27,9 @@ const InterFont = Inter({
     weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
     subsets: ["latin"],
 });
-const Fira_CodeFont = Inter({
+const Fira_CodeFont = Fira_Code({
     variable: "--Fira_CodeFont-font",
-    weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
+    weight: ["300", "400", "500", "700"],
     subsets: ["latin"],
 });
 

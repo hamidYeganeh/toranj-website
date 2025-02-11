@@ -54,6 +54,7 @@ export const HomePageContactsSection = () => {
                                 </p>
                                 <Link
                                     href={contactItem.link}
+                                    target="_blank"
                                     className="text-xl capitalize text-text-light"
                                 >
                                     {contactItem.value}

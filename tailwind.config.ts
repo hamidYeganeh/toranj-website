@@ -32,7 +32,7 @@ export default {
             fontFamily: {
                 sequencia: "var(--sequencia-font)",
                 inter: "var(--inter-font)",
-                fira: "--Fira_CodeFont-font",
+                fira: "var(--Fira_CodeFont-font)",
             },
             fontSize: {
                 extreme: "204px",

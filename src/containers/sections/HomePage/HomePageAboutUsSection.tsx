@@ -91,7 +91,10 @@ export const HomePageAboutUsSection = () => {
                 </div>
             </div>
 
-            <div id="container" className="relative h-dvh w-full">
+            <div
+                id="container"
+                className="relative h-dvh w-dvw overflow-hidden"
+            >
                 <SectionCard id="about-us-card-1" item={AboutUs[0]} withBg />
                 <div
                     id="about-us-card-2-container"
@@ -114,11 +117,11 @@ const SectionCard: FC<{
         <div
             id={id}
             className={cn(
-                "relative z-20 grid h-dvh w-dvw grid-cols-2 overflow-hidden",
+                "relative z-20 grid h-dvh w-dvw grid-cols-2",
                 "max-md:grid-cols-1",
             )}
         >
-            <div className="relative flex h-full items-center justify-center overflow-hidden">
+            <div className="relative flex h-full items-center justify-center">
                 <h2
                     id={`${id}-title`}
                     className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto max-w-md text-center font-sequencia text-7xl mix-blend-soft-light"

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useFormatter, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 type IMenuItem = (typeof MENU_ITEMS)[number];
@@ -27,31 +27,23 @@ export const HomePagePriceSection = () => {
         setSelectedMenu(selectedMenu);
     }
 
-    // useEffect(() => {
-    //     if (!!document) {
-    //         if (isMenuSheetOpen) {
-    //             document.body.style.overflowY = "hidden";
-    //         } else {
-    //             document.body.style.overflowY = "auto";
-    //         }
-    //     }
-    // }, [isMenuSheetOpen]);
-    useGSAP(() => {
-        const MenuSheet = gsap.timeline();
-
-        if (isMenuSheetOpen) {
-            MenuSheet.fromTo("#menu-sheet", { xPercent: 100 }, { xPercent: 0 });
-        } else {
-            MenuSheet.fromTo("#menu-sheet", { xPercent: 0 }, { xPercent: 100 });
+    useEffect(() => {
+        if (!!document) {
+            if (isMenuSheetOpen) {
+                document.body.style.overflowY = "hidden";
+            } else {
+                document.body.style.overflowY = "auto";
+            }
         }
-    });
+    }, [isMenuSheetOpen]);
 
     return (
-        <div className="relative w-full bg-blue-500">
+        <div className="relative w-full">
             <div
                 className={cn(
-                    "z-reserve top-0 m-auto h-full w-full transition-all duration-500",
+                    "top-0 z-reserve m-auto h-full w-full transition-all duration-500",
                     isMenuSheetOpen ? "fixed left-0" : "fixed left-[100dvw]",
+                    "max-md:p-4",
                 )}
             >
                 <div className="relative flex h-full w-full justify-end">
@@ -65,9 +57,16 @@ export const HomePagePriceSection = () => {
                         <IoClose />
                     </IconButton>
 
-                    <div className="z-20 flex h-full w-1/2 flex-col bg-white p-4">
+                    <div
+                        className={cn(
+                            "z-20 flex h-full w-1/2 flex-col bg-white p-4",
+                            "max-md:w-full max-md:rounded-lg max-md:overflow-hidden",
+                        )}
+                    >
                         <div
-                            className={"h-56 w-full bg-cover bg-fixed"}
+                            className={
+                                "h-80 w-full rounded-lg bg-cover bg-fixed bg-center bg-no-repeat"
+                            }
                             style={{
                                 backgroundImage: `url(${selectedMenu?.banner})`,
                             }}
@@ -148,7 +147,11 @@ export const HomePagePriceSection = () => {
                                         {t(
                                             "price-section.menu-item-start-price",
                                             {
-                                                price: menuItem.startPrice,
+                                                price: Math.min(
+                                                    ...menuItem.items.map(
+                                                        ({ price }) => price,
+                                                    ),
+                                                ),
                                             },
                                         )}
                                     </p>

@@ -69,78 +69,93 @@ export const AboutUs = [
 export const MENU_ITEMS = [
     {
         _id: "1",
-        title: "Salads",
-        startPrice: 10,
-        banner: MEDIAS.aboutUsImage2,
+        title: "Grillgerichte",
+        banner: MEDIAS.menuKababBanner,
         items: [
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
-            { title: "Caprese Salads", price: 23 },
+            {
+                title: "KUBIDEH",
+                description:
+                    "Faschierter Spieß aus Lamm & Rind serviert mit Basmati-Reis oder Pommes",
+                price: 13.9,
+            },
+            {
+                title: "KABAB-BARG",
+                description:
+                    "Zartes Lammfilet vom Grill serviert mit Basmati-Reis oder Pommes",
+                price: 17.9,
+            },
+            {
+                title: "KABAB-SHISHLIK",
+                description:
+                    "Gegrillte Lammkoteletts serviert mit Basmati-Reis oder Pommes",
+                price: 18.9,
+            },
+            {
+                title: "JUJEH-TORSH",
+                description:
+                    "Fein mariniertes Hühnerfilet vom Grill, eingelegt in Granatapfelsauce & persischen Limetten (C,G)",
+                price: 19.3,
+            },
         ],
     },
     {
         _id: "2",
-        title: "Hot Dishes",
-        startPrice: 10,
-        banner: MEDIAS.aboutUsImage2,
+        title: "VORSPEISEN",
+        banner: MEDIAS.menuStarterBanner,
         items: [
-            { title: "Caprese Hot dishes", price: 23 },
-            { title: "Caprese Hot dishes", price: 23 },
-            { title: "Caprese Hot dishes", price: 23 },
-            { title: "Caprese Hot dishes", price: 23 },
-            { title: "Caprese Hot dishes", price: 23 },
-            { title: "Caprese Hot dishes", price: 23 },
-            { title: "Caprese Hot dishes", price: 23 },
+            {
+                title: "MIRZA GHASEMI",
+                description:
+                    "Fein passierte, geräucherte Melanzani, verfeinert mit Ei, Tomaten & Knoblauch serviert mit Hausbrot (C,O)",
+                price: 6.9,
+            },
+            {
+                title: "KASHKE BADEMJAN",
+                description:
+                    "Fein passierte, gebratene Melanzani, verfeinert mit Minze, Knoblauch & persischem Sauerrahm, serviert mit Hausbrot (A,G)",
+                price: 7.1,
+            },
+            {
+                title: "KUKU SABZI",
+                description:
+                    "Persisches Omelett aus frischen Kräutern, Ei, Mohnteigblätter, Berberitzen & geriebene Walnüssen, serviert mit Hausbrot (A,C,G,N)",
+                price: 6.5,
+            },
+            {
+                title: "HUMMUS",
+                description:
+                    "Kichererbsenpüree mit Tahin & Olivenöl (H,N) serviert mit Hausbrot",
+                price: 5.2,
+            },
+            {
+                title: "ZEYTOON PARVARDE",
+                description:
+                    "Grüne Oliven in einer Granatapfel-Walnussmarinade (H)",
+                price: 6.8,
+            },
         ],
     },
     {
         _id: "3",
-        title: "Dessert",
-        startPrice: 10,
-        banner: MEDIAS.aboutUsImage2,
+        title: "SPECIALS",
+        banner: MEDIAS.menuSpecialsBanner,
         items: [
-            { title: "Caprese Dessert", price: 23 },
-            { title: "Caprese Dessert", price: 23 },
-            { title: "Caprese Dessert", price: 23 },
-            { title: "Caprese Dessert", price: 23 },
-            { title: "Caprese Dessert", price: 23 },
-            { title: "Caprese Dessert", price: 23 },
-            { title: "Caprese Dessert", price: 23 },
-        ],
-    },
-    {
-        _id: "4",
-        title: "Beverages",
-        startPrice: 10,
-        banner: MEDIAS.aboutUsImage2,
-        items: [
-            { title: "Caprese Beverages", price: 23 },
-            { title: "Caprese Beverages", price: 23 },
-            { title: "Caprese Beverages", price: 23 },
-            { title: "Caprese Beverages", price: 23 },
-            { title: "Caprese Beverages", price: 23 },
-            { title: "Caprese Beverages", price: 23 },
-            { title: "Caprese Beverages", price: 23 },
+            {
+                title: "VORSPEISENTELLER FÜR 2",
+                description: "3 Vorspeisen nach Wahl",
+                price: 15.9,
+            },
+            {
+                title: "VORSPEISENTELLER FÜR 3-4",
+                description: "4 Vorspeisen nach Wahl",
+                price: 25.8,
+            },
+            {
+                title: "TORANJ PLATTE (FÜR 2 PERSONEN)",
+                description:
+                    "Grillplatte für 2 Personen, bestehend aus - 2 Spieß Kubideh - 1 Spieß Chenjeh (Rindfilet) - 1 Spieß Juje (Hühnerfilet) serviert mit zwei Portionen Safran-Reis",
+                price: 49.8,
+            },
         ],
     },
 ];
@@ -172,9 +187,17 @@ export const GALLERY: IGallery[] = [
 export const ContactUsData = [
     {
         label: "contacts-section.address",
-        link: "tel:",
-        value: "USA - Chicago",
+        link: "https://www.google.com/maps/place/Toranj+Restaurant/@48.2039329,16.3850383,21z/data=!4m6!3m5!1s0x476d07f3e0d495ef:0x97c0244050a1b56e!8m2!3d48.2038242!4d16.3852665!16s%2Fg%2F11t9d471fj?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D",
+        value: "Ecke Münzgasse, Ungargasse 6, 1030 Wien, Austria",
     },
-    { label: "contacts-section.phone", link: "tel:", value: "1234567" },
-    { label: "contacts-section.email", link: "tel:", value: "email@test.com" },
+    {
+        label: "contacts-section.phone",
+        link: "tel:+4319978097",
+        value: "+4319978097",
+    },
+    {
+        label: "contacts-section.email",
+        link: "mailto:info@toranj.at",
+        value: "info@toranj.at",
+    },
 ];
