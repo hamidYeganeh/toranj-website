@@ -18,12 +18,12 @@
             "book": "Book ▶"
         },
         "about-us-section": {
-            "text": "The atmosphere of romantic Venice reigns in our cozy restaurant, where every dish is prepared by hand and with special passion. Just like in old cafes on the narrow streets of a charming city. The chefs skillfully combine fresh and selected ingredients and deliver them to your table with love. We work to ensure that you enjoy the dolce vita and the vibrant flavors of Italy",
+            "text": "Im Restaurant Toranj in Wien tauchen Sie in eine Welt der Geschmacksvielfalt, in der Sie nicht nur die orientalischen Spezialitäten genießen, sondern auch das Ambiente der persischen Kulturvielfalt bewundern können. Das derzeitige Toranj, wurde von unseren Gründer selbst, mit viel Liebe und Leidenschaft renoviert. Die renovierung hat mehr als sechszehn Monate gedauert und umsomehr der Hunger nach persischen Gerichten. Erleben Sie in einem der besten Restaurants, in Wien, einen besonderen Aufenthalt. Unsere orientalischen Spezialitäten genießen Sie in einem atemberaubenden und exklusiven Ambiente, nähe dem Wiener Stadtpark. Mit einem Besuch im Restaurant - Toranj können Sie die gehobene Küche, mit aufwändig zubereiteten Gerichten, verkosten. Herzlich Willkommen im Toranj und besten Appetit wünscht Euch das Team.",
             "reserve-table": "Reserve a table",
             "callback": "Callback",
             "card": {
-                "title": "Welcome to our sophisticated restaurant in the heart of Venice",
-                "description": "Enjoy stunning views of the beautiful city's historic architecture with a glass of fine wine and delicate salami prepared by the world's best chef"
+                "title": "BESUCHEN SIE UNSER RESTAURANT UND DIE GEMÜTLICHE ATMOSPHÄRE",
+                "description": "Ob Hochzeit, Familienfest, Betriebsfeier oder ein großer Empfang. Unser geräumiges Restaurant mit ca. 100 m² Gastfläche kann durch die verschiedenen Bereiche kleine, mittlere und große Veranstaltungen ausrichten. Für die Planung Ihrer Veranstaltung möchten wir Ihnen einen kleinen Überblick über die Möglichkeiten in unserem Hause geben."
             }
         },
         "price-section": {
@@ -31,8 +31,8 @@
             "menu-item-start-price": "from {price}"
         },
         "contents-section": {
-            "title": "Since 1920 In the heart of Venice",
-            "description": "In the very heart of Venice, on the banks of one of the canals, a cozy Italian tavern was opened. Its founder was a passionate connoisseur of Italian cuisine and culture, who dreamed of creating a place where guests could enjoy excellent dishes, a rich wine selection and a unique atmosphere\n\nThe restaurant was located in a building with historical architecture that combined elements of the Venetian Gothic style and the splendor of the canal views. Every day the tavern welcomed guests with its warm and cozy interior, reminiscent of the historical heritage of Venice and its culture\n\nOver time, the restaurant has become an integral part of the gastronomic life of Venice, attracting both locals and tourists from all over the world. The menu of the establishment was enriched with new dishes, but did not lose its exquisite Italian taste, and the service remained the most attentive and caring\n\nAnd now, many years later, the restaurant continues to be famous for its delicious dishes, cozy atmosphere and stunning views of the petal bridges and floating gondolas. The Venetian tavern has become not just a place for treating bodily needs, but a real epicenter of meetings, conversations and elevation of the soul\n\nThe concept of our restaurant is to create a unique atmosphere inspired by the culture and history of Venice. The interior design of the restaurant reflects Venetian style and architecture, using traditional elements and colors\n\nThe restaurant's menu is probably composed of traditional Venetian dishes, representing the best culinary traditions of this region. The selection of products will be carried out with special attention to quality and freshness, so that guests can enjoy the authentic tastes of Venetian cuisine\n\nThe service at the restaurant will probably be high quality and attentive, making each guest feel valued and welcome during the service experience. All this combined with our restaurant's unique location in the center of Venice makes it a popular destination for tourists and locals wanting to experience the magic and flavors of this historic city",
+            "title": "BIS WIR DIE GASTRONOMIE ENTDECKTEN, WAREN WIR NIE WIRKLICH AN IRGENDETWAS INTERESSIERT",
+            "description": "Das persische Restaurant Toranj in Wien gehört seit August 2021 zu den kulinarischen Treffpunkten im beliebten Wienerbezirk. Genießen Sie authentisch persische Küche, romantisch-gemütliches Ambiente und herzlich aufmerksame Bedienung.",
             "gallery-title": "Breathe in the charm of Venice"
         },
         "advantages-section": {

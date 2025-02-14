@@ -3,9 +3,8 @@
 import { Button, Container, IconButton } from "@/components/kit";
 import { MENU_ITEMS } from "@/constants/dummy";
 import { cn } from "@/lib/utils";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { useFormatter, useTranslations } from "next-intl";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
@@ -60,18 +59,19 @@ export const HomePagePriceSection = () => {
                     <div
                         className={cn(
                             "z-20 flex h-full w-1/2 flex-col bg-white p-4",
-                            "max-md:w-full max-md:rounded-lg max-md:overflow-hidden",
+                            "max-md:w-full max-md:overflow-hidden max-md:rounded-lg",
                         )}
                     >
-                        <div
-                            className={
-                                "h-80 w-full rounded-lg bg-cover bg-fixed bg-center bg-no-repeat"
-                            }
-                            style={{
-                                backgroundImage: `url(${selectedMenu?.banner})`,
-                            }}
-                        ></div>
-                        <div className="my-2 max-h-[calc(100%-(56*4px)-(14*4px))] w-full scroll-m-4 divide-y-[1px] overflow-y-scroll pe-4">
+                        {selectedMenu?.banner && selectedMenu?.title && (
+                            <Image
+                                src={selectedMenu.banner}
+                                alt={selectedMenu.title}
+                                width={760}
+                                height={280}
+                                className="h-72 w-full rounded-lg object-cover"
+                            />
+                        )}
+                        <div className="my-2 max-h-[calc(100%-(56*4px)-(14*4px))] w-full scroll-m-4 divide-y-[1px] overflow-y-auto pe-4">
                             {selectedMenu?.items.map(
                                 (menuSubItem, menuSubItemIndex) => (
                                     <div

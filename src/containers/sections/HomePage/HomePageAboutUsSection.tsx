@@ -20,7 +20,11 @@ export const HomePageAboutUsSection = () => {
         aboutUsSections
             .to("#about-us-card", { xPercent: -100 })
             .fromTo("#about-us-card-1", { xPercent: 100 }, { xPercent: 0 }, "=")
-            .fromTo("#about-us-card-1-image", { scale: 1 }, { scale: 3 })
+            .fromTo(
+                "#about-us-card-1-image",
+                { width: "50%" },
+                { width: "100%" },
+            )
             .fromTo(
                 "#about-us-card-1-title",
                 { yPercent: 0 },
@@ -31,7 +35,11 @@ export const HomePageAboutUsSection = () => {
                 { left: "100dvw" },
                 { left: "0dvw" },
             )
-            .fromTo("#about-us-card-2-image", { scale: 1 }, { scale: 3 })
+            .fromTo(
+                "#about-us-card-2-image",
+                { width: "50%" },
+                { width: "100%" },
+            )
             .fromTo(
                 "#about-us-card-2-title",
                 { yPercent: 0 },
@@ -124,7 +132,7 @@ const SectionCard: FC<{
             <div className="relative flex h-full items-center justify-center overflow-hidden">
                 <h2
                     id={`${id}-title`}
-                    className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto max-w-md text-center font-sequencia text-7xl mix-blend-soft-light"
+                    className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto max-w-xl text-center font-sequencia text-7xl text-white mix-blend-hard-light"
                 >
                     {item.title}
                 </h2>
@@ -135,7 +143,7 @@ const SectionCard: FC<{
                     width={300}
                     height={300}
                     className={cn(
-                        "z-10 aspect-square w-[50%]",
+                        "z-10 aspect-square w-[50%] object-cover",
                         "max-md:mx-auto max-md:w-[75%]",
                     )}
                 />

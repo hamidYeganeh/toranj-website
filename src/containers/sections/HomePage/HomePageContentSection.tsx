@@ -142,7 +142,7 @@ const ContentSection1 = () => {
                 <div className="flex h-dvh w-full items-center justify-start">
                     <p
                         className={cn(
-                            "whitespace-pre-line text-xs font-normal text-text-dark",
+                            "whitespace-pre-line font-fira text-lg font-normal text-text-dark",
                             "max-md:text-text-light",
                         )}
                     >
@@ -152,16 +152,17 @@ const ContentSection1 = () => {
             </div>
             <div
                 className={cn(
-                    "sticky top-0 h-full w-1/2 bg-cover bg-fixed bg-no-repeat",
-                    "max-md:w-full max-md:absolute max-md:z-0 max-md:h-full",
+                    "sticky top-0 h-full w-1/2",
+                    "max-md:absolute max-md:z-0 max-md:h-full max-md:w-full",
                 )}
-                style={{
-                    backgroundImage: `url(${MEDIAS.contentImage1})`,
-                    backgroundPosition: "center",
-                    transformOrigin: "center",
-                    backgroundSize: "cover",
-                }}
-            ></div>
+            >
+                <div
+                    className="h-full w-full bg-cover bg-fixed bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `url(${MEDIAS.contentImage1})`,
+                    }}
+                ></div>
+            </div>
         </div>
     );
 };
@@ -177,7 +178,7 @@ const ContentSection2 = () => {
                             id="content-section-2-title"
                             className={cn(
                                 "max-w-md text-start font-sequencia text-7xl",
-                                "max-md:absolute max-md:mx-4 max-md:top-[20dvh] max-md:z-50 max-md:max-w-full max-md:text-text-light max-md:text-5xl",
+                                "max-md:absolute max-md:top-[20dvh] max-md:z-50 max-md:mx-4 max-md:max-w-full max-md:text-5xl max-md:text-text-light",
                             )}
                         >
                             {t("contents-section.gallery-title")}
@@ -192,7 +193,7 @@ const ContentSection2 = () => {
                                 <div
                                     key={`gallery-item-${galleryItem._id}`}
                                     id={`gallery-item-${galleryItem._id}`}
-                                    className="max-md:absolute max-md:mx-auto max-md:w-full max-md:flex max-md:justify-center"
+                                    className="max-md:absolute max-md:mx-auto max-md:flex max-md:w-full max-md:justify-center"
                                 >
                                     <GalleryCard
                                         id={`gallery-item-card-${galleryItem._id}`}

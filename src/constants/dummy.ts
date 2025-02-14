@@ -57,11 +57,11 @@ export const Products: (IProduct | null)[] = [
 
 export const AboutUs = [
     {
-        title: "Breakfast with the aromas of fresh coffee",
+        title: "EIN KULINARISCHES ERLEBNIS WIE KEIN ANDERES",
         image: MEDIAS.aboutUsImage2,
     },
     {
-        title: "Dinner in a romantic settingSO MUUUCH",
+        title: "BIS WIR DIE GASTRONOMIE ENTDECKTEN, WAREN WIR NIE WIRKLICH AN IRGENDETWAS INTERESSIERT",
         image: MEDIAS.aboutUsImage3,
     },
 ];
@@ -188,7 +188,7 @@ export const ContactUsData = [
     {
         label: "contacts-section.address",
         link: "https://www.google.com/maps/place/Toranj+Restaurant/@48.2039329,16.3850383,21z/data=!4m6!3m5!1s0x476d07f3e0d495ef:0x97c0244050a1b56e!8m2!3d48.2038242!4d16.3852665!16s%2Fg%2F11t9d471fj?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D",
-        value: "Ecke Münzgasse, Ungargasse 6, 1030 Wien, Austria",
+        value: "Ungargasse 6 / Ecke Münzgasse, 1030 Wien",
     },
     {
         label: "contacts-section.phone",

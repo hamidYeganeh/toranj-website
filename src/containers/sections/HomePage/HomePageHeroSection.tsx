@@ -29,7 +29,7 @@ export const HomePageHeroSection = () => {
         ScrollTrigger.create({
             trigger: "#hero-section-container",
             start: "25% top",
-            end: '+=' + window.innerHeight / 2,
+            end: "+=" + window.innerHeight / 2,
             scrub: 2,
             animation: heroTitle,
         });
@@ -45,7 +45,7 @@ export const HomePageHeroSection = () => {
                 <h1
                     id="hero-section-title"
                     className={cn(
-                        "relative z-10 line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-text-light",
+                        "relative z-10 line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-text-dark",
                         "max-md:text-center max-md:text-5xl",
                     )}
                 >
