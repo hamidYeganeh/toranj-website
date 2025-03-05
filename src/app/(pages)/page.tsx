@@ -23,8 +23,6 @@ export default function HomePage() {
             <HomePageContentSection />
             <HomePageAdvantagesSection />
             <HomePageContactsSection />
-            {/*
-             */}
         </main>
     );
 }

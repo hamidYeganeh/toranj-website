@@ -90,10 +90,10 @@ export const HomePageAboutUsSection = () => {
 
             <div
                 id="about-us-text-container"
-                className="flex w-full justify-end pe-24 pt-[130dvh]"
+                className="flex w-full justify-end pe-24 pt-[130dvh] max-md:ps-6"
             >
                 <div className={cn("w-1/3", "max-md:w-full")}>
-                    <h2 className="text-wrap font-fira text-5xl text-white max-md:text-4xl">
+                    <h2 className="max-w-full break-words font-fira text-5xl text-white max-md:text-4xl">
                         {t("about-us-section.text")}
                     </h2>
                 </div>
