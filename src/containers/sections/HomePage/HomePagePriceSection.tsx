@@ -38,7 +38,7 @@ export const HomePagePriceSection = () => {
 
     return (
         <div className="relative w-full">
-            <div
+            {/* <div
                 className={cn(
                     "top-0 z-reserve m-auto h-full w-full transition-all duration-500",
                     isMenuSheetOpen ? "fixed left-0" : "fixed left-[100dvw]",
@@ -112,7 +112,7 @@ export const HomePagePriceSection = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div
                 id="price-section"
                 className={cn(

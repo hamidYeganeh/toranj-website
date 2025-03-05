@@ -32,7 +32,7 @@ export const HomePageAdvantagesSection = () => {
     });
 
     return (
-        <div className="max-md:h-[200dvh] relative h-[300dvh] w-full max-md:overflow-x-hidden">
+        <div className="relative h-[300dvh] w-full overflow-x-hidden max-md:h-[200dvh]">
             <div
                 className="h-full w-full bg-cover bg-fixed bg-no-repeat"
                 style={{
@@ -46,7 +46,7 @@ export const HomePageAdvantagesSection = () => {
                     id="advantages-section"
                     className={cn(
                         "sticky top-0 flex h-full w-1/2 flex-col justify-between gap-4 bg-white p-4",
-                        "max-md:w-[calc(100%-16px)] max-md:mx-auto",
+                        "max-md:mx-auto max-md:w-[calc(100%-16px)]",
                     )}
                 >
                     <div className="relative h-full w-full">

@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function HomePage() {
     return (
-        <main className="w-full bg-bg-paper">
+        <main className="w-dvw bg-bg-paper">
             <HomePageHeroSection />
             <HomePageProductsSection />
             <HomePageAboutUsSection />
@@ -23,6 +23,8 @@ export default function HomePage() {
             <HomePageContentSection />
             <HomePageAdvantagesSection />
             <HomePageContactsSection />
+            {/*
+             */}
         </main>
     );
 }
