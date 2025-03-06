@@ -33,14 +33,16 @@ export const HomePageAdvantagesSection = () => {
 
     return (
         <div className="relative h-[300dvh] w-full max-md:h-[200dvh] max-md:overflow-x-hidden">
-            <div
-                className="h-full w-full bg-cover bg-fixed bg-no-repeat"
-                style={{
-                    backgroundImage: `url(${MEDIAS.contentImage4})`,
-                    backgroundPositionX: "100%",
-                    backgroundPositionY: "0",
-                }}
-            ></div>
+            <div className="sticky top-0 h-dvh max-md:h-full">
+                <div
+                    className="h-full w-full bg-cover bg-fixed bg-left-top"
+                    style={{
+                        backgroundImage: `url(${MEDIAS.contentImage4})`,
+                        backgroundPositionX: "-50%",
+                        backgroundPositionY: "0",
+                    }}
+                ></div>
+            </div>
             <div className="absolute top-0 flex h-full w-full justify-end">
                 <div
                     id="advantages-section"

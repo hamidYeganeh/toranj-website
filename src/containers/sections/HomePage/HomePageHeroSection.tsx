@@ -45,7 +45,7 @@ export const HomePageHeroSection = () => {
                 <h1
                     id="hero-section-title"
                     className={cn(
-                        "relative z-10 line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-text-dark",
+                        "relative z-10 line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-white",
                         "max-md:text-center max-md:text-5xl",
                     )}
                 >
@@ -56,6 +56,7 @@ export const HomePageHeroSection = () => {
                 id="hero-section-image-container"
                 className="absolute inset-0 m-auto h-dvh w-full bg-bg-paper"
             >
+                <div className="absolute inset-0 m-auto h-full w-full bg-black/20"></div>
                 <video
                     className="z-0 h-full w-full object-cover"
                     autoPlay
@@ -67,16 +68,6 @@ export const HomePageHeroSection = () => {
                         type="video/MP4"
                     />
                 </video>
-                {/* <div
-                    id="hero-section-image"
-                    className={cn(
-                        "mx-auto flex h-full w-full overflow-hidden bg-cover bg-fixed z-0",
-                    )}
-                    style={{
-                        backgroundImage: `url(${MEDIAS.heroImage})`,
-                        backgroundPosition: "0% 50%",
-                    }}
-                ></div> */}
             </div>
         </div>
     );

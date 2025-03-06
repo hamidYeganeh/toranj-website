@@ -18,11 +18,6 @@ export const HomePageContentSection = () => {
         const galleryItemsWrapper = gsap.timeline();
         const galleryItemsWrapperReversed = gsap.timeline();
 
-        // contentSection2Bg1.fromTo(
-        //     "#content-bg-1",
-        //     { width: "50%" },
-        //     { width: "100%" },
-        // );
         contentSection2Bg1.to("#content-bg-1", { width: "100%" });
 
         galleryItemsWrapper
@@ -157,9 +152,9 @@ const ContentSection1 = () => {
                 )}
             >
                 <div
-                    className="h-full w-full bg-cover bg-fixed bg-center bg-no-repeat"
+                    className="h-full w-full bg-cover bg-fixed bg-right-top bg-no-repeat"
                     style={{
-                        backgroundImage: `url(${MEDIAS.contentImage1})`,
+                        backgroundImage: `url(${MEDIAS.contentImage11})`,
                     }}
                 ></div>
             </div>
@@ -210,7 +205,18 @@ const ContentSection2 = () => {
                     <div
                         id="content-bg-1"
                         className={cn(
-                            "h-full w-1/2 bg-cover bg-fixed bg-no-repeat",
+                            "h-full w-1/2 bg-cover bg-fixed bg-no-repeat max-md:hidden",
+                            "max-md:w-full",
+                        )}
+                        style={{
+                            backgroundImage: `url(${MEDIAS.contentImage2})`,
+                            backgroundPositionX: "100%",
+                            backgroundPositionY: "0",
+                        }}
+                    ></div>
+                    <div
+                        className={cn(
+                            "hidden h-full w-full bg-cover bg-fixed bg-no-repeat max-md:block",
                             "max-md:w-full",
                         )}
                         style={{
