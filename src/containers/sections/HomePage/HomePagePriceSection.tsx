@@ -16,6 +16,9 @@ export const HomePagePriceSection = () => {
     const format = useFormatter();
     const [isMenuSheetOpen, setOpenMenuSheet] = useState(false);
     const [selectedMenu, setSelectedMenu] = useState<IMenuItem | null>(null);
+    const [hoveredMenuItemImage, setHoveredMenuItemImage] = useState<
+        string | null
+    >(null);
 
     function handleOpenMenuSheet() {
         setOpenMenuSheet(true);
@@ -38,7 +41,7 @@ export const HomePagePriceSection = () => {
     }, [isMenuSheetOpen]);
 
     return (
-        <div className="relative w-full">
+        <div id="menu" className="relative w-full">
             <div
                 className={cn(
                     "fixed top-0 z-reserve m-auto h-full w-full transition-all duration-500",
@@ -59,25 +62,66 @@ export const HomePagePriceSection = () => {
 
                     <div
                         className={cn(
-                            "z-20 flex h-full w-1/2 flex-col bg-white p-4",
+                            "relative z-20 flex h-full w-1/2 flex-col bg-white p-4",
                             "max-md:w-full max-md:overflow-hidden max-md:rounded-lg",
                         )}
                     >
-                        {selectedMenu?.banner && selectedMenu?.title && (
-                            <Image
-                                src={selectedMenu.banner}
-                                alt={selectedMenu.title}
-                                width={760}
-                                height={280}
-                                className="h-72 w-full rounded-lg object-cover"
-                            />
-                        )}
+                        <div className="relative w-full">
+                            {selectedMenu?.banner && selectedMenu?.title && (
+                                <Image
+                                    src={
+                                        !!hoveredMenuItemImage
+                                            ? hoveredMenuItemImage
+                                            : selectedMenu.banner
+                                    }
+                                    alt={selectedMenu.title}
+                                    width={760}
+                                    height={280}
+                                    className={cn(
+                                        "absolute inset-0 z-50 m-auto h-64 w-auto rounded-xl object-contain shadow-2xl transition-all duration-500",
+                                        {
+                                            "animate-fade-up":
+                                                !!hoveredMenuItemImage,
+                                            "animate-fade-down":
+                                                !hoveredMenuItemImage,
+                                        },
+                                    )}
+                                />
+                            )}
+                            {selectedMenu?.banner && selectedMenu?.title && (
+                                <Image
+                                    src={
+                                        !!hoveredMenuItemImage
+                                            ? hoveredMenuItemImage
+                                            : selectedMenu.banner
+                                    }
+                                    alt={selectedMenu.title}
+                                    width={760}
+                                    height={280}
+                                    className={cn(
+                                        "h-72 w-full overflow-hidden rounded-lg object-cover blur-md transition-all duration-500",
+                                    )}
+                                />
+                            )}
+                        </div>
                         <div className="my-2 max-h-[calc(100%-(56*4px)-(14*4px))] w-full scroll-m-4 divide-y-[1px] overflow-y-auto pe-4">
                             {selectedMenu?.items.map(
                                 (menuSubItem, menuSubItemIndex) => (
                                     <div
                                         key={menuSubItemIndex}
                                         className="flex w-full flex-row items-center justify-between py-3"
+                                        onMouseEnter={() => {
+                                            if (menuSubItem.image !== "") {
+                                                setHoveredMenuItemImage(
+                                                    menuSubItem.image,
+                                                );
+                                            }
+                                        }}
+                                        onMouseLeave={() => {
+                                            if (menuSubItem.image !== "") {
+                                                setHoveredMenuItemImage(null);
+                                            }
+                                        }}
                                     >
                                         <p className="text-md font-fira">
                                             {menuSubItem.title}

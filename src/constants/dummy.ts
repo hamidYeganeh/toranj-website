@@ -77,24 +77,28 @@ export const MENU_ITEMS = [
                 description:
                     "Faschierter Spieß aus Lamm & Rind serviert mit Basmati-Reis oder Pommes",
                 price: 13.9,
+                image: "/assets/images/menu/menu-kubideh.jpg",
             },
             {
                 title: "KABAB-BARG",
                 description:
                     "Zartes Lammfilet vom Grill serviert mit Basmati-Reis oder Pommes",
                 price: 17.9,
+                image: "/assets/images/menu/menu-barg.jpg",
             },
             {
                 title: "KABAB-SHISHLIK",
                 description:
                     "Gegrillte Lammkoteletts serviert mit Basmati-Reis oder Pommes",
                 price: 18.9,
+                image: "/assets/images/menu/menu-shishlik.jpg",
             },
             {
                 title: "JUJEH-TORSH",
                 description:
                     "Fein mariniertes Hühnerfilet vom Grill, eingelegt in Granatapfelsauce & persischen Limetten (C,G)",
                 price: 19.3,
+                image: "/assets/images/menu/menu-jujetorsh.jpg",
             },
         ],
     },
@@ -108,30 +112,35 @@ export const MENU_ITEMS = [
                 description:
                     "Fein passierte, geräucherte Melanzani, verfeinert mit Ei, Tomaten & Knoblauch serviert mit Hausbrot (C,O)",
                 price: 6.9,
+                image: "/assets/images/menu/menu-mirzaghasemi.jpg",
             },
             {
                 title: "KASHKE BADEMJAN",
                 description:
                     "Fein passierte, gebratene Melanzani, verfeinert mit Minze, Knoblauch & persischem Sauerrahm, serviert mit Hausbrot (A,G)",
                 price: 7.1,
+                image: "/assets/images/menu/menu-kashkbademjan.jpg",
             },
             {
                 title: "KUKU SABZI",
                 description:
                     "Persisches Omelett aus frischen Kräutern, Ei, Mohnteigblätter, Berberitzen & geriebene Walnüssen, serviert mit Hausbrot (A,C,G,N)",
                 price: 6.5,
+                image: "/assets/images/menu/menu-kukusabzi.jpg",
             },
             {
                 title: "HUMMUS",
                 description:
                     "Kichererbsenpüree mit Tahin & Olivenöl (H,N) serviert mit Hausbrot",
                 price: 5.2,
+                image: "/assets/images/menu/menu-hummus.jpg",
             },
             {
                 title: "ZEYTOON PARVARDE",
                 description:
                     "Grüne Oliven in einer Granatapfel-Walnussmarinade (H)",
                 price: 6.8,
+                image: "/assets/images/menu/menu-zeytoonparvardeh.jpg",
             },
         ],
     },
@@ -144,17 +153,20 @@ export const MENU_ITEMS = [
                 title: "VORSPEISENTELLER FÜR 2",
                 description: "3 Vorspeisen nach Wahl",
                 price: 15.9,
+                image: "/assets/images/menu/menu-starter.jpg",
             },
             {
                 title: "VORSPEISENTELLER FÜR 3-4",
                 description: "4 Vorspeisen nach Wahl",
                 price: 25.8,
+                image: "/assets/images/menu/menu-starter.jpg",
             },
             {
                 title: "TORANJ PLATTE (FÜR 2 PERSONEN)",
                 description:
                     "Grillplatte für 2 Personen, bestehend aus - 2 Spieß Kubideh - 1 Spieß Chenjeh (Rindfilet) - 1 Spieß Juje (Hühnerfilet) serviert mit zwei Portionen Safran-Reis",
                 price: 49.8,
+                image: "/assets/images/menu/menu-starter.jpg",
             },
         ],
     },
