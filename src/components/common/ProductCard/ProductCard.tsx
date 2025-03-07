@@ -32,10 +32,10 @@ export const ProductCard: FC<IProductCard> = (props) => {
                 }}
             ></div>
             <div className="flex w-full flex-row items-center justify-between">
-                <h4 className="text-xs font-medium text-text-secondary">
+                <h4 className="font-perpetua text-xs font-medium tracking-widest text-text-secondary max-md:text-sm">
                     {product.title}
                 </h4>
-                <h5 className="text-xs font-medium text-text-secondary">
+                <h5 className="font-perpetua text-xs font-medium tracking-widest text-text-secondary max-md:text-sm">
                     {format.number(product.price, {
                         style: "currency",
                         currency: "EUR",
@@ -44,11 +44,11 @@ export const ProductCard: FC<IProductCard> = (props) => {
                 </h5>
             </div>
             <div className="mt-auto flex w-full flex-row items-center justify-between">
-                <h6 className="text-xs text-text-secondary opacity-30">
+                <h6 className="font-perpetua text-xs tracking-widest text-text-secondary opacity-30">
                     <em>{product.subtitle}</em>
                 </h6>
 
-                <h6 className="text-xs text-text-secondary opacity-30">
+                <h6 className="font-perpetua text-xs tracking-widest text-text-secondary opacity-30">
                     {t("products-section.book")}
                 </h6>
             </div>

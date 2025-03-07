@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Container } from "@/components/kit";
-import { getNavbarItems } from "@/constants/navbar-config";
+import { getNavbarItems, RESERVE_LINK } from "@/constants/navbar-config";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -33,7 +33,7 @@ export const Header = () => {
     return (
         <header
             id="header"
-            className="z-header fixed left-0 top-0 h-10 w-full bg-bg-paper duration-500"
+            className="fixed left-0 top-0 z-header h-10 w-full bg-bg-paper duration-500"
         >
             <Container
                 maxWidth={"xl"}
@@ -64,6 +64,7 @@ export const Header = () => {
                         variant={"contained"}
                         size={"sm"}
                         className="ms-4 px-2"
+                        href={RESERVE_LINK}
                     >
                         {t("navbar.reserve-table")}
                     </Button>

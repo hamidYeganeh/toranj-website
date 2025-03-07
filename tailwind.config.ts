@@ -31,8 +31,9 @@ export default {
             },
             fontFamily: {
                 sequencia: "var(--sequencia-font)",
-                inter: "var(--inter-font)",
-                fira: "var(--Fira_CodeFont-font)",
+                bemirs: "var(--bemirs1-font)",
+                brilliant: "var(--brilliant2-font)",
+                perpetua: "var(--perpetua6-font)",
             },
             fontSize: {
                 extreme: "204px",

@@ -121,7 +121,7 @@ export const HomePagePriceSection = () => {
                 )}
             >
                 <Container>
-                    <h4 className="text-md text-text-light">
+                    <h4 className="font-perpetua text-sm text-text-light">
                         {t("price-section.title")}
                     </h4>
 
@@ -143,14 +143,22 @@ export const HomePagePriceSection = () => {
                                         "max-md:flex-col",
                                     )}
                                 >
-                                    <p className="font-fira text-sm text-text-disabled">
+                                    <p className="font-brilliant text-xs tracking-widest text-text-disabled">
                                         {t(
                                             "price-section.menu-item-start-price",
                                             {
-                                                price: Math.min(
-                                                    ...menuItem.items.map(
-                                                        ({ price }) => price,
+                                                price: format.number(
+                                                    Math.min(
+                                                        ...menuItem.items.map(
+                                                            ({ price }) =>
+                                                                price,
+                                                        ),
                                                     ),
+                                                    {
+                                                        style: "currency",
+                                                        currency: "EUR",
+                                                        minimumFractionDigits: 0,
+                                                    },
                                                 ),
                                             },
                                         )}
@@ -158,8 +166,8 @@ export const HomePagePriceSection = () => {
 
                                     <h2
                                         className={cn(
-                                            "font-sequencia text-9xl text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
-                                            "max-md:text-5xl",
+                                            "font-bemirs text-8xl font-medium text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
+                                            "max-md:text-3xl max-md:tracking-widest",
                                         )}
                                     >
                                         {menuItem.title}

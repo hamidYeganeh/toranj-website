@@ -42,6 +42,7 @@ const Button = forwardRef<HTMLButtonElement, IButton>((props, ref) => {
         return (
             <Link
                 href={href}
+                target="_blank"
                 className={cn(
                     ButtonVariants({ variant, size }),
                     ButtonColor,

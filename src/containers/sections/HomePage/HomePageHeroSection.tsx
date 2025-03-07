@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { MEDIAS } from "@/constants/layout-config";
 
 export const HomePageHeroSection = () => {
     const t = useTranslations("HomePage");
@@ -45,8 +46,8 @@ export const HomePageHeroSection = () => {
                 <h1
                     id="hero-section-title"
                     className={cn(
-                        "relative z-10 line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-white",
-                        "max-md:text-center max-md:text-5xl",
+                        "font-bemirs relative z-10 line-clamp-1 text-clip text-center text-6xl font-bold text-white",
+                        "max-md:text-center max-md:text-3xl",
                     )}
                 >
                     {t("hero-section.title")}
@@ -63,10 +64,7 @@ export const HomePageHeroSection = () => {
                     muted
                     loop
                 >
-                    <source
-                        src="https://spexup.arvanvod.ir/OqrPLZb1pY/mvGbQEbQWE/origin_FlB9qmDlsQwlybLOQorL93Nv6w9oyU8Og3yi6nj9.mp4"
-                        type="video/MP4"
-                    />
+                    <source src={MEDIAS.heroVideo} type="video/MP4" />
                 </video>
             </div>
         </div>

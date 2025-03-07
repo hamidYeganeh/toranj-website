@@ -1,6 +1,5 @@
 // libs
 import LocalFont from "next/font/local";
-import { Inter, Fira_Code } from "next/font/google";
 import { getLanguageDirection } from "@/i18n/request";
 import { getLocale, getMessages } from "next-intl/server";
 // providers
@@ -17,20 +16,20 @@ import "@/theme/breakpoints.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-const SequenciaFont = LocalFont({
-    src: "./fonts/sequencia/Sequencia.ttf",
+const BemirsFont1 = LocalFont({
+    src: "./fonts/bemirs1/Bemirs.ttf",
     weight: "600",
-    variable: "--sequencia-font",
+    variable: "--bemirs1-font",
 });
-const InterFont = Inter({
-    variable: "--inter-font",
-    weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
-    subsets: ["latin"],
+const BrilliantFont2 = LocalFont({
+    src: "./fonts/brillant2/brillant.otf",
+    weight: "400",
+    variable: "--brilliant2-font",
 });
-const Fira_CodeFont = Fira_Code({
-    variable: "--Fira_CodeFont-font",
-    weight: ["300", "400", "500", "700"],
-    subsets: ["latin"],
+const PerpetuaFont6 = LocalFont({
+    src: "./fonts/Perpetua6/Perpetua.ttf",
+    weight: "600",
+    variable: "--perpetua6-font",
 });
 
 export const metadata: Metadata = {
@@ -84,7 +83,7 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} suppressHydrationWarning>
             <body
-                className={`${SequenciaFont.variable} ${Fira_CodeFont.variable} ${InterFont.className} scroll-smooth antialiased`}
+                className={`${BemirsFont1.variable} ${PerpetuaFont6.variable} ${BrilliantFont2.variable} scroll-smooth antialiased`}
             >
                 <ReduxProvider>
                     <ThemeProvider>

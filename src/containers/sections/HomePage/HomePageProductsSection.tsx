@@ -9,17 +9,17 @@ export const HomePageProductsSection = () => {
     return (
         <div
             id="products-section-container"
-            className="relative z-0 w-full bg-text-dark px-8 pb-8"
+            className="relative z-0 w-full bg-text-dark p-8"
         >
             <h1
                 className={cn(
-                    "sticky top-0 -z-10 line-clamp-1 text-clip text-center font-sequencia text-[206px] font-bold text-text-secondary",
-                    "max-md:text-5xl max-md:text-center max-md:top-8",
+                    "font-bemirs sticky top-0 -z-10 line-clamp-1 text-clip text-center text-6xl font-bold text-text-secondary",
+                    "max-md:top-8 max-md:text-center max-md:text-3xl",
                 )}
             >
                 {t("hero-section.title")}
             </h1>
-            <div className="h-[400px] w-full"></div>
+            <div className="h-60 w-full"></div>
             <div
                 className={cn(
                     "z-20 grid w-full grid-cols-3 gap-2",

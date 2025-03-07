@@ -1,11 +1,7 @@
-export const LOGO_PATHS = "https://www.digikala.com/brand/full-horizontal.svg";
-export const MAIN_HEADER_LOGO_CONFIG = {
-    path: LOGO_PATHS,
-    size: { width: 195, height: 30 },
-};
 
 export const MEDIAS = {
     heroImage: "/assets/images/heroImage1.jpg",
+    heroVideo: "/assets/videos/Tv Video.mp4",
     aboutUsImage: "/assets/images/aboutUsImage1.jpg",
     aboutUsImage2: "/assets/images/aboutUsImage2.jpg",
     aboutUsImage3: "/assets/images/aboutUsImage3.jpg",

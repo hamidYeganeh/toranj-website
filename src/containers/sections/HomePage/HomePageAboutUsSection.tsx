@@ -28,7 +28,7 @@ export const HomePageAboutUsSection = () => {
             .fromTo(
                 "#about-us-card-1-title",
                 { yPercent: 0 },
-                { yPercent: -100 },
+                { yPercent: -300 },
             )
             .fromTo(
                 "#about-us-card-2-container",
@@ -43,7 +43,7 @@ export const HomePageAboutUsSection = () => {
             .fromTo(
                 "#about-us-card-2-title",
                 { yPercent: 0 },
-                { yPercent: -100 },
+                { yPercent: -300 },
             );
 
         ScrollTrigger.create({
@@ -77,11 +77,11 @@ export const HomePageAboutUsSection = () => {
                         "sticky left-0 top-0 flex h-dvh items-end justify-start p-8",
                     )}
                 >
-                    <div className="flex h-60 w-full max-w-md flex-col justify-between bg-white p-4">
-                        <p className="w-full max-w-60 text-xs font-medium text-text-dark">
+                    <div className="flex h-72 w-full max-w-md flex-col justify-between bg-white p-4 max-md:h-fit max-md:gap-8">
+                        <p className="font-perpetua w-full max-w-60 text-xs font-medium leading-5 tracking-widest text-text-dark">
                             {t("about-us-section.card.title")}
                         </p>
-                        <p className="w-full max-w-sm text-xs font-medium text-text-dark">
+                        <p className="font-perpetua w-full max-w-sm text-xs font-medium leading-5 tracking-widest text-text-dark">
                             {t("about-us-section.card.description")}
                         </p>
                     </div>
@@ -90,10 +90,10 @@ export const HomePageAboutUsSection = () => {
 
             <div
                 id="about-us-text-container"
-                className="flex w-full justify-end pe-24 pt-[130dvh] max-md:ps-6"
+                className="flex w-full justify-end pe-24 pt-[35dvh] max-md:ps-6"
             >
                 <div className={cn("w-1/3", "max-md:w-full")}>
-                    <h2 className="max-w-full break-words font-fira text-5xl text-white max-md:text-4xl">
+                    <h2 className="font-brilliant max-w-full break-words text-5xl font-bold leading-[72px] text-white max-md:text-4xl">
                         {t("about-us-section.text")}
                     </h2>
                 </div>
@@ -132,7 +132,7 @@ const SectionCard: FC<{
             <div className="relative flex h-full items-center justify-center overflow-hidden">
                 <h2
                     id={`${id}-title`}
-                    className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto max-w-xl text-center font-sequencia text-7xl text-white mix-blend-hard-light"
+                    className="font-brilliant absolute inset-0 top-[calc(50%-250px)] z-30 m-auto hidden max-w-xl text-center text-2xl leading-8 tracking-widest text-white mix-blend-hard-light max-md:inline-block"
                 >
                     {item.title}
                 </h2>
@@ -150,13 +150,21 @@ const SectionCard: FC<{
             </div>
             <div
                 className={cn(
-                    "flex h-full justify-end",
+                    "relative flex h-full justify-end",
                     {
-                        "bg-white": withBg,
+                        "bg-secondary-200": withBg,
                     },
                     "max-md:hidden",
                 )}
             >
+                <div className="flex h-full w-full items-center justify-center bg-[#0c6056]">
+                    <h2
+                        id={`${id}-title`}
+                        className="font-brilliant inline-block max-w-xl text-center text-4xl leading-[64px] text-white max-md:hidden"
+                    >
+                        {item.title}
+                    </h2>
+                </div>
                 <div
                     className="h-full w-1/5 bg-cover bg-fixed bg-left"
                     style={{

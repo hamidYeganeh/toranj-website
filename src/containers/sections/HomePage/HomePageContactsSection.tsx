@@ -49,13 +49,13 @@ export const HomePageContactsSection = () => {
                                 key={ContactItemIndex}
                                 className="flex w-full flex-col items-start gap-1 border-t border-text-primary py-4"
                             >
-                                <p className="text-xs text-text-primary">
+                                <p className="font-brilliant text-xs font-bold text-text-primary">
                                     {t(contactItem.label)}
                                 </p>
                                 <Link
                                     href={contactItem.link}
                                     target="_blank"
-                                    className="text-xl capitalize text-text-light"
+                                    className="font-perpetua text-xl capitalize text-text-light max-md:text-sm max-md:tracking-widest"
                                 >
                                     {contactItem.value}
                                 </Link>
@@ -68,7 +68,7 @@ export const HomePageContactsSection = () => {
                         <div
                             key={index}
                             className={cn(
-                                "whitespace-nowrap font-sequencia text-9xl text-text-primary",
+                                "font-bemirs whitespace-nowrap text-9xl text-text-primary",
                                 index % 2 === 0
                                     ? "animate-marquee"
                                     : "animate-marquee-reverse",
@@ -88,7 +88,7 @@ export const HomePageContactsSection = () => {
             <div
                 className={cn(
                     "flex w-full flex-row items-center justify-between px-8 py-4",
-                    "max-md:px-4 max-md:flex-col max-md:gap-2",
+                    "max-md:flex-col max-md:gap-2 max-md:px-4",
                 )}
             >
                 <p className="text-xs text-text-light">

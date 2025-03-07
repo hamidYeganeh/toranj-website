@@ -18,7 +18,14 @@ export const HomePageContentSection = () => {
         const galleryItemsWrapper = gsap.timeline();
         const galleryItemsWrapperReversed = gsap.timeline();
 
-        contentSection2Bg1.to("#content-bg-1", { width: "100%" });
+        contentSection2Bg1
+            .to("#content-bg-1", { width: "100%" })
+            .fromTo(
+                "#content-section-2-title",
+                { color: "#000000" },
+                { color: "#ffffff" },
+                ">=",
+            );
 
         galleryItemsWrapper
             .fromTo(
@@ -127,8 +134,8 @@ const ContentSection1 = () => {
                 <div className="flex h-dvh w-full items-center justify-start">
                     <h3
                         className={cn(
-                            "max-w-lg text-start font-sequencia text-7xl font-bold text-text-dark",
-                            "max-md:text-text-light",
+                            "font-bemirs max-w-lg text-start text-5xl font-bold leading-[64px] text-text-dark",
+                            "max-md:text-3xl max-md:text-text-light",
                         )}
                     >
                         {t("contents-section.title")}
@@ -137,7 +144,7 @@ const ContentSection1 = () => {
                 <div className="flex h-dvh w-full items-center justify-start">
                     <p
                         className={cn(
-                            "whitespace-pre-line font-fira text-lg font-normal text-text-dark",
+                            "font-perpetua whitespace-pre-line text-lg font-normal tracking-widest text-text-dark",
                             "max-md:text-text-light",
                         )}
                     >
@@ -172,8 +179,8 @@ const ContentSection2 = () => {
                         <h2
                             id="content-section-2-title"
                             className={cn(
-                                "max-w-md text-start font-sequencia text-7xl",
-                                "max-md:absolute max-md:top-[20dvh] max-md:z-50 max-md:mx-4 max-md:max-w-full max-md:text-5xl max-md:text-text-light",
+                                "font-perpetua max-w-md text-start text-3xl",
+                                "max-md:absolute max-md:top-[10dvh] max-md:z-50 max-md:mx-4 max-md:max-w-full max-md:text-3xl max-md:text-text-light",
                             )}
                         >
                             {t("contents-section.gallery-title")}
