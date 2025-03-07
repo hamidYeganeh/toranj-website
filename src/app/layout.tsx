@@ -21,6 +21,7 @@ const BemirsFont1 = LocalFont({
     weight: "600",
     variable: "--bemirs1-font",
 });
+
 const BrilliantFont2 = LocalFont({
     src: "./fonts/brillant2/brillant.otf",
     weight: "400",
