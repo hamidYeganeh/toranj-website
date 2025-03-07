@@ -2,6 +2,7 @@
 
 import { Button, Container, IconButton } from "@/components/kit";
 import { MENU_ITEMS } from "@/constants/dummy";
+import { RESERVE_LINK } from "@/constants/navbar-config";
 import { cn } from "@/lib/utils";
 import { useFormatter, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -38,10 +39,10 @@ export const HomePagePriceSection = () => {
 
     return (
         <div className="relative w-full">
-            {/* <div
+            <div
                 className={cn(
-                    "top-0 z-reserve m-auto h-full w-full transition-all duration-500",
-                    isMenuSheetOpen ? "fixed left-0" : "fixed left-[100dvw]",
+                    "fixed top-0 z-reserve m-auto h-full w-full transition-all duration-500",
+                    isMenuSheetOpen ? "top-0" : "top-[-100dvh]",
                     "max-md:p-4",
                 )}
             >
@@ -98,21 +99,14 @@ export const HomePagePriceSection = () => {
                                 variant="contained"
                                 color="secondary"
                                 size={"md"}
+                                href={RESERVE_LINK}
                             >
                                 {t("about-us-section.reserve-table")}
-                            </Button>
-                            <Button
-                                fullWidth
-                                variant="outlined"
-                                color="primary"
-                                size={"md"}
-                            >
-                                {t("about-us-section.callback")}
                             </Button>
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
             <div
                 id="price-section"
                 className={cn(
