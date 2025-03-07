@@ -28,7 +28,7 @@ const BrilliantFont2 = LocalFont({
     variable: "--brilliant2-font",
 });
 const PerpetuaFont6 = LocalFont({
-    src: "./fonts/perpetua6/perpetuaFont.ttf",
+    src: "./fonts/perpetua6/perpetua.ttf",
     weight: "600",
     variable: "--perpetua6-font",
 });

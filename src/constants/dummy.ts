@@ -163,24 +163,30 @@ export const MENU_ITEMS = [
 export const GALLERY: IGallery[] = [
     {
         _id: "1",
-        title: "Venice festival",
+        title: "In der persischen Küche sind Gewürze mehr als nur Zutaten – sie erzählen Geschichten und bringen jedes Gericht zum Leben. Safran, das „rote Gold“, ist das wertvollste Gewürz und verleiht unseren Gerichten nicht nur eine goldene Farbe, sondern auch einen unverwechselbaren Geschmack. 🌟",
         date: "2024",
-        image: "https://static.tildacdn.com/tild3433-3039-4362-b531-303762613538/max1232617_A_person_.jpg",
-        subtitle: "Musicians from all over world",
+        image: "/assets/images/instagramPost1.jpg",
+        subtitle:
+            "#toranjwien #safran #persischeküche #gewürze #aromen #wienereats #instafood #persianfood #persischespezialitäten #viennaeats #orientalischeküch",
+        link: "https://www.instagram.com/p/DGyF1L8sGP6/",
     },
     {
         _id: "2",
-        title: "Venice festival",
+        title: "Unser Salat kombiniert knackiges Gemüse, aromatische Kräuter und feine orientalische Aromen – leicht, erfrischend und einfach köstlich! Perfekt als Vorspeise oder leichte Mahlzeit. 🍅✨",
         date: "2024",
-        image: "https://static.tildacdn.com/tild3838-6563-4336-b463-663432363563/max1232617_A_closeup.jpg",
-        subtitle: "Musicians from all over world",
+        image: "/assets/images/instagramPost2.jpg",
+        subtitle:
+            " #healthyfood #wienereats #leichtundlecker #persianfood #restaurantwien #persischespezialitäten #viennaeats #eventlocation #foodie #instafood",
+        link: "https://www.instagram.com/p/DGn48YuMuU6/",
     },
     {
         _id: "3",
-        title: "Venice festival",
+        title: "🍹✨ Sharbat Safran Chia – Ein erfrischendes Geschmackserlebnis aus Persien!",
         date: "2024",
-        image: "https://static.tildacdn.com/tild3266-3830-4637-b234-363366343563/max1232617_A_row_of_.jpg",
-        subtitle: "Musicians from all over world",
+        image: "/assets/images/instagramPost3.jpg",
+        subtitle:
+            "#toranjwien #sharbatsafranchia #persischegetränke #wienereats #instadrink #gesundgenießen #exotisch",
+        link: "https://www.instagram.com/p/DGdl_lisCaZ/",
     },
 ];
 

@@ -11,4 +11,5 @@ export interface IGallery {
     date: string;
     subtitle: string;
     image: string;
+    link: string;
 }
