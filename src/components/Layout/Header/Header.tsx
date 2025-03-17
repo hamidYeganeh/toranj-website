@@ -6,6 +6,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -33,26 +35,39 @@ export const Header = () => {
     return (
         <header
             id="header"
-            className="fixed left-0 top-0 z-header h-10 w-full bg-bg-paper duration-500"
+            className="bg-brand-500 fixed left-0 top-0 z-header h-12 w-full duration-500"
         >
             <Container
                 maxWidth={"xl"}
                 className="flex h-full flex-row items-center justify-between"
             >
-                <p className="text-md font-normal text-text-dark">
-                    {t.rich("header.brand", {
-                        brand: (chunks) => (
-                            <span className="text-text-disabled">{chunks}</span>
-                        ),
-                    })}
-                </p>
+                <Link href={"/"} className="flex flex-row items-center gap-2">
+                    <div className="flex aspect-square items-center justify-center rounded-md bg-white">
+                        <Image
+                            src={"/assets/images/logo.png"}
+                            alt="Toranj logo"
+                            width={36}
+                            height={36}
+                            className="aspect-square w-9 object-cover"
+                        />
+                    </div>
+                    <p className="text-lg font-normal text-white">
+                        {t.rich("header.brand", {
+                            chunks: (chunks) => (
+                                <span className="text-xs text-white/75">
+                                    {chunks}
+                                </span>
+                            ),
+                        })}
+                    </p>
+                </Link>
 
                 <div className="flex flex-row items-center gap-1">
                     {navbar.map((navbarItem) => (
                         <Button
                             key={navbarItem.title}
                             size={"sm"}
-                            variant={"outlined"}
+                            variant={"light"}
                             href={navbarItem.path}
                             className="max-md:hidden"
                         >
@@ -63,6 +78,7 @@ export const Header = () => {
                     <Button
                         variant={"contained"}
                         size={"sm"}
+                        color="secondary"
                         className="ms-4 px-2"
                         href={RESERVE_LINK}
                     >

@@ -1,13 +1,10 @@
-import { Button } from "@/components/kit";
-import { ContactUsData } from "@/constants/dummy";
-import { getNavbarItems } from "@/constants/navbar-config";
+import { ContactUsData, OpeningHours } from "@/constants/dummy";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export const HomePageContactsSection = () => {
     const t = useTranslations("HomePage");
-    const navbar = getNavbarItems();
 
     return (
         <div id="contact-us" className="w-full bg-text-dark">
@@ -18,28 +15,32 @@ export const HomePageContactsSection = () => {
                 )}
             >
                 <div className="w-full">
-                    <div className="flex h-72 w-full flex-col items-start gap-2 py-8">
+                    <div className="flex h-fit w-full flex-col items-start gap-2 py-8">
                         <p className="text-md font-normal text-text-light">
-                            {t.rich("contacts-section.brand", {
-                                brand: (chunks) => (
-                                    <span className="text-text-disabled">
-                                        {chunks}
-                                    </span>
-                                ),
-                            })}
+                            {t("contacts-section.opening-hour.title")}
                         </p>
 
-                        <div className="mt-2 flex flex-col items-start gap-1">
-                            {navbar.map((navbarItem) => (
-                                <Button
-                                    key={navbarItem.title}
-                                    size={"sm"}
-                                    variant={"outlined"}
-                                    color="tertiary"
-                                    className="hover:text-text-primary"
+                        <div className="mt-2 flex w-full max-w-xs flex-col items-start gap-2">
+                            {OpeningHours.map((openingHour) => (
+                                <div
+                                    key={openingHour.weekday}
+                                    className="grid w-full grid-cols-2"
                                 >
-                                    {t(`contacts-section.${navbarItem.title}`)}
-                                </Button>
+                                    <h3 className="text-xs font-medium text-white">
+                                        {openingHour.weekday}
+                                    </h3>
+                                    <h4
+                                        className={cn(
+                                            "text-center text-xs font-normal text-white",
+                                            {
+                                                "text-error-main":
+                                                    openingHour.isClosed,
+                                            },
+                                        )}
+                                    >
+                                        {openingHour.time}
+                                    </h4>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -55,7 +56,7 @@ export const HomePageContactsSection = () => {
                                 <Link
                                     href={contactItem.link}
                                     target="_blank"
-                                    className="font-perpetua text-xl capitalize text-text-light max-md:text-sm max-md:tracking-widest"
+                                    className="font-montserrat text-xl capitalize text-text-light max-md:text-sm max-md:tracking-widest"
                                 >
                                     {contactItem.value}
                                 </Link>
@@ -68,7 +69,7 @@ export const HomePageContactsSection = () => {
                         <div
                             key={index}
                             className={cn(
-                                "font-bemirs whitespace-nowrap text-9xl text-text-primary",
+                                "whitespace-nowrap font-bemirs text-9xl text-text-primary",
                                 index % 2 === 0
                                     ? "animate-marquee"
                                     : "animate-marquee-reverse",

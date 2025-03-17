@@ -1,56 +1,61 @@
 import { IGallery, IProduct } from "@/types/general.types";
 import { MEDIAS } from "./layout-config";
 
+export const PDFMenuLink =
+    "https://drive.google.com/file/d/1ltXlUlJemR_nZmfmYConhz-i0OEOWvn2/preview";
+
 export const Products: (IProduct | null)[] = [
     {
         _id: "1",
-        title: "Tiramissu",
-        price: 10,
-        subtitle: "Bright shades of coffee",
+        title: "Juje Torsh",
+        price: 19.3,
+        subtitle: "fein mariniertes Hühnerfilet vom Grill, eingelegt in Granatapfelsauce und persichen Limetten serviert mit Safran-Reis oder Pommes",
         images: [
-            "https://static.tildacdn.com/tild6131-6533-4461-a264-383165616536/max1232617_photo_of_.jpg",
-            "https://static.tildacdn.com/tild3739-3961-4663-a339-363838343235/max1232617_a_photo_o.jpg",
+            "/assets/images/products/product-juje-torsh-1.jpg",
+            "/assets/images/products/product-juje-torsh-2.jpg",
         ],
     },
     {
         _id: "2",
-        title: "Tiramissu",
-        price: 10,
-        subtitle: "Bright shades of coffee",
+        title: "Kubideh",
+        price: 16.3,
+        subtitle: "faschiertem Spieß aus Lamm und Rindfleisch, serviert mit Safran-Reis oder Pommes",
         images: [
-            "https://static.tildacdn.com/tild6131-6533-4461-a264-383165616536/max1232617_photo_of_.jpg",
-            "https://static.tildacdn.com/tild3739-3961-4663-a339-363838343235/max1232617_a_photo_o.jpg",
+            "/assets/images/products/product-kubideh-1.jpg",
+            "/assets/images/products/product-kubideh-2.jpg",
         ],
     },
     {
         _id: "3",
-        title: "Tiramissu",
-        price: 10,
-        subtitle: "Bright shades of coffee",
+        title: "Soltani",
+        price: 27.1,
+        subtitle:
+            "ein Speß Kubideh, ein Speß Barg, serviert mit Safran-Reis oder Pommes",
         images: [
-            "https://static.tildacdn.com/tild6131-6533-4461-a264-383165616536/max1232617_photo_of_.jpg",
-            "https://static.tildacdn.com/tild3739-3961-4663-a339-363838343235/max1232617_a_photo_o.jpg",
+            "/assets/images/products/product-soltani-1.jpg",
+            "/assets/images/products/product-soltani-1.jpg",
         ],
     },
     {
         _id: "4",
-        title: "Tiramissu",
-        price: 10,
-        subtitle: "Bright shades of coffee",
+        title: "Ash Reshte",
+        price: 10.5,
+        subtitle:
+            "Eintopf mit Bulgur, Linsen, Bohnen, Minze, Koriander Petersillie serviert mit Brot",
         images: [
-            "https://static.tildacdn.com/tild6131-6533-4461-a264-383165616536/max1232617_photo_of_.jpg",
-            "https://static.tildacdn.com/tild3739-3961-4663-a339-363838343235/max1232617_a_photo_o.jpg",
+            "/assets/images/products/product-ash-reshte-1.jpg",
+            "/assets/images/products/product-ash-reshte-2.jpg",
         ],
     },
     null,
     {
         _id: "5",
-        title: "Tiramissu",
-        price: 10,
-        subtitle: "Bright shades of coffee",
+        title: "Vorspeisenteller for 4 Personen",
+        price: 15.8,
+        subtitle: "5 Verspeisen nach Wahl serviert mit Brot",
         images: [
-            "https://static.tildacdn.com/tild6131-6533-4461-a264-383165616536/max1232617_photo_of_.jpg",
-            "https://static.tildacdn.com/tild3739-3961-4663-a339-363838343235/max1232617_a_photo_o.jpg",
+            "/assets/images/products/product-vorspeisenteller-1.jpg",
+            "/assets/images/products/product-vorspeisenteller-2.jpg",
         ],
     },
 ];
@@ -153,20 +158,20 @@ export const MENU_ITEMS = [
                 title: "VORSPEISENTELLER FÜR 2",
                 description: "3 Vorspeisen nach Wahl",
                 price: 15.9,
-                image: "/assets/images/menu/menu-starter.jpg",
+                image: "",
             },
             {
                 title: "VORSPEISENTELLER FÜR 3-4",
                 description: "4 Vorspeisen nach Wahl",
                 price: 25.8,
-                image: "/assets/images/menu/menu-starter.jpg",
+                image: "",
             },
             {
                 title: "TORANJ PLATTE (FÜR 2 PERSONEN)",
                 description:
                     "Grillplatte für 2 Personen, bestehend aus - 2 Spieß Kubideh - 1 Spieß Chenjeh (Rindfilet) - 1 Spieß Juje (Hühnerfilet) serviert mit zwei Portionen Safran-Reis",
                 price: 49.8,
-                image: "/assets/images/menu/menu-starter.jpg",
+                image: "",
             },
         ],
     },
@@ -217,5 +222,43 @@ export const ContactUsData = [
         label: "contacts-section.email",
         link: "mailto:info@toranj.at",
         value: "info@toranj.at",
+    },
+];
+
+export const OpeningHours = [
+    {
+        weekday: "Monday",
+        time: "Close",
+        isClosed: true,
+    },
+    {
+        weekday: "Tuesday",
+        time: "11:30am to 10:00pm",
+        isClosed: false,
+    },
+    {
+        weekday: "Wednesday",
+        time: "11:30am to 10:00pm",
+        isClosed: false,
+    },
+    {
+        weekday: "Thursday",
+        time: "11:30am to 10:00pm",
+        isClosed: false,
+    },
+    {
+        weekday: "Friday",
+        time: "11:30am to 10:00pm",
+        isClosed: false,
+    },
+    {
+        weekday: "Saturday",
+        time: "11:30am to 10:00pm",
+        isClosed: false,
+    },
+    {
+        weekday: "Sunday",
+        time: "11:30am to 10:00pm",
+        isClosed: false,
     },
 ];

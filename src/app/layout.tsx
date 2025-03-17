@@ -1,5 +1,6 @@
 // libs
 import LocalFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 import { getLanguageDirection } from "@/i18n/request";
 import { getLocale, getMessages } from "next-intl/server";
 // providers
@@ -32,6 +33,13 @@ const PerpetuaFont6 = LocalFont({
     weight: "600",
     variable: "--perpetua6-font",
 });
+const MontserratFont = Montserrat({
+    display: "swap",
+    style: "normal",
+    weight: "500",
+    subsets: ["latin"],
+    variable: "--montserrat-font",
+});
 
 export const metadata: Metadata = {
     title: "Toranj Restaurant",
@@ -54,6 +62,16 @@ export const metadata: Metadata = {
         url: "https://spexup.com",
     },
     robots: { index: true },
+    assets: "/assets",
+    twitter: {
+        title: "Toranj Restaurant",
+        images: "/assets/images/contentImage1__.jpg",
+        description:
+            "Das persische Restaurant Toranj in Wien gehört seit August 2021 zu den kulinarischen Treffpunkten im beliebten Wienerbezirk. Genießen Sie authentisch persische Küche, romantisch-gemütliches Ambiente und herzlich aufmerksame Bedienung.",
+        card: "summary_large_image",
+        site: "https://toranj.at",
+    },
+
     openGraph: {
         type: "website",
         countryName: "Austria",
@@ -84,7 +102,7 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} suppressHydrationWarning>
             <body
-                className={`${BemirsFont1.variable} ${PerpetuaFont6.variable} ${BrilliantFont2.variable} scroll-smooth antialiased`}
+                className={`${BemirsFont1.variable} ${MontserratFont.variable} ${PerpetuaFont6.variable} ${BrilliantFont2.variable} scroll-smooth antialiased`}
             >
                 <ReduxProvider>
                     <ThemeProvider>

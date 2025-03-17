@@ -24,7 +24,7 @@ export const ProductCard: FC<IProductCard> = (props) => {
             }}
         >
             <div
-                className="h-72 w-full bg-cover bg-no-repeat transition-all duration-500"
+                className="h-72 w-full bg-cover bg-center bg-no-repeat transition-all duration-500"
                 style={{
                     backgroundImage: `url(${
                         isHovered ? product?.images[0] : product?.images[1]
@@ -43,8 +43,8 @@ export const ProductCard: FC<IProductCard> = (props) => {
                     })}
                 </h5>
             </div>
-            <div className="mt-auto flex w-full flex-row items-center justify-between">
-                <h6 className="font-perpetua text-xs tracking-widest text-text-secondary opacity-30">
+            <div className="mt-auto flex w-full flex-row items-center justify-between gap-2">
+                <h6 className="flex-1 font-perpetua text-xs tracking-widest text-text-secondary opacity-30">
                     <em>{product.subtitle}</em>
                 </h6>
 

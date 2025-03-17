@@ -1,4 +1,3 @@
-
 export const MEDIAS = {
     heroImage: "/assets/images/heroImage1.jpg",
     heroVideo: "/assets/videos/Tv Video.mp4",
@@ -10,7 +9,7 @@ export const MEDIAS = {
     contentImage2: "/assets/images/contentImage2.jpg",
     contentImage3: "/assets/images/contentImage3.jpg",
     contentImage4: "/assets/images/contentImage44.jpg",
-    menuKababBanner: "/assets/images/grilled-dishes-banner.jpg",
-    menuStarterBanner: "/assets/images/starter-banner.jpg",
-    menuSpecialsBanner: "/assets/images/specials-banner.jpg",
+    menuKababBanner: "/assets/images/menu/menu-starter.jpg",
+    menuStarterBanner: "/assets/images/menu/menu-starter.jpg",
+    menuSpecialsBanner: "/assets/images/menu/menu-starter.jpg",
 };

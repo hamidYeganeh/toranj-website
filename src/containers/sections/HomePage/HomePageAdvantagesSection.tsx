@@ -29,14 +29,14 @@ export const HomePageAdvantagesSection = () => {
             scrub: 1,
             animation: advantages,
         });
-        ScrollTrigger.create({
-            trigger: "#advantages-section-responsive",
-            start: `top bottom`,
-            end: "+=" + window.innerHeight / 2,
-            markers: false,
-            scrub: 1,
-            animation: advantages,
-        });
+        // ScrollTrigger.create({
+        //     trigger: "#advantages-section-responsive",
+        //     start: `top bottom`,
+        //     end: "+=" + window.innerHeight / 2,
+        //     markers: false,
+        //     scrub: 1,
+        //     animation: advantages,
+        // });
     });
 
     return (
@@ -51,7 +51,7 @@ export const HomePageAdvantagesSection = () => {
                     }}
                 ></div>
             </div>
-            <div className="absolute top-0 flex h-full w-full justify-end">
+            <div className="absolute top-0 flex h-full w-full justify-end max-md:py-2">
                 <div
                     id="advantages-section"
                     className={cn(
@@ -61,14 +61,14 @@ export const HomePageAdvantagesSection = () => {
                     )}
                 >
                     <div className="relative h-full w-full">
-                        <h3
-                            className={cn(
-                                "font-bemirs sticky top-4 max-w-lg pt-8 text-5xl",
-                                "max-md:top-8 max-md:text-3xl",
-                            )}
-                        >
-                            {t("advantages-section.title")}
-                        </h3>
+                        <div className="sticky top-4 flex w-full flex-col gap-4 pt-12 max-md:top-8">
+                            <h3 className={cn("max-w-lg font-bemirs text-3xl")}>
+                                {t("about-us-section.card.title")}
+                            </h3>
+                            <h3 className={cn("font-bemirs text-xl")}>
+                                {t("about-us-section.card.description")}
+                            </h3>
+                        </div>
                     </div>
                     <div className="mb-24 flex w-full flex-col gap-20">
                         {Array.from(Array(4)).map((_, index) => (
@@ -99,14 +99,19 @@ export const HomePageAdvantagesSection = () => {
                     )}
                 >
                     <div className="relative h-full w-full">
-                        <h3
-                            className={cn(
-                                "font-bemirs sticky top-4 max-w-lg pt-8 text-5xl",
-                                "max-md:top-8 max-md:text-3xl",
-                            )}
-                        >
-                            {t("advantages-section.title")}
-                        </h3>
+                        <div className="sticky top-4 flex w-full flex-col gap-4 pt-12 max-md:top-8">
+                            <h3
+                                className={cn(
+                                    "max-w-lg font-bemirs text-3xl",
+                                    "max-md:text-xl",
+                                )}
+                            >
+                                {t("about-us-section.card.title")}
+                            </h3>
+                            <h3 className={cn("text-md font-bemirs")}>
+                                {t("about-us-section.card.description")}
+                            </h3>
+                        </div>
                     </div>
                     <div className="mb-24 flex w-full flex-col gap-20">
                         {Array.from(Array(4)).map((_, index) => (

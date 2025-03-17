@@ -1,6 +1,6 @@
 {
     "General": {
-        "header": { "brand": "Fresh / <brand>Toranj</brand>" },
+        "header": { "brand": "Toranj <chunks>Restaurant</chunks>" },
         "navbar": {
             "about-us": "About us",
             "menu": "Menu",
@@ -54,8 +54,7 @@
             "address": "Adress",
             "phone": "phone",
             "email": "E-mail",
-            "brand": "Fresh / <brand>Toranj</brand>",
-            "brand-simple": "Toranj restaurant◕Toranj restaurant",
+            "brand-simple": "Toranj restaurant Toranj restaurant",
             "navbar": {
                 "about-us": "About us",
                 "menu": "Menu",
@@ -63,6 +62,9 @@
                 "story": "Story",
                 "advantages": "Advantages",
                 "reserve-table": "Reserve a table"
+            },
+            "opening-hour": {
+                "title": "Öffnungszeiten"
             }
         }
     }

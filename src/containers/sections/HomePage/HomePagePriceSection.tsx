@@ -1,11 +1,12 @@
 "use client";
 
 import { Button, Container, IconButton } from "@/components/kit";
-import { MENU_ITEMS } from "@/constants/dummy";
+import { MENU_ITEMS, PDFMenuLink } from "@/constants/dummy";
 import { RESERVE_LINK } from "@/constants/navbar-config";
 import { cn } from "@/lib/utils";
 import { useFormatter, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
@@ -109,7 +110,7 @@ export const HomePagePriceSection = () => {
                                 (menuSubItem, menuSubItemIndex) => (
                                     <div
                                         key={menuSubItemIndex}
-                                        className="flex w-full flex-row items-center justify-between py-3"
+                                        className="group flex w-full flex-row items-center justify-between py-3"
                                         onMouseEnter={() => {
                                             if (menuSubItem.image !== "") {
                                                 setHoveredMenuItemImage(
@@ -123,7 +124,7 @@ export const HomePagePriceSection = () => {
                                             }
                                         }}
                                     >
-                                        <p className="text-md font-fira">
+                                        <p className="text-md font-fira group-hover:text-secondary-500">
                                             {menuSubItem.title}
                                         </p>
                                         <p className="text-md font-fira">
@@ -181,31 +182,10 @@ export const HomePagePriceSection = () => {
                                         "max-md:flex-col",
                                     )}
                                 >
-                                    <p className="font-brilliant text-xs tracking-widest text-text-disabled">
-                                        {t(
-                                            "price-section.menu-item-start-price",
-                                            {
-                                                price: format.number(
-                                                    Math.min(
-                                                        ...menuItem.items.map(
-                                                            ({ price }) =>
-                                                                price,
-                                                        ),
-                                                    ),
-                                                    {
-                                                        style: "currency",
-                                                        currency: "EUR",
-                                                        minimumFractionDigits: 0,
-                                                    },
-                                                ),
-                                            },
-                                        )}
-                                    </p>
-
                                     <h2
                                         className={cn(
-                                            "font-bemirs text-8xl font-medium text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
-                                            "max-md:text-3xl max-md:tracking-widest",
+                                            "font-bemirs text-7xl font-medium text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
+                                            "max-md:text-2xl max-md:tracking-widest",
                                         )}
                                     >
                                         {menuItem.title}
@@ -217,6 +197,33 @@ export const HomePagePriceSection = () => {
                                 </div>
                             </div>
                         ))}
+                        <Link
+                            href={PDFMenuLink}
+                            target="_blank"
+                            className={cn(
+                                "group flex cursor-pointer flex-row items-baseline gap-4 border-b border-text-primary py-4",
+                            )}
+                        >
+                            <div
+                                className={cn(
+                                    "flex flex-1 flex-row items-baseline gap-4",
+                                    "max-md:flex-col",
+                                )}
+                            >
+                                <h2
+                                    className={cn(
+                                        "font-bemirs text-8xl font-medium text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
+                                        "max-md:text-3xl max-md:tracking-widest",
+                                    )}
+                                >
+                                    {"Menü anzeigen"}
+                                </h2>
+                            </div>
+
+                            <div className="my-auto h-full text-2xl text-white transition-all duration-500 group-hover:-translate-x-7">
+                                {"-->"}
+                            </div>
+                        </Link>
                     </div>
                 </Container>
             </div>
