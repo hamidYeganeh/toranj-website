@@ -1,6 +1,6 @@
 export const MEDIAS = {
     heroImage: "/assets/images/heroImage1.jpg",
-    heroVideo: "/assets/videos/Tv Video.mp4",
+    heroVideo: "/assets/videos/Tv Video_1_1_1_1.mp4",
     aboutUsImage: "/assets/images/aboutUsImage1.jpg",
     aboutUsImage2: "/assets/images/aboutUsImage2.jpg",
     aboutUsImage3: "/assets/images/aboutUsImage3.jpg",

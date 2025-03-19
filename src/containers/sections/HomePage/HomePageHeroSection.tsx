@@ -46,7 +46,7 @@ export const HomePageHeroSection = () => {
                 <h1
                     id="hero-section-title"
                     className={cn(
-                        "font-bemirs relative z-10 line-clamp-1 text-clip text-center text-6xl font-bold text-white",
+                        "relative z-10 line-clamp-1 text-clip text-center font-bemirs text-6xl font-bold text-white",
                         "max-md:text-center max-md:text-3xl",
                     )}
                 >
@@ -57,7 +57,7 @@ export const HomePageHeroSection = () => {
                 id="hero-section-image-container"
                 className="absolute inset-0 m-auto h-dvh w-full bg-bg-paper"
             >
-                <div className="absolute inset-0 m-auto h-full w-full bg-black/20"></div>
+                <div className="absolute inset-0 m-auto h-full w-full bg-black/40"></div>
                 <video
                     className="z-0 h-full w-full object-cover"
                     autoPlay
