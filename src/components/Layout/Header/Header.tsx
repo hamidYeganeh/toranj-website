@@ -35,7 +35,7 @@ export const Header = () => {
     return (
         <header
             id="header"
-            className="bg-brand-500 fixed left-0 top-0 z-header h-12 w-full duration-500"
+            className="fixed left-0 top-0 z-header h-12 w-full bg-brand-500 duration-500"
         >
             <Container
                 maxWidth={"xl"}
@@ -69,7 +69,7 @@ export const Header = () => {
                             size={"sm"}
                             variant={"light"}
                             href={navbarItem.path}
-                            className="max-md:hidden"
+                            className="max-lg:hidden"
                         >
                             {t(navbarItem.title)}
                         </Button>

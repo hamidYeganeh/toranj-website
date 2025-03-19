@@ -42,12 +42,12 @@ export const HomePageHeroSection = () => {
             id="hero-section-container"
             className="flex h-dvh w-full flex-col items-center justify-center"
         >
-            <div className={cn("relative top-20", "max-md:top-0")}>
+            <div className={cn("relative top-20", "max-lg:top-0")}>
                 <h1
                     id="hero-section-title"
                     className={cn(
                         "relative z-10 line-clamp-1 text-clip text-center font-bemirs text-6xl font-bold text-white",
-                        "max-md:text-center max-md:text-3xl",
+                        "max-lg:text-center max-lg:text-3xl",
                     )}
                 >
                     {t("hero-section.title")}

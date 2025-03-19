@@ -129,13 +129,13 @@ const ContentSection1 = () => {
     return (
         <div className="flex h-[200dvh] w-full flex-row items-start bg-white">
             <div
-                className={cn("h-full w-1/2 px-8", "max-md:z-10 max-md:w-full")}
+                className={cn("h-full w-1/2 px-8", "max-lg:z-10 max-lg:w-full")}
             >
                 <div className="flex h-dvh w-full items-center justify-start">
                     <h3
                         className={cn(
-                            "font-bemirs max-w-lg text-start text-5xl font-bold leading-[64px] text-text-dark",
-                            "max-md:text-3xl max-md:text-text-light",
+                            "max-w-lg text-start font-bemirs text-5xl font-bold leading-[64px] text-text-dark",
+                            "max-lg:text-3xl max-lg:text-text-light",
                         )}
                     >
                         {t("contents-section.title")}
@@ -144,8 +144,8 @@ const ContentSection1 = () => {
                 <div className="flex h-dvh w-full items-center justify-start">
                     <p
                         className={cn(
-                            "font-perpetua whitespace-pre-line text-lg font-normal tracking-widest text-text-dark",
-                            "max-md:text-text-light",
+                            "whitespace-pre-line font-perpetua text-lg font-normal tracking-widest text-text-dark",
+                            "max-lg:text-text-light",
                         )}
                     >
                         {t("contents-section.description")}
@@ -155,13 +155,19 @@ const ContentSection1 = () => {
             <div
                 className={cn(
                     "sticky top-0 h-full w-1/2",
-                    "max-md:absolute max-md:z-0 max-md:h-full max-md:w-full",
+                    "max-lg:absolute max-lg:z-0 max-lg:h-full max-lg:w-full",
                 )}
             >
                 <div
-                    className="h-full w-full bg-cover bg-fixed bg-right-top bg-no-repeat"
+                    className="block h-full w-full bg-cover bg-fixed bg-right-top bg-no-repeat max-lg:hidden"
                     style={{
                         backgroundImage: `url(${MEDIAS.contentImage11})`,
+                    }}
+                ></div>
+                <div
+                    className="hidden h-full w-full bg-cover bg-fixed bg-right-top bg-no-repeat max-lg:block"
+                    style={{
+                        backgroundImage: `url(${MEDIAS.contentImage1})`,
                     }}
                 ></div>
             </div>
@@ -179,8 +185,8 @@ const ContentSection2 = () => {
                         <h2
                             id="content-section-2-title"
                             className={cn(
-                                "font-perpetua max-w-md text-start text-3xl",
-                                "max-md:absolute max-md:top-[10dvh] max-md:z-50 max-md:mx-4 max-md:max-w-full max-md:text-3xl max-md:text-text-light",
+                                "max-w-md text-start font-perpetua text-3xl",
+                                "max-lg:absolute max-lg:top-[10dvh] max-lg:z-50 max-lg:mx-4 max-lg:max-w-full max-lg:text-3xl max-lg:text-text-light",
                             )}
                         >
                             {t("contents-section.gallery-title")}
@@ -195,7 +201,7 @@ const ContentSection2 = () => {
                                 <div
                                     key={`gallery-item-${galleryItem._id}`}
                                     id={`gallery-item-${galleryItem._id}`}
-                                    className="max-md:absolute max-md:mx-auto max-md:flex max-md:w-full max-md:justify-center"
+                                    className="max-lg:absolute max-lg:mx-auto max-lg:flex max-lg:w-full max-lg:justify-center"
                                 >
                                     <GalleryCard
                                         id={`gallery-item-card-${galleryItem._id}`}
@@ -212,8 +218,8 @@ const ContentSection2 = () => {
                     <div
                         id="content-bg-1"
                         className={cn(
-                            "h-full w-1/2 bg-cover bg-fixed bg-no-repeat max-md:hidden",
-                            "max-md:w-full",
+                            "h-full w-1/2 bg-cover bg-fixed bg-no-repeat max-lg:hidden",
+                            "max-lg:w-full",
                         )}
                         style={{
                             backgroundImage: `url(${MEDIAS.contentImage2})`,
@@ -223,8 +229,8 @@ const ContentSection2 = () => {
                     ></div>
                     <div
                         className={cn(
-                            "hidden h-full w-full bg-cover bg-fixed bg-no-repeat max-md:block",
-                            "max-md:w-full",
+                            "hidden h-full w-full bg-cover bg-fixed bg-no-repeat max-lg:block",
+                            "max-lg:w-full",
                         )}
                         style={{
                             backgroundImage: `url(${MEDIAS.contentImage2})`,

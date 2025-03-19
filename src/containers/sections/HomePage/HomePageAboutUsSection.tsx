@@ -77,7 +77,7 @@ export const HomePageAboutUsSection = () => {
                         "sticky left-0 top-0 flex h-dvh items-end justify-start p-8",
                     )}
                 >
-                    <div className="flex h-72 w-full max-w-md flex-col justify-between bg-white p-4 max-md:h-fit max-md:gap-8">
+                    <div className="flex h-72 w-full max-w-md flex-col justify-between bg-white p-4 max-lg:h-fit max-lg:gap-8">
                         <p className="w-full max-w-60 font-perpetua text-xs font-medium leading-5 tracking-widest text-text-dark">
                             {t("about-us-section.card.title")}
                         </p>
@@ -90,10 +90,10 @@ export const HomePageAboutUsSection = () => {
 
             <div
                 id="about-us-text-container"
-                className="flex w-full justify-end pe-24 pt-[35dvh] max-md:ps-6"
+                className="flex w-full justify-end pe-24 pt-[35dvh] max-lg:ps-6"
             >
-                <div className={cn("w-1/3", "max-md:w-full")}>
-                    <h2 className="max-w-full break-words font-brilliant text-5xl font-bold leading-[72px] text-white max-md:text-4xl">
+                <div className={cn("w-1/3", "max-lg:w-full")}>
+                    <h2 className="max-w-full break-words font-brilliant text-5xl font-bold leading-[72px] text-white max-lg:text-4xl">
                         {t("about-us-section.text")}
                     </h2>
                 </div>
@@ -126,13 +126,13 @@ const SectionCard: FC<{
             id={id}
             className={cn(
                 "relative z-20 grid h-dvh w-dvw grid-cols-2",
-                "max-md:grid-cols-1",
+                "max-lg:grid-cols-1",
             )}
         >
             <div className="relative flex h-full items-center justify-center overflow-hidden">
                 <h2
                     id={`${id}-title`}
-                    className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto hidden max-w-xl text-center font-brilliant text-2xl leading-8 tracking-widest text-white mix-blend-hard-light max-md:inline-block"
+                    className="absolute inset-0 top-[calc(50%-250px)] z-30 m-auto hidden max-w-xl text-center font-brilliant text-2xl leading-8 tracking-widest text-white mix-blend-hard-light max-lg:inline-block"
                 >
                     {item.title}
                 </h2>
@@ -144,7 +144,7 @@ const SectionCard: FC<{
                     height={300}
                     className={cn(
                         "z-10 aspect-square w-[50%] object-cover",
-                        "max-md:mx-auto max-md:w-[75%]",
+                        "max-lg:mx-auto max-lg:w-[75%]",
                     )}
                 />
             </div>
@@ -154,13 +154,13 @@ const SectionCard: FC<{
                     {
                         "bg-secondary-200": withBg,
                     },
-                    "max-md:hidden",
+                    "max-lg:hidden",
                 )}
             >
-                <div className="bg-brand-500 flex h-full w-full items-center justify-center">
+                <div className="flex h-full w-full items-center justify-center bg-brand-500">
                     <h2
                         id={`${id}-title`}
-                        className="inline-block max-w-xl text-center font-brilliant text-4xl leading-[64px] text-white max-md:hidden"
+                        className="inline-block max-w-xl text-center font-brilliant text-4xl leading-[64px] text-white max-lg:hidden"
                     >
                         {item.title}
                     </h2>

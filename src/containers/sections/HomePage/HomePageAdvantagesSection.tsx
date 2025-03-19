@@ -40,8 +40,8 @@ export const HomePageAdvantagesSection = () => {
     });
 
     return (
-        <div className="relative h-[300dvh] w-full max-md:h-[200dvh]">
-            <div className="sticky top-0 h-dvh max-md:h-full">
+        <div className="relative h-[300dvh] w-full max-lg:h-[200dvh]">
+            <div className="sticky top-0 h-dvh max-lg:h-full">
                 <div
                     className="h-full w-full bg-cover bg-fixed bg-left-top"
                     style={{
@@ -51,17 +51,17 @@ export const HomePageAdvantagesSection = () => {
                     }}
                 ></div>
             </div>
-            <div className="absolute top-0 flex h-full w-full justify-end max-md:py-2">
+            <div className="absolute top-0 flex h-full w-full justify-end max-lg:py-2">
                 <div
                     id="advantages-section"
                     className={cn(
-                        "flex max-md:hidden",
+                        "flex max-lg:hidden",
                         "sticky top-0 h-full w-1/2 flex-col justify-between gap-4 bg-white p-4",
-                        "max-md:mx-auto max-md:w-[calc(100%-16px)] max-md:pt-48",
+                        "max-lg:mx-auto max-lg:w-[calc(100%-16px)] max-lg:pt-48",
                     )}
                 >
                     <div className="relative h-full w-full">
-                        <div className="sticky top-4 flex w-full flex-col gap-4 pt-12 max-md:top-8">
+                        <div className="sticky top-4 flex w-full flex-col gap-4 pt-12 max-lg:top-8">
                             <h3 className={cn("max-w-lg font-bemirs text-3xl")}>
                                 {t("about-us-section.card.title")}
                             </h3>
@@ -93,17 +93,17 @@ export const HomePageAdvantagesSection = () => {
                 <div
                     id="advantages-section-responsive"
                     className={cn(
-                        "hidden max-md:flex",
+                        "hidden max-lg:flex",
                         "sticky top-0 h-full w-1/2 flex-col justify-between gap-4 bg-white/75 p-4",
-                        "max-md:mx-auto max-md:w-[calc(100%-16px)] max-md:pt-48",
+                        "max-lg:mx-auto max-lg:w-[calc(100%-16px)] max-lg:pt-48",
                     )}
                 >
                     <div className="relative h-full w-full">
-                        <div className="sticky top-4 flex w-full flex-col gap-4 pt-12 max-md:top-8">
+                        <div className="sticky top-4 flex w-full flex-col gap-4 pt-12 max-lg:top-8">
                             <h3
                                 className={cn(
                                     "max-w-lg font-bemirs text-3xl",
-                                    "max-md:text-xl",
+                                    "max-lg:text-xl",
                                 )}
                             >
                                 {t("about-us-section.card.title")}

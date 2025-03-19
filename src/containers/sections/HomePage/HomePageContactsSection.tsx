@@ -11,7 +11,7 @@ export const HomePageContactsSection = () => {
             <div
                 className={cn(
                     "flex w-full flex-row items-stretch justify-stretch divide-x divide-text-primary px-8",
-                    "max-md:px-4",
+                    "max-lg:px-4",
                 )}
             >
                 <div className="w-full">
@@ -56,7 +56,7 @@ export const HomePageContactsSection = () => {
                                 <Link
                                     href={contactItem.link}
                                     target="_blank"
-                                    className="font-montserrat text-xl capitalize text-text-light max-md:text-sm max-md:tracking-widest"
+                                    className="font-montserrat text-xl capitalize text-text-light max-lg:text-sm max-lg:tracking-widest"
                                 >
                                     {contactItem.value}
                                 </Link>
@@ -89,7 +89,7 @@ export const HomePageContactsSection = () => {
             <div
                 className={cn(
                     "flex w-full flex-row items-center justify-between px-8 py-4",
-                    "max-md:flex-col max-md:gap-2 max-md:px-4",
+                    "max-lg:flex-col max-lg:gap-2 max-lg:px-4",
                 )}
             >
                 <p className="text-xs text-text-light">

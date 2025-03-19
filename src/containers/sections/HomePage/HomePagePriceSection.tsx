@@ -47,7 +47,7 @@ export const HomePagePriceSection = () => {
                 className={cn(
                     "fixed top-0 z-reserve m-auto h-full w-full transition-all duration-500",
                     isMenuSheetOpen ? "top-0" : "top-[-100dvh]",
-                    "max-md:p-4",
+                    "max-lg:p-4",
                 )}
             >
                 <div className="relative flex h-full w-full justify-end">
@@ -64,7 +64,7 @@ export const HomePagePriceSection = () => {
                     <div
                         className={cn(
                             "relative z-20 flex h-full w-1/2 flex-col bg-white p-4",
-                            "max-md:w-full max-md:overflow-hidden max-md:rounded-lg",
+                            "max-lg:w-full max-lg:overflow-hidden max-lg:rounded-lg",
                         )}
                     >
                         <div className="relative w-full">
@@ -156,7 +156,7 @@ export const HomePagePriceSection = () => {
                 id="price-section"
                 className={cn(
                     "relative z-40 w-full overflow-hidden bg-text-dark py-32",
-                    "max-md:px-4",
+                    "max-lg:px-4",
                 )}
             >
                 <Container>
@@ -179,13 +179,13 @@ export const HomePagePriceSection = () => {
                                 <div
                                     className={cn(
                                         "flex flex-1 flex-row items-baseline gap-4",
-                                        "max-md:flex-col",
+                                        "max-lg:flex-col",
                                     )}
                                 >
                                     <h2
                                         className={cn(
                                             "font-bemirs text-7xl font-medium text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
-                                            "max-md:text-2xl max-md:tracking-widest",
+                                            "max-lg:text-2xl max-lg:tracking-widest",
                                         )}
                                     >
                                         {menuItem.title}
@@ -207,13 +207,13 @@ export const HomePagePriceSection = () => {
                             <div
                                 className={cn(
                                     "flex flex-1 flex-row items-baseline gap-4",
-                                    "max-md:flex-col",
+                                    "max-lg:flex-col",
                                 )}
                             >
                                 <h2
                                     className={cn(
                                         "font-bemirs text-8xl font-medium text-white transition-all duration-500 group-hover:translate-x-7 group-hover:text-secondary-500",
-                                        "max-md:text-3xl max-md:tracking-widest",
+                                        "max-lg:text-3xl max-lg:tracking-widest",
                                     )}
                                 >
                                     {"Menü anzeigen"}

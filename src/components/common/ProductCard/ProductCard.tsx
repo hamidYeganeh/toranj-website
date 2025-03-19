@@ -32,10 +32,10 @@ export const ProductCard: FC<IProductCard> = (props) => {
                 }}
             ></div>
             <div className="flex w-full flex-row items-center justify-between">
-                <h4 className="font-perpetua text-xs font-medium tracking-widest text-text-secondary max-md:text-sm">
+                <h4 className="font-perpetua text-xs font-medium tracking-widest text-text-secondary max-lg:text-sm">
                     {product.title}
                 </h4>
-                <h5 className="font-perpetua text-xs font-medium tracking-widest text-text-secondary max-md:text-sm">
+                <h5 className="font-perpetua text-xs font-medium tracking-widest text-text-secondary max-lg:text-sm">
                     {format.number(product.price, {
                         style: "currency",
                         currency: "EUR",

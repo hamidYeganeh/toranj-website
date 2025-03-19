@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const ContainerVariants = cva(
-    "w-full mx-auto  max-w-[1440px] max-md:px-4",
+    "w-full mx-auto  max-w-[1440px] max-lg:px-4",
     {
         variants: {
             maxWidth: {

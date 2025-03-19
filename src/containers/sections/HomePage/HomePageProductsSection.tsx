@@ -13,8 +13,8 @@ export const HomePageProductsSection = () => {
         >
             <h1
                 className={cn(
-                    "font-bemirs sticky top-0 -z-10 line-clamp-1 text-clip text-center text-6xl font-bold text-text-secondary",
-                    "max-md:top-8 max-md:text-center max-md:text-3xl",
+                    "sticky top-0 -z-10 line-clamp-1 text-clip text-center font-bemirs text-6xl font-bold text-text-secondary",
+                    "max-lg:top-8 max-lg:text-center max-lg:text-3xl",
                 )}
             >
                 {t("hero-section.title")}
@@ -23,7 +23,7 @@ export const HomePageProductsSection = () => {
             <div
                 className={cn(
                     "z-20 grid w-full grid-cols-3 gap-2",
-                    "max-md:grid-cols-1",
+                    "max-lg:grid-cols-1",
                 )}
             >
                 {Products.map((product, productIndex) => {
